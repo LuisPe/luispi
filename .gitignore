@@ -1,0 +1,7 @@
+# Ignore Macbook files
+.DS_Store
+
+# Common IDE folders
+.idea
+.vscode
+
