@@ -1,6 +1,6 @@
 ---
 title: "De los errores se aprende, si se comparten, se crece"
-date: 2022-06-09T21:53:34-03:00
+date: 2022-06-05T21:53:34-03:00
 draft: false
 tags: ["reflexion"]
 author: "luispi"
