@@ -1,11 +1,10 @@
----
-title: "De los errores se aprende, si se comparten, se crece"
-date: 2022-06-05T21:53:34-03:00
-draft: false
-tags: ["reflexion"]
-author: "luispi"
----
-
++++
+title = "De los errores se aprende, si se comparten, se crece"
+date = 2022-06-05T21:53:34-03:00
+draft = false
+tags = ["reflexion"]
+author = "luispi"
++++
 En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
 (opinión de quien redacta, mal llamado **caso de éxito**) y pocas, por no decir nulas, las ocasiones donde se comparten los 
 errores (opinión de quien redacta, mal llamado **fracaso**).

@@ -1,11 +1,11 @@
----
-title: "Hexagonal Architecture"
-date: 2022-06-09T21:53:34-03:00
-draft: false
-tags: ["best-practices", "golang", "go"]
-categories: ["stop-copy-paste"]
-author: "luispi"
----
++++
+draft = false
+date = 2022-06-09T21:53:34-03:00
+title = "Hexagonal Architecture"
+tags = ["best-practices", "golang", "go"]
+categories = ["stop-copy-paste"]
+author = "luispi"
++++
 Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
 
