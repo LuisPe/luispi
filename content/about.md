@@ -1,7 +1,7 @@
 +++
 title = "Acerca de mi"
 date = "2022-06-10"
-author = "luispi"
+author = "luispe"
 +++
 
 # Hola
@@ -10,7 +10,7 @@ En el blog vas a encontrarte con reflexiones y aprendizajes sobre mi vida en gen
 
 No pretendo ser ejemplo de nada ni nadie, las opiniones que dejo acá son mías, espero no ofender a nadie con ellas.
 
-Mi nombre es Luis Pedro --luispi-- tengo 38 años nací y crecí en Gonnet, una localidad de La Plata, BsAs, Argentina. 
+Mi nombre es Luis Pedro --luispe-- tengo 38 años nací y crecí en Gonnet, una localidad de La Plata, BsAs, Argentina. 
 De mi infancia conservo a una tonelada de amigos con los cuales ya compartimos 35 años, ahora que lo escribo es una locura.
 Son mi guía y mi cable a tierra, si soy lo que soy es en parte gracias a ellos y en otra gran medida a mi familia :heart:
 

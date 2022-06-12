@@ -58,7 +58,7 @@ url = "https://twitter.com/luispe84/"
 
 # Menu links
 [[menu.main]]
-name = "Blog"
+name = "Posts"
 weight = 1
 url  = "posts/"
 [[menu.main]]
