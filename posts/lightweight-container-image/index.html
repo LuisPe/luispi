@@ -4,16 +4,17 @@
 <time datetime=2022-06-11T17:49:18-03:00>junio 11, 2022</time></span>
 <span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
 4 minutos de lectura.</span></div><div class=authors><i class="fa fa-user" aria-hidden=true></i>
-<a href=/blog/authors/luispe/>luispe</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<a href=/blog/authors/luispe/>luispe</a></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/blog/categories/stop-copy-paste/>stop-copy-paste</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/blog/tags/best-practices/>best-practices</a></span>
 <span class=separator>•</span>
 <span class=tag><a href=/blog/tags/docker/>docker</a></span></div></div></header><div><p>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!</p><h2 id=preámbulo>Preámbulo
 <a class=heading-link href=#pre%c3%a1mbulo><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
-no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:</p><ul><li>Reduce gatos de storage en el registry que utilizamos para gestionar nuestras imágenes.</li><li>Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
-va a ser la inicialización del container, y con esto ganamos en dos puntos.<ul><li>Costos, y costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
-el container.</li><li>Velocidad en auto scaling, está claro que obtener una imagen de 20MB versus una de 900MB la primera, claro está, va a
+no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:</p><ul><li>Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.</li><li>Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
+va a ser la inicialización del container, y con esto ganamos en dos puntos.<ul><li>Costos, y con costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
+el container.</li><li>Velocidad en auto scaling, está claro que obtener una imagen de 20 MB versus una de 900 MB la primera, claro está, va a
 inicializarse con mayor velocidad.</li></ul></li></ul><p>Por dar algunos ejemplos.</p><h2 id=comencemos>Comencemos
 <a class=heading-link href=#comencemos><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Imaginemos que tenemos el siguiente Dockerfile para crear nuestra imagen de container e.g:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=display:flex><span><span style=font-weight:700>FROM</span><span style=font-style:italic> golang:1.18</span><span>
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>WORKDIR</span><span style=font-style:italic> /build</span><span>
@@ -25,7 +26,9 @@ inicializarse con mayor velocidad.</li></ul></li></ul><p>Por dar algunos ejemplo
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>RUN</span> go build -o ./myapp ./path/to/main<span>
 </span></span></span><span style=display:flex><span><span>
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>ENTRYPOINT</span> [<span style=font-style:italic>&#34;/myapp&#34;</span>]<span>
-</span></span></span></code></pre></div><p>Construyamos nuestra imagen <code>docker build -t myapp:0.0.1 .</code></p><p>Si listamos las imágenes que tengamos en nuestro host vamos a poder observar que el peso es de aproximadamente <code>968 MB</code></p><p>What? 968 MB solo para disponibilizar un binario que pesa unos pocos megas?</p><h2 id=propuestaaprendizaje>Propuesta/aprendizaje
+</span></span></span></code></pre></div><p>Construyamos nuestra imagen <code>docker build -t myapp:0.0.1 .</code></p><p>Si listamos las imágenes que tengamos en nuestro host vamos a poder observar que el peso es de aproximadamente <code>968 MB</code></p><p>What? 968 MB solo para disponibilizar un binario que pesa unos pocos megas?</p><blockquote><p>NOTA</p><p>En todas mis publicaciones vas a encontrarte con conceptos, la idea es que aprendamos y no copiemos y peguemos.
+Por dar un ejemplo <code>RUN go build -o ./myapp ./path/to/main</code> donde <code>./path/to/main</code> debería estar el main de tu app de
+Golang</p></blockquote><h2 id=propuestaaprendizaje>Propuesta/aprendizaje
 <a class=heading-link href=#propuestaaprendizaje><i class="fa fa-link" aria-hidden=true></i></a></h2><h3 id=vamos-con-la-primera-propuesta>Vamos con la primera propuesta.
 <a class=heading-link href=#vamos-con-la-primera-propuesta><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Siempre es una buena práctica usar imágenes <code>-alpine</code>, por convención en el universo de container cuando disponibilizamos
 una imagen <code>-alpine</code> estamos indicando al cliente que es una imagen reducida en tamaño y la que deberíamos utilizar en
@@ -38,12 +41,12 @@ nuestro Dockerfile, entre otras cosas.</p><p>Bien, realicemos un pequeño cambio
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>RUN</span> go build -o ./myapp ./path/to/main<span>
 </span></span></span><span style=display:flex><span><span>
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>ENTRYPOINT</span> [<span style=font-style:italic>&#34;/myapp&#34;</span>]<span>
-</span></span></span></code></pre></div><p>Si prestamos atención el cambio fue sutil, pero efectivo, pasamos de <code>FROM golang:1.18</code> a <code>FROM golang:1.18-alpine3.16</code></p><p>Si volvemos a listar las imágenes nos vamos a encontrar con que ahora nuestra imagen pesa aproximadamente <code>331 MB</code></p><p>Reducimos, si las cuentas no fallan, 637 MB.</p><p>Es una excelente &ldquo;approach&rdquo; pero repensemos. ¿Hace falta tener una imagen de container de 331 MB para disponibilizar un
-binario que pesa unos cuantos megabytes?.</p><p>La respuesta es claramente, no.</p><h3 id=segunda-propuesta>Segunda propuesta
+</span></span></span></code></pre></div><p>Si prestamos atención el cambio fue sutil, pero efectivo, pasamos de <code>FROM golang:1.18</code> a <code>FROM golang:1.18-alpine3.16</code></p><p>Construyamos nuevamente nuestra imagen <code>docker build -t myapp:0.0.2 .</code></p><p>Si volvemos a listar las imágenes nos vamos a encontrar con que ahora la imagen <code>myapp:0.0.2</code> pesa aproximadamente <code>331 MB</code></p><p>Reducimos, si las cuentas no fallan, 637 MB.</p><p>Es una excelente &ldquo;approach&rdquo; pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pensando
+cerca de 331 MB para disponibilizar un binario que pesa unos cuantos megabytes?.</p><p>La respuesta es claramente, no.</p><h3 id=segunda-propuesta>Segunda propuesta
 <a class=heading-link href=#segunda-propuesta><i class="fa fa-link" aria-hidden=true></i></a></h3><p>La tecnología de container tiene una característica excelente, que para nuestro caso, nos va a ayudar a construir una
 imagen de container muy liviana, por si no lo sabías, estoy hablando de Multistage, te comparto la
 <a href=https://docs.docker.com/develop/develop-images/multistage-build/>documentación oficial</a> para que profundices sobre esta
-característica.</p><p>En que consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de
+característica.</p><p>¿En qué consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de
 ellas y vamos a obtener una imagen final de un tamaño muy pequeño.</p><p>Lo primero que vamos a hacer es tener una primera etapa de build, donde vamos a construir el binario, y una segunda
 etapa donde vamos a dejarlo disponible para utilizarlo.</p><p>Manos a la obra, abramos y realicemos las siguientes modificaciones a nuestro Dockerfile.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-dockerfile data-lang=dockerfile><span style=display:flex><span><span style=font-style:italic># First layer use to build a Golang binary</span><span>
 </span></span></span><span style=display:flex><span><span></span><span style=font-weight:700>FROM</span><span style=font-style:italic> golang:1.18-alpine3.16 AS builder</span><span>
