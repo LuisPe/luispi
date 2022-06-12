@@ -2,6 +2,7 @@
 draft = false
 date = 2022-06-09T21:53:34-03:00
 title = "Hexagonal Architecture"
+description = "Como desacoplar nuestras capas del sistema correctamente"
 tags = ["best-practices", "golang", "go"]
 categories = ["stop-copy-paste"]
 authors = ["luispe"]

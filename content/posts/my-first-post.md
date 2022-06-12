@@ -1,5 +1,6 @@
 +++
 title = "De los errores se aprende, si se comparten, se crece"
+description = "Compartir y adquirir conocimiento debería ser la guía"
 date = 2022-06-05T21:53:34-03:00
 draft = false
 tags = ["reflexion"]

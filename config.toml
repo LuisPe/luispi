@@ -13,7 +13,6 @@ enableEmoji = true
 
 [params]
 author = "luispe"
-info = "Musico y Desarrollador"
 description = "Un blog personal donde comparto reflexiones y experiencias"
 keywords = "blog,developer,personal,musician"
 #avatarurl = "images/profile.jpg"

@@ -2,7 +2,7 @@
 draft = false
 date = 2022-06-11T17:49:18-03:00
 title = "El tamaño importa"
-description = "Como prevenir comportamientos inesperados y como ahorrar transferencia de networking y storage"
+description = "Como obtener imágenes livianas y ahorrar transferencia de networking y storage"
 authors = ["luispe"]
 tags = ["best-practices", "docker"]
 categories = ["stop-copy-paste"]
