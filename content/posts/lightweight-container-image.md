@@ -5,7 +5,7 @@ title = "El tamaño importa"
 description = "Como prevenir comportamientos inesperados y como ahorrar transferencia de networking y storage"
 authors = ["luispe"]
 tags = ["best-practices", "docker"]
-categories = []
+categories = ["stop-copy-paste"]
 +++
 En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
@@ -15,12 +15,12 @@ para cualquier lenguaje, ¡vamos!
 
 Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
 no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:
-- Reduce gatos de storage en el registry que utilizamos para gestionar nuestras imágenes.
+- Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.
 - Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
   va a ser la inicialización del container, y con esto ganamos en dos puntos.
-  - Costos, y costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
+  - Costos, y con costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
     el container.
-  - Velocidad en auto scaling, está claro que obtener una imagen de 20MB versus una de 900MB la primera, claro está, va a
+  - Velocidad en auto scaling, está claro que obtener una imagen de 20 MB versus una de 900 MB la primera, claro está, va a
     inicializarse con mayor velocidad.
 
 Por dar algunos ejemplos.
@@ -47,6 +47,12 @@ Si listamos las imágenes que tengamos en nuestro host vamos a poder observar qu
 
 What? 968 MB solo para disponibilizar un binario que pesa unos pocos megas?
 
+>NOTA
+> 
+> En todas mis publicaciones vas a encontrarte con conceptos, la idea es que aprendamos y no copiemos y peguemos.
+>Por dar un ejemplo `RUN go build -o ./myapp ./path/to/main` donde `./path/to/main` debería estar el main de tu app de
+> Golang
+
 ## Propuesta/aprendizaje
 
 ### Vamos con la primera propuesta.
@@ -71,12 +77,14 @@ ENTRYPOINT ["/myapp"]
 
 Si prestamos atención el cambio fue sutil, pero efectivo, pasamos de `FROM golang:1.18` a `FROM golang:1.18-alpine3.16`
 
-Si volvemos a listar las imágenes nos vamos a encontrar con que ahora nuestra imagen pesa aproximadamente `331 MB`
+Construyamos nuevamente nuestra imagen `docker build -t myapp:0.0.2 .` 
+
+Si volvemos a listar las imágenes nos vamos a encontrar con que ahora la imagen `myapp:0.0.2` pesa aproximadamente `331 MB`
 
 Reducimos, si las cuentas no fallan, 637 MB.
 
-Es una excelente "approach" pero repensemos. ¿Hace falta tener una imagen de container de 331 MB para disponibilizar un 
-binario que pesa unos cuantos megabytes?.
+Es una excelente "approach" pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pensando 
+cerca de 331 MB para disponibilizar un binario que pesa unos cuantos megabytes?.
 
 La respuesta es claramente, no.
 
@@ -87,7 +95,7 @@ imagen de container muy liviana, por si no lo sabías, estoy hablando de Multist
 [documentación oficial](https://docs.docker.com/develop/develop-images/multistage-build/) para que profundices sobre esta
 característica.
 
-En que consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de 
+¿En qué consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de 
 ellas y vamos a obtener una imagen final de un tamaño muy pequeño.
 
 Lo primero que vamos a hacer es tener una primera etapa de build, donde vamos a construir el binario, y una segunda 
