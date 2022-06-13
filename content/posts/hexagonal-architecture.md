@@ -1,14 +1,11 @@
-+++
-draft = false
-date = 2022-06-09T21:53:34-03:00
-title = "Hexagonal Architecture"
-description = "Como desacoplar nuestras capas del sistema correctamente"
-tags = ["best-practices", "golang", "go"]
-categories = ["stop-copy-paste"]
-authors = ["luispe"]
-type = "post"
-showTableOfContents = true
-+++
+---
+draft: false
+title: "Hexagonal Architecture"
+description: "Como desacoplar nuestras capas del sistema correctamente"
+date: 2022-06-09T21:53:34-03:00
+tags: ["best-practices", "golang", "go"]
+categories: ["stop-copy-paste"]
+---
 Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
 

@@ -1,9 +1,7 @@
-+++
-title = "Acerca de mi"
-date = "2022-06-10"
-author = "luispe"
-+++
-
+---
+title: "Acerca de mi"
+date: 2022-06-10
+---
 # Hola
 
 En el blog vas a encontrarte con reflexiones y aprendizajes sobre mi vida en general.

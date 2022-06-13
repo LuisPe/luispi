@@ -1,14 +1,11 @@
-+++
-draft = false
-date = 2022-06-11T17:49:18-03:00
-title = "El tamaño importa"
-description = "Como crear imágenes livianas y ahorrar transferencia de networking y storage."
-authors = ["luispe"]
-tags = ["best-practices", "docker"]
-categories = ["stop-copy-paste"]
-type = "post"
-showTableOfContents = true
-+++
+---
+draft:  false
+title:  "El tamaño importa"
+description:  "Como crear imágenes livianas y ahorrar transferencia de networking y storage."
+date: 2022-06-11T17:49:18-03:00
+tags:  ["best-practices", "docker"]
+categories:  ["stop-copy-paste"]
+---
 En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!
@@ -31,7 +28,7 @@ Por dar algunos ejemplos.
 
 Imaginemos que tenemos el siguiente Dockerfile para crear nuestra imagen de container e.g:
 
-```dockerfile
+```
 FROM golang:1.18
 WORKDIR /build
 
@@ -65,7 +62,7 @@ nuestro Dockerfile, entre otras cosas.
 
 Bien, realicemos un pequeño cambio en nuestro Dockerfile y volvamos a construir nuestra imagen
 
-```dockerfile
+```
 FROM golang:1.18-alpine3.16
 WORKDIR /build
 COPY go.mod go.sum ./
@@ -105,7 +102,7 @@ etapa donde vamos a dejarlo disponible para utilizarlo.
 
 Manos a la obra, abramos y realicemos las siguientes modificaciones a nuestro Dockerfile.
 
-```dockerfile
+```
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
