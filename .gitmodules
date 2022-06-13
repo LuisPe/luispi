@@ -1,9 +1,0 @@
-[submodule "themes/hugo-coder"]
-	path = themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder
-[submodule "themes/hugo-notepadium"]
-	path = themes/hugo-notepadium
-	url = https://github.com/cntrump/hugo-notepadium.git
-[submodule "themes/gokarna"]
-	path = themes/gokarna
-	url = https://github.com/526avijitgupta/gokarna.git
