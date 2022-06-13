@@ -1,66 +1,71 @@
 baseurl = "https://luispe.github.io/blog"
 title = "luispe"
-theme = "hugo-coder"
+theme = "hugo-notepadium"
 languagecode = "en"
 defaultcontentlanguage = "es"
+hasCJKLanguage = true
 
-paginate = 20
+enableRobotsTXT = true
 
-pygmentsstyle = "bw"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-enableEmoji = true
+# Enable Disqus
+#disqusShortname = "XXX"
+
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
 
 [params]
-author = "luispe"
-description = "Un blog personal donde comparto reflexiones y experiencias"
-keywords = "blog,developer,personal,musician"
-#avatarurl = "images/profile.jpg"
-#gravatar = "john.doe@example.com"
+enableEmoji = true
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "2 January, 2006"  # if unset, default is "2006-01-02"
+#logo = ""  # if you have a logo png
+#slogan = ""
+#license = ""  # CC License
+fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
 
-favicon_32 = "/img/favicon-32x32.png"
-favicon_16 = "/img/favicon-16x16.png"
+[params.comments]
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
-since = 2019
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
 
-enableTwemoji = true
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
 
-colorScheme = "auto"
-hidecolorschemetoggle = false
+[params.share]
+enable = false
+addThisId = ""
+inlineToolId = ""
 
-#customCSS = ["css/custom.css"]
-#customSCSS = ["scss/custom.scss"]
-#customJS = ["js/custom.js"]
+[params.profile]
+enable = true
+#avatar = "/img/avatar.jpg"
+#name = "luispe"
+twitter = "luispe84"
+github = "luispe"
 
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
+[params.nav]
+showCategories = true       # /categories/
+showTags = true             # /tags/
 
-# Social links
-[[params.social]]
-name = "Github"
-icon = "fa fa-github fa-2x"
-weight = 1
-url = "https://github.com/luispe/"
-[[params.social]]
-name = "Gitlab"
-icon = "fa fa-gitlab fa-2x"
-weight = 2
-url = "https://gitlab.com/luispe/"
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter fa-2x"
-weight = 3
-url = "https://twitter.com/luispe84/"
+# custom navigation items
+[[params.nav.custom]]
+title = "About"
+url = "/about"
 
-# Menu links
-[[menu.main]]
-name = "Posts"
-weight = 1
-url  = "posts/"
-[[menu.main]]
-name = "About"
-weight = 2
-url = "about/"
+[[params.nav.custom]]
+title = "Tags"
+url = "/tags"
+
+[[params.nav.custom]]
+title = "Categories"
+url = "/categories"

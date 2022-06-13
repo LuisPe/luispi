@@ -13,10 +13,8 @@ errores (opinión de quien redacta, mal llamado **fracaso**).
 Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y 
 entendí de la industria al compartirlos.
 
----
+## Enseñanza 1:
 
->Enseñanza 1:
->
 >Escribir un paso a paso, compartirlo, validarlo y re-validarlo antes de ejecutar nada
 
 Mi primer desarrollo productivo fue en 2012 (?) aproximadamente, se trató de una web para una empresa que necesitaba
@@ -47,10 +45,8 @@ desde la web (no tengo mucha idea como se resuelve por detrás) podes ejecutar u
 
 Configure de nuevo los puertos, y el resto medio que es historia.
 
----
+## Enseñanza 2:
 
->Enseñanza 2:
->
 > Documentar el conocimiento por más trivial que lo consideremo e invitemos a que el resto lo haga. Además de evitar 
 > varias reuniones de “transferencia de conocimiento” nos vamos a ahorrar varios arrobas, ¿te recuerda algo?
 > 
@@ -72,10 +68,8 @@ O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más
 
 ¿o acaso eras vos quien lo estaba dejando?
 
----
+## Enseñanza 3:
 
->Enseñanza 3:
->
 >Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.
 >
 >Enseñanza 3 bis:
