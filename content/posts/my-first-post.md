@@ -1,10 +1,12 @@
 +++
 title = "De los errores se aprende, si se comparten, se crece"
-description = "Compartir y adquirir conocimiento debería ser la guía"
+description = "Compartir y adquirir conocimiento debería ser la guía."
 date = 2022-06-05T21:53:34-03:00
 draft = false
 tags = ["reflexion"]
 authors = ["luispe"]
+type = "post"
+showTableOfContents = true
 +++
 En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
 (opinión de quien redacta, mal llamado **caso de éxito**) y pocas, por no decir nulas, las ocasiones donde se comparten los 

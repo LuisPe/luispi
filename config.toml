@@ -1,75 +1,88 @@
 baseurl = "https://luispe.github.io/blog"
-title = "luispe"
-theme = "hugo-notepadium"
-languagecode = "en"
-defaultcontentlanguage = "es"
-hasCJKLanguage = true
+defaultContentLanguage = "en"
+languageCode = "en"
 
+title = "luispe"
+
+theme = "gokarna"
+# Choose one of emacs, trac or perldoc
+pygmentsStyle = "native"
+enableEmoji = true
+# Automatically generate robots.txt
 enableRobotsTXT = true
 
-# Enable Disqus
-#disqusShortname = "XXX"
+[menu]
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-# Google Analytics
-#googleAnalytics = "UA-123-45"
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 2
 
-[markup.highlight]
-codeFences = true
-noClasses = false
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 3
 
-[markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
+#[[menu.main]]
+#name = "Projects"
+#url = "/projects/"
+#weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 5
+
+[[menu.main]]
+identifier = "github"
+pre = "<span data-feather='github'></span>"
+url = "https://github.com/526avijitgupta/gokarna"
+weight = 6
+
+[[menu.main]]
+identifier = "rss"
+pre = "<span data-feather='rss'></span>"
+url = "/index.xml"
+weight = 7
 
 [params]
-enableEmoji = true
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "2 January, 2006"  # if unset, default is "2006-01-02"
-#logo = ""  # if you have a logo png
-#slogan = ""
-#license = ""  # CC License
-fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+    socialIcons = [
+        {name = "twitter", url = "https://twitter.com/luispe84"},
+        {name = "linkedin", url = "https://www.linkedin.com/in/luis-pedro-toloy-a1b529a2/"},
+    ]
+# URL for the avatar on homepage
+#avatarURL = ""
 
-[params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+# Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+#avatarSize = ""
 
-[params.math]
-enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-use = "katex"  # option: "katex", "mathjax". default: "katex"
+# Description to display on homepage
+#description = ""
 
-[params.syntax]
-use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "xcode"
-darkTheme = "xcode-dark"  # apply this theme in dark mode
+# Accent color is displayed when you hover over <a> tags
+accentColor = "#FF4D4D"
 
-[params.share]
-enable = false
-addThisId = ""
-inlineToolId = ""
+# You can use this to inject any HTML in the <head> tag.
+# Ideal usecase for this is to import custom js/css or add your analytics snippet
+#customHeadHTML = ""
 
-[params.profile]
-enable = true
-#avatar = "/img/avatar.jpg"
-#name = "luispe"
-twitter = "luispe84"
-github = "luispe"
+# Keywords relevant for SEO
+metaKeywords = ["blog", "luispe", "developer", "personal", "experience"]
 
-[params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
+# If you want to display posts on the homepage, the options are
+# "popular" (order posts by weight), "recent" (order posts by date)
+# or "" (do not display, default option)
+#showPostsOnHomePage = ""
 
-# custom navigation items
-[[params.nav.custom]]
-title = "About"
-url = "/about"
+# Footer text
+footer = "luispe"
 
-[[params.nav.custom]]
-title = "Posts"
-url = "/posts"
-
-[[params.nav.custom]]
-title = "Tags"
-url = "/tags"
-
-[[params.nav.custom]]
-title = "Categories"
-url = "/categories"
+[markup]
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 3
+ordered = false
