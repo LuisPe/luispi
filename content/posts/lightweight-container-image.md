@@ -2,10 +2,12 @@
 draft = false
 date = 2022-06-11T17:49:18-03:00
 title = "El tamaño importa"
-description = "Como obtener imágenes livianas y ahorrar transferencia de networking y storage"
+description = "Como crear imágenes livianas y ahorrar transferencia de networking y storage."
 authors = ["luispe"]
 tags = ["best-practices", "docker"]
 categories = ["stop-copy-paste"]
+type = "post"
+showTableOfContents = true
 +++
 En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican

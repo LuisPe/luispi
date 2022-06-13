@@ -6,6 +6,8 @@ description = "Como desacoplar nuestras capas del sistema correctamente"
 tags = ["best-practices", "golang", "go"]
 categories = ["stop-copy-paste"]
 authors = ["luispe"]
+type = "post"
+showTableOfContents = true
 +++
 Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
