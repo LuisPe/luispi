@@ -1,4 +1,254 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>best-practices on luispe</title><link>https://luispe.github.io/blog/tags/best-practices/</link><description>Recent content in best-practices on luispe</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 11 Jun 2022 17:49:18 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/posts/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/posts/lightweight-container-image/</guid><description>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican para cualquier lenguaje, ¡vamos!
-Preámbulo Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc) no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:</description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/posts/hexagonal-architecture/</guid><description>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
-Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.
-Preámbulo Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra, mas bien todo lo contrario, me parece un excelente patrón.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>best-practices on luispe</title><link>https://luispe.github.io/blog/tags/best-practices/</link><description>Recent content in best-practices on luispe</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 11 Jun 2022 17:49:18 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/best-practices/index.xml" rel="self" type="application/rss+xml"/><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/posts/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/posts/lightweight-container-image/</guid><description>&lt;p>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
+de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
+para cualquier lenguaje, ¡vamos!&lt;/p>
+&lt;h2 id="preámbulo">Preámbulo&lt;/h2>
+&lt;p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
+no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:&lt;/p>
+&lt;ul>
+&lt;li>Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.&lt;/li>
+&lt;li>Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
+va a ser la inicialización del container, y con esto ganamos en dos puntos.
+&lt;ul>
+&lt;li>Costos, y con costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
+el container.&lt;/li>
+&lt;li>Velocidad en auto scaling, está claro que obtener una imagen de 20 MB versus una de 900 MB la primera, claro está, va a
+inicializarse con mayor velocidad.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Por dar algunos ejemplos.&lt;/p>
+&lt;h2 id="comencemos">Comencemos&lt;/h2>
+&lt;p>Imaginemos que tenemos el siguiente Dockerfile para crear nuestra imagen de container e.g:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Construyamos nuestra imagen &lt;code>docker build -t myapp:0.0.1 .&lt;/code>&lt;/p>
+&lt;p>Si listamos las imágenes que tengamos en nuestro host vamos a poder observar que el peso es de aproximadamente &lt;code>968 MB&lt;/code>&lt;/p>
+&lt;p>What? 968 MB solo para disponibilizar un binario que pesa unos pocos megas?&lt;/p>
+&lt;blockquote>
+&lt;p>NOTA&lt;/p>
+&lt;p>En todas mis publicaciones vas a encontrarte con conceptos, la idea es que aprendamos y no copiemos y peguemos.
+Por dar un ejemplo &lt;code>RUN go build -o ./myapp ./path/to/main&lt;/code> donde &lt;code>./path/to/main&lt;/code> debería estar el main de tu app de
+Golang&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="propuestaaprendizaje">Propuesta/aprendizaje&lt;/h2>
+&lt;h3 id="vamos-con-la-primera-propuesta">Vamos con la primera propuesta.&lt;/h3>
+&lt;p>Siempre es una buena práctica usar imágenes &lt;code>-alpine&lt;/code>, por convención en el universo de container cuando disponibilizamos
+una imagen &lt;code>-alpine&lt;/code> estamos indicando al cliente que es una imagen reducida en tamaño y la que deberíamos utilizar en
+nuestro Dockerfile, entre otras cosas.&lt;/p>
+&lt;p>Bien, realicemos un pequeño cambio en nuestro Dockerfile y volvamos a construir nuestra imagen&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Si prestamos atención el cambio fue sutil, pero efectivo, pasamos de &lt;code>FROM golang:1.18&lt;/code> a &lt;code>FROM golang:1.18-alpine3.16&lt;/code>&lt;/p>
+&lt;p>Construyamos nuevamente nuestra imagen &lt;code>docker build -t myapp:0.0.2 .&lt;/code>&lt;/p>
+&lt;p>Si volvemos a listar las imágenes nos vamos a encontrar con que ahora la imagen &lt;code>myapp:0.0.2&lt;/code> pesa aproximadamente &lt;code>331 MB&lt;/code>&lt;/p>
+&lt;p>Reducimos, si las cuentas no fallan, 637 MB.&lt;/p>
+&lt;p>Es una excelente &amp;ldquo;approach&amp;rdquo; pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pensando
+cerca de 331 MB para disponibilizar un binario que pesa unos cuantos megabytes?.&lt;/p>
+&lt;p>La respuesta es claramente, no.&lt;/p>
+&lt;h3 id="segunda-propuesta">Segunda propuesta&lt;/h3>
+&lt;p>La tecnología de container tiene una característica excelente, que para nuestro caso, nos va a ayudar a construir una
+imagen de container muy liviana, por si no lo sabías, estoy hablando de Multistage, te comparto la
+&lt;a href="https://docs.docker.com/develop/develop-images/multistage-build/"target="_blank" rel="noopener noreferrer">documentación oficial&lt;/a>
+para que profundices sobre esta
+característica.&lt;/p>
+&lt;p>¿En qué consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de
+ellas y vamos a obtener una imagen final de un tamaño muy pequeño.&lt;/p>
+&lt;p>Lo primero que vamos a hacer es tener una primera etapa de build, donde vamos a construir el binario, y una segunda
+etapa donde vamos a dejarlo disponible para utilizarlo.&lt;/p>
+&lt;p>Manos a la obra, abramos y realicemos las siguientes modificaciones a nuestro Dockerfile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># First layer use to build a Golang binary&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16 AS builder&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Final layer expose app to minimal docker image&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> alpine:3.16.0&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --from&lt;span class="o">=&lt;/span>builder /build/myapp /myapp&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Como podemos observar la primera modificación consiste en taguear la primera etapa como build.
+Luego en la segunda y etapa final con la siguiente línea &lt;code>COPY --from=builder /build/myapp /myapp&lt;/code> copiamos el binario
+desde la etapa que tagueamos como &lt;code>builder&lt;/code> y lo disponibilizamos en una imagen alpine.&lt;/p>
+&lt;p>Si listamos ahora nuestras imágenes podemos observar que pesa aproximadamente 9 MB, si si, escribi correctamente
+9 megabytes :sunglasses:.&lt;/p>
+&lt;p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.&lt;/p>
+&lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
+&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/posts/hexagonal-architecture/</guid><description>&lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
+en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
+&lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>
+&lt;h2 id="preámbulo">Preámbulo&lt;/h2>
+&lt;p>Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra,
+mas bien todo lo contrario, me parece un excelente patrón.&lt;/p>
+&lt;p>Pero creo que caemos en el error de aplicar la recetas de publicaciones de &amp;ldquo;medium&amp;rdquo; y no solo terminamos con todas las
+capas de nuestro sistema acopladas sino que con nombres de packages al estilo &amp;ldquo;adapters&amp;rdquo; o &amp;ldquo;ports&amp;rdquo; y si hay algo hermoso
+en el lenguaje de Go(lang) es la intencionalidad en el nombre de un package.&lt;/p>
+&lt;blockquote>
+&lt;p>Un buen nombre en el package hace que casi ni sea necesario nada más para expresar la intencionalidad del mismo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Te comparto y recomiendo leer la siguiente &lt;a href="https://go.dev/blog/package-names"target="_blank" rel="noopener noreferrer">publicación oficial&lt;/a>
+, opinión personal,
+aplica para cualquier lenguaje.&lt;/p>
+&lt;h2 id="comencemos">Comencemos&lt;/h2>
+&lt;blockquote>
+&lt;p>Anti patrón&lt;/p>
+&lt;p>Anotación en nuestro modelo de dominio e.g &lt;code>json&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>Un error que solía cometer es tener las anotaciones &lt;code>json&lt;/code> o &lt;code>validate&lt;/code> o cualquier anotación en el modelo de dominio.&lt;/p>
+&lt;p>Imaginemos que tenemos nuestro modelo &lt;code>/user/user.go&lt;/code> con el siguiente contenido&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">User&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;first_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;last_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Antes de continuar leyendo te invito a que por unos segundos/minutos hagamos una reflexión de porque es un anti patrón.&lt;/p>
+&lt;h2 id="propuestaaprendizaje">Propuesta/aprendizaje&lt;/h2>
+&lt;p>Nuestro modelo debería ser agnóstico a la capa de presentación y a la de datos, por lo tanto, no debería contener ninguna
+anotación. Deberíamos mapear los datos hacia nuestro modelo y viceversa, a continuación un ejemplo de como quedaría
+un controlador rest HTTP e.g.:&lt;/p>
+&lt;p>&lt;code>user/rest_controller.go&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">UserDTO&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;first_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;last_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ctrl&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">controller&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">toUserModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">userDTO&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">UserDTO&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">User&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">User&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">userDTO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">FirstName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">userDTO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">LastName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ctrl&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">controller&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">toUserDTO&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">User&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">UserDTO&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">UserDTO&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">FirstName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">LastName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
+hacia el modelo de dominio cuando llamemos al servicio y viceversa.&lt;/p>
+&lt;p>Por último quitamos las anotaciones en nuestro modelo &lt;code>user/user.go&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">User&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Todo bien luispi, ¿pero qué ganancia obtuvimos?&lt;/p>
+&lt;p>Ahora nuestro &lt;code>/user/user.go&lt;/code> al no tener ninguna anotación no importa como presentemos o como obtengamos/persistamos
+los datos, nunca vamos a tocar el core/dominio de nuestra aplicación, ahora si podríamos afirmar que nuestro core/dominio
+es agnóstico a las capas de presentación o datos ganando flexibilidad, testabilidad, etc.&lt;/p>
+&lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
+&lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
+&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>Acerca de mi</title><link>https://luispe.github.io/blog/about/</link><pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate><guid>https://luispe.github.io/blog/about/</guid><description>&lt;h1 id="hola">Hola&lt;/h1>
+&lt;p>En el blog vas a encontrarte con reflexiones y aprendizajes sobre mi vida en general.&lt;/p>
+&lt;p>No pretendo ser ejemplo de nada ni nadie, las opiniones que dejo acá son mías, espero no ofender a nadie con ellas.&lt;/p>
+&lt;p>Mi nombre es Luis Pedro &amp;ndash;luispe&amp;ndash; tengo 38 años nací y crecí en Gonnet, una localidad de La Plata, BsAs, Argentina.
+De mi infancia conservo a una tonelada de amigos con los cuales ya compartimos 35 años, ahora que lo escribo es una locura.
+Son mi guía y mi cable a tierra, si soy lo que soy es en parte gracias a ellos y a mi familia :heart:&lt;/p>
+&lt;p>Desde muy pequeño juegue al fútbol en el club Gimnasia y Esgrima de La Plata, después de muchos años cuando estaba en
+la 7ma división tuve que tomar la decisión si el fútbol iba a ser mi destino profesional o un deporte, la decisión fue
+que sea un deporte, este capítulo se merece una publicación aparte.&lt;/p>
+&lt;p>Al terminar la secundaria en La Plata estudié y me recibí en el conservatorio Gilardo Gilardi y a la par en un terciario
+de jazz EMU.&lt;/p>
+&lt;p>Después de varios &lt;a href="https://open.spotify.com/artist/4uWML0AUa4iRuvb5jiZYTg?si=d7wHhM_wT1mS0_zxcnNqpQ"target="_blank" rel="noopener noreferrer">discos&lt;/a>
+, recitales y
+ensayos decidí dar un giro a mi vida y comencé a estudiar en la FRLP la carrera de ingeniería en sistemas.&lt;/p>
+&lt;p>En 2012 comencé a trabajar en tecnología y gracias a ella me hice de varios amigos que aún y por fortuna conservo, no voy a
+nombrarlos porque temo olvidarme de más de una o de uno.&lt;/p>
+&lt;p>Luego de varios años y ahora que lo escribo 38 y contando, es un buen momento para escribir, lo considero un buen canal
+para canalizar mis sensaciones que se suma a un buen vino, la música mi familia y amigos.&lt;/p>
+&lt;p>Entonces, acá va&amp;hellip; espero que lo disfrutes!&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/posts/my-first-post/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/posts/my-first-post/</guid><description>&lt;p>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
+(opinión de quien redacta, mal llamado &lt;strong>caso de éxito&lt;/strong>) y pocas, por no decir nulas, las ocasiones donde se comparten los
+errores (opinión de quien redacta, mal llamado &lt;strong>fracaso&lt;/strong>).&lt;/p>
+&lt;p>Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y
+entendí de la industria al compartirlos.&lt;/p>
+&lt;h2 id="enseñanza-1">Enseñanza 1:&lt;/h2>
+&lt;blockquote>
+&lt;p>Escribir un paso a paso, compartirlo, validarlo y re-validarlo antes de ejecutar nada&lt;/p>
+&lt;/blockquote>
+&lt;p>Mi primer desarrollo productivo fue en 2012 (?) aproximadamente, se trató de una web para una empresa que necesitaba
+publicar su catálogo de productos, enumero tecnologías para tener un poco de contexto:&lt;/p>
+&lt;ul>
+&lt;li>digitalocean, recién salido, además de los droplets no se cuantos productos más tenía en cartera&lt;/li>
+&lt;li>angular js (angular 1)&lt;/li>
+&lt;li>creo que nodeJS para el backend&lt;/li>
+&lt;/ul>
+&lt;p>Este desarrollo lo hice con quien es una de las personas que más respeto y admiro, Víctor De Grandis –Vitor–.&lt;/p>
+&lt;p>Mi experiencia configurando servidores era nula, tuve la delirante idea de decirle a Vitor:&lt;/p>
+&lt;p>&lt;em>che amigo, ¿puedo configurar el servidor y después intentas romperlo?&lt;/em>&lt;/p>
+&lt;p>Acto seguido me pongo a realizar varias configuraciones entre ellas me puse a jugar con los puertos, hasta que muy
+orgulloso le digo:&lt;/p>
+&lt;p>&lt;em>Vitor, probá a ver qué onda&lt;/em>&lt;/p>
+&lt;p>Después de un rato me llega un mensaje,&lt;/p>
+&lt;p>&lt;em>amigo ¿puede ser que cerraste el puerto 22?&lt;/em>&lt;/p>
+&lt;p>Hermoso, salí de la casa, cerré la puerta y tiré la llave a una laguna.&lt;/p>
+&lt;p>Como la gente de digitalocean está preparada para personas como quien redacta, tiene una funcionalidad que si se accede
+desde la web (no tengo mucha idea como se resuelve por detrás) podes ejecutar una terminal en el navegador y acceder al droplet.&lt;/p>
+&lt;p>Configure de nuevo los puertos, y el resto medio que es historia.&lt;/p>
+&lt;h2 id="enseñanza-2">Enseñanza 2:&lt;/h2>
+&lt;blockquote>
+&lt;p>Documentar el conocimiento por más trivial que lo consideremo e invitemos a que el resto lo haga. Además de evitar
+varias reuniones de “transferencia de conocimiento” nos vamos a ahorrar varios arrobas, ¿te recuerda algo?&lt;/p>
+&lt;p>@fulanito puede darte una mano&lt;/p>
+&lt;/blockquote>
+&lt;p>En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas pero de las cuales aprendí mucho mucho
+de cada una de ellas, lamentablemente la aventura fue muy corta en tiempo.&lt;/p>
+&lt;p>Lo que sí me extrañó mucho a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a
+punto tal de parar motores (literal) y estar semanas sin entregar funcionalidades a producción porque tuvimos que sentarnos
+a entender cómo dejar esa línea de código local y exponerla a internet.&lt;/p>
+&lt;p>¿Qué errores detecte y que aprendí?&lt;/p>
+&lt;p>Documentar el conocimiento, por más trivial que lo consideremos, documentarlo.&lt;/p>
+&lt;p>O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más veces haciendo reuniones de
+“knowledge transfer” porque alguna persona estaba dejando el equipo?&lt;/p>
+&lt;p>¿o acaso eras vos quien lo estaba dejando?&lt;/p>
+&lt;h2 id="enseñanza-3">Enseñanza 3:&lt;/h2>
+&lt;blockquote>
+&lt;p>Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.&lt;/p>
+&lt;p>Enseñanza 3 bis:&lt;/p>
+&lt;p>Pensar y realizar pruebas antes de implementar cualquier cosa es una guía fundamental para entender el comportamiento de
+nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, &lt;strong>siempre&lt;/strong>,
+es una ganancia en el tiempo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas, Juan Moreno,
+¿qué es mejor para mí?, soluciones simples a problemas complejos.&lt;/p>
+&lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar
+la enseñanza número 3 y 3 bis.&lt;/p>
+&lt;p>En los tiempos pre pandemia, solía –costumbre que aun conservo desde lo remoto– arrancar temprano, tener un par de horas
+“a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.&lt;/p>
+&lt;p>Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un
+poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque
+había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.&lt;/p>
+&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junte con él a solas, le hice una pregunta:&lt;/p>
+&lt;p>&lt;em>¿cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
+&lt;p>Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y
+no agarrar a los primero que se cruzó en el camino.&lt;/p>
+&lt;p>Por último le dije que comprendía pero no compartía su enojo ni como lo había manejado.&lt;/p>
+&lt;p>Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:&lt;/p>
+&lt;blockquote>
+&lt;p>Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a
+la altura de las circunstancias. Compartir y adquirir conocimiento debería ser la guía.&lt;/p>
+&lt;p>Pensar y realizar test antes de implementar cualquier cosa es la guía fundamental para entender el comportamiento
+de nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, &lt;strong>siempre&lt;/strong>,
+es una ganancia en el tiempo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Para finalizar entiendo que voy a seguir cometiendo errores y compartiendo la experiencia que me dejaron,
+eso no me hace ni peor ni mejor que nadie.&lt;/p>
+&lt;p>Estoy convencido que es una sana manera de transitar la vida donde lo “normal” es mostrarnos “exitosos” o
+como me gusta hacer paralelismos con el fútbol, “jugar para la tribuna”, pero a fin de cuenta es solo una apariencia.&lt;/p></description></item></channel></rss>
