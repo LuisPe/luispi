@@ -1,10 +1,10 @@
 ---
-draft:  false
-title:  "El tamaño importa"
-description:  "Como crear imágenes livianas y ahorrar transferencia de networking y storage."
+draft: false
+title: "El tamaño importa"
+description: "Como crear imágenes livianas y ahorrar transferencia de networking y storage."
 date: 2022-06-11T17:49:18-03:00
-tags:  ["best-practices", "docker"]
-categories:  ["stop-copy-paste"]
+tags: ["best-practices", "docker"]
+categories: ["stop-copy-paste"]
 ---
 En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
@@ -82,7 +82,7 @@ Si volvemos a listar las imágenes nos vamos a encontrar con que ahora la imagen
 
 Reducimos, si las cuentas no fallan, 637 MB.
 
-Es una excelente "approach" pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pensando 
+Es una excelente "approach" pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pesando 
 cerca de 331 MB para disponibilizar un binario que pesa unos cuantos megabytes?.
 
 La respuesta es claramente, no.
