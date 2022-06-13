@@ -12,7 +12,6 @@ en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo
 
 Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.
 
----
 ## Preámbulo
 Hace tiempo noto mucho "hype" en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra, 
 mas bien todo lo contrario, me parece un excelente patrón.
