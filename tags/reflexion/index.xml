@@ -1,2 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reflexion on luispe</title><link>https://luispe.github.io/blog/tags/reflexion/</link><description>Recent content in reflexion on luispe</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 05 Jun 2022 21:53:34 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml"/><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/posts/my-first-post/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/posts/my-first-post/</guid><description>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos (opinión de quien redacta, mal llamado caso de éxito) y pocas, por no decir nulas, las ocasiones donde se comparten los errores (opinión de quien redacta, mal llamado fracaso).
-Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y entendí de la industria al compartirlos.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>reflexion on luispe</title>
+    <link>https://luispe.github.io/blog/tags/reflexion/</link>
+    <description>Recent content in reflexion on luispe</description>
+    <image>
+      <url>https://luispe.github.io/blog/papermod-cover.png</url>
+      <link>https://luispe.github.io/blog/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Jun 2022 21:53:34 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>De los errores se aprende, si se comparten, se crece</title>
+      <link>https://luispe.github.io/blog/posts/my-first-post/</link>
+      <pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/posts/my-first-post/</guid>
+      <description>Compartir y adquirir conocimiento debería ser la guía.</description>
+    </item>
+    
+  </channel>
+</rss>
