@@ -77,8 +77,8 @@ O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más
 > nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, **siempre**, 
 > es una ganancia en el tiempo.
 
-Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas, Juan Moreno,
-¿qué es mejor para mí?, soluciones simples a problemas complejos.
+Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas, 
+[Juan Moreno](https://www.linkedin.com/in/morenojp/), ¿qué es mejor para mí?, soluciones simples a problemas complejos.
 
 Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar 
 la enseñanza número 3 y 3 bis.
