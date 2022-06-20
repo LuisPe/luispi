@@ -3,16 +3,16 @@ draft: false
 title: "De interfaces y \"arquitectura hexagonal\""
 description: "Prevenir el abuso o mal uso de las interfaces favorece a la mantenibilidad del código."
 date: 2022-06-18T10:47:02-03:00
-tags: ["design", "golang", "go"]
+tags: ["best-practices", "golang", "go"]
 categories: ["stop-copy-paste"]
 ---
 En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.
 
-Seguramente se encuentren con algunas referencias a otra publicación sobre 
-[Hexagonal Architecture](https://luispe.github.io/blog/posts/hexagonal-architecture/), creo que parte del mal uso de las
-interfaces es la consecuencia de seguir a rajatabla publicaciones y no tomarse el tiempo para entender el concepto
-subyacente.
+Seguramente se encuentren con algunas referencias a otra publicación que hice sobre 
+[arquitectura hexagonal](https://luispe.github.io/blog/posts/hexagonal-architecture/), creo que parte del mal uso de las
+interfaces es la consecuencia de seguir a rajatabla publicaciones de "medium" y no tomarse el tiempo para entender el 
+concepto subyacente. 
 
 ## Preámbulo
 
@@ -45,7 +45,7 @@ type repository struct {
 	// repository client and configs go here
 }
 
-func New() Repository {
+func NewRepository() Repository {
 	return &repository{}
 }
 
@@ -70,7 +70,7 @@ type service struct {
 	repo Repository
 }
 
-func New(repo persistance.Repository) Service {
+func NewService(repo persistance.Repository) Service {
 	return &service{repo: repo}
 }
 
@@ -84,8 +84,8 @@ func (svc *service) Create(ctx context.Context, model *Beer) (*Beer, error) {
 }
 ```
 
-El anterior escenario es el que me encuentro comúnmente en los proyectos de Go y permítanme comentarles que yo también
-supe cometer el mismo error.
+El anterior escenario es el que me encuentro comúnmente en los proyectos de Go y quiero comentarles que yo también supe 
+cometer el mismo error.
 
 Todo bien luispi, ¿pero cuál es el error?
 
@@ -115,7 +115,7 @@ type Repository struct{
 	// repository client and configs go here
 }
 
-func New() Repository {
+func NewRepository() Repository {
 	return Repository{}
 }
 
@@ -127,7 +127,7 @@ func (repo *Repository) Save(ctx context.Context, model *beer.Beer) (*beer.Beer,
 
 Repasemos el cambio.
 
-En primer lugar eliminamos la interfaz y ahora la función `New()` retorna la estructura `Repository`, y en segundo lugar
+En primer lugar eliminamos la interfaz y ahora la función `NewRepository()` retorna la estructura `Repository`, y en segundo lugar
 agregamos a `Repository` el método save.
 
 Todo bien luispi, ¿pero qué ganamos con este cambio?
@@ -153,7 +153,7 @@ type Service struct {
 	repo Repository
 }
 
-func New(repo Repository) Service {
+func NewService(repo Repository) Service {
 	return Service{repo: repo}
 }
 
@@ -172,7 +172,7 @@ Repasemos el cambio.
 Realizamos varios cambios, en primer lugar declaramos la interfaz `Repository` y en la estructura `Service` inyectamos
 la interfaz para que pueda consumirse en los métodos del servicio.
 
-Al igual que con la capa de repositorio nuestro `New()` ahora retorna una estructura y no una interfaz.
+Al igual que con la capa de repositorio nuestro `NewService()` ahora retorna una estructura y no una interfaz.
 
 Por ultimo agregamos el método `Create` a nuestro `Service`.
 
@@ -189,7 +189,7 @@ Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar 
 
 ¡Que pase bien!
 
-
+---
 Fuentes:
 - [wiki oficial de Golang](https://github.com/golang/go/wiki/CodeReviewComments#interfaces)
 - [go interfaces misuse](https://8thlight.com/blog/go-interface-misuse/)
