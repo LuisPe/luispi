@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://luispe.github.io/blog/tags/best-practices/</loc>
-    <lastmod>2022-06-13T18:45:35-03:00</lastmod>
-  </url><url>
     <loc>https://luispe.github.io/blog/categories/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/posts/interfaces-correct-use/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/tags/design/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/tags/go/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/tags/golang/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/posts/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/categories/stop-copy-paste/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/tags/</loc>
+    <lastmod>2022-06-18T10:47:02-03:00</lastmod>
+  </url><url>
+    <loc>https://luispe.github.io/blog/tags/best-practices/</loc>
     <lastmod>2022-06-13T18:45:35-03:00</lastmod>
   </url><url>
     <loc>https://luispe.github.io/blog/posts/when-the-context-matter/</loc>
@@ -14,26 +38,8 @@
     <loc>https://luispe.github.io/blog/tags/docker/</loc>
     <lastmod>2022-06-13T18:45:35-03:00</lastmod>
   </url><url>
-    <loc>https://luispe.github.io/blog/</loc>
-    <lastmod>2022-06-13T18:45:35-03:00</lastmod>
-  </url><url>
-    <loc>https://luispe.github.io/blog/posts/</loc>
-    <lastmod>2022-06-13T18:45:35-03:00</lastmod>
-  </url><url>
-    <loc>https://luispe.github.io/blog/categories/stop-copy-paste/</loc>
-    <lastmod>2022-06-13T18:45:35-03:00</lastmod>
-  </url><url>
-    <loc>https://luispe.github.io/blog/tags/</loc>
-    <lastmod>2022-06-13T18:45:35-03:00</lastmod>
-  </url><url>
     <loc>https://luispe.github.io/blog/posts/lightweight-container-image/</loc>
     <lastmod>2022-06-11T17:49:18-03:00</lastmod>
-  </url><url>
-    <loc>https://luispe.github.io/blog/tags/go/</loc>
-    <lastmod>2022-06-09T21:53:34-03:00</lastmod>
-  </url><url>
-    <loc>https://luispe.github.io/blog/tags/golang/</loc>
-    <lastmod>2022-06-09T21:53:34-03:00</lastmod>
   </url><url>
     <loc>https://luispe.github.io/blog/posts/hexagonal-architecture/</loc>
     <lastmod>2022-06-09T21:53:34-03:00</lastmod>
