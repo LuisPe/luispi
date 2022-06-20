@@ -2,7 +2,7 @@
 draft: false
 title: "De interfaces y \"arquitectura hexagonal\""
 description: "Prevenir el abuso o mal uso de las interfaces favorece a la mantenibilidad del código."
-date: 2022-06-18T10:47:02-03:00
+date: 2022-06-20T10:47:02-03:00
 tags: ["best-practices", "golang", "go"]
 categories: ["stop-copy-paste"]
 ---
