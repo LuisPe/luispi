@@ -32,9 +32,7 @@ Imaginemos que en la capa de repositorio nos encontramos con lo siguiente
 package repository
 
 import (
-	"context"
-	
-	"url/to/project/internal/beer"
+    // pkg imports
 )
 
 type Repository interface {
@@ -60,7 +58,9 @@ Y en la capa de servicio lo siguiente
 ```go
 package service
 
-import "context"
+import (
+    // pkg imports
+)
 
 type Service interface {
 	Create(ctx context.Context, model *Beer) (*Beer, error)
@@ -70,7 +70,7 @@ type service struct {
 	repo Repository
 }
 
-func NewService(repo persistance.Repository) Service {
+func NewService(repo Repository) Service {
 	return &service{repo: repo}
 }
 
@@ -106,9 +106,7 @@ no la interfaz.
 package repository
 
 import (
-	"context"
-
-	"url/to/project/internal/beer"
+    // pkg imports
 )
 
 type Repository struct{
@@ -143,7 +141,9 @@ Ahora es el turno de editar la capa del consumidor (`consumer`), en este caso el
 ```go
 package service
 
-import "context"
+import (
+    // pkg imports
+)
 
 type Repository interface {
 	Save(ctx context.Context, beer *Beer) (*Beer, error)
