@@ -9,7 +9,16 @@
       <link>https://luispe.github.io/blog/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Jun 2022 21:53:34 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jul 2022 16:36:17 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deuda técnica</title>
+      <link>https://luispe.github.io/blog/posts/technical-debt/</link>
+      <pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/posts/technical-debt/</guid>
+      <description>La famosa deuda técnica y el impacto que produce en los equipos.</description>
+    </item>
+    
     <item>
       <title>De los errores se aprende, si se comparten, se crece</title>
       <link>https://luispe.github.io/blog/posts/mistakes-and-learnings/</link>
