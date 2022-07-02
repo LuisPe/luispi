@@ -40,7 +40,7 @@ contextos.
 ¿Por qué es nociva la deuda técnica?
 - En contexto de tests: es extremadamente difícil realizar cambios sin que explote todo.
 - En contexto de documentación: es extremadamente difícil agregar funcionalidad porque la falta de documentación hace que
-perdamos una cantidad enorme de tiempo tratando de entender como construidas están construidas las cosas.
+perdamos una cantidad enorme de tiempo tratando de entender como están construidas las cosas.
 - En contexto de equipo: tener deuda técnica hace que el conocimiento quede en las personas y deberíamos siempre, siempre,
 impulsar que el conocimiento esté distribuido.
 
