@@ -25,11 +25,11 @@ Al notar esto le preguntamos a "x" porque no pinto alrededor de los marcos de la
 
 \- Disculpe, es una deuda técnica que la podemos atacar a futuro.
 
-¿Qué sentirías si te encuentras con una situación asi?
+¿Qué sentirías si te encontrás con una situación asi?
 
 ¿Por qué en el contexto de la tecnología avalamos tener deuda técnica?
 
-## Conclusiones
+## Repensemos
 
 En tecnología es muy común encontrarnos con este escenario y lamentablemente lo naturalizamos y como comente en una
 [publicación anterior](https://luispe.github.io/blog/posts/mistakes-and-learnings/) donde hablo entre otras cosas sobre
@@ -37,9 +37,19 @@ la importancia de documentar y hacer test, es algo común que siempre veo como "
 de pintar la casa creo que nos expone como podemos tener "distinta vara" para medir la misma situación en diferentes 
 contextos.
 
-La deuda técnica es muy agotadora para los equipos y donde hoy pensamos que estamos ganando tiempo te aseguro que pronto, 
-muy pronto, vas a perder agilidad y velocidad en el desarrollo.
+¿Por qué es nociva la deuda técnica?
+- En contexto de tests: es extremadamente difícil realizar cambios sin que explote todo.
+- En contexto de documentación: es extremadamente difícil agregar funcionalidad porque la falta de documentación hace que
+perdamos una cantidad enorme de tiempo tratando de entender como construidas están construidas las cosas.
+- En contexto de equipo: tener deuda técnica hace que el conocimiento quede en las personas y deberíamos siempre, siempre,
+impulsar que el conocimiento esté distribuido.
 
-Para finalizar espero que repensemos juntos la "deuda técnica" y que nos incomode tenerla.
+
+## Conclusiones
+
+La deuda técnica es muy agotadora para los equipos y donde hoy pensamos que estamos ganando tiempo te aseguro que pronto,
+muy pronto, se pierde agilidad y velocidad en el desarrollo.
 
 Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.
+
+Para finalizar espero que repensemos juntos la "deuda técnica" y que nos incomode tenerla.
