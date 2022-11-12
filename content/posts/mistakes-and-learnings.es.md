@@ -113,3 +113,5 @@ eso no me hace ni peor ni mejor que nadie.
 
 Estoy convencido que es una sana manera de transitar la vida donde lo “normal” es mostrarnos “exitosos” o 
 como me gusta hacer paralelismos con el fútbol, “jugar para la tribuna”, pero a fin de cuenta es solo una apariencia.
+
+¡Gracias por leerme! 👋🏽

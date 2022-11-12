@@ -53,3 +53,5 @@ muy pronto, se pierde agilidad y velocidad en el desarrollo.
 Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.
 
 Para finalizar espero que repensemos juntos la "deuda técnica" y que nos incomode tenerla.
+
+¡Gracias por leerme! 👋🏽

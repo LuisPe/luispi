@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "De interfaces y \"copy paste\""
+title: "Interfaces y \"copy paste\""
 description: "Prevenir el abuso o mal uso de las interfaces favorece a la mantenibilidad del código."
 date: 2022-06-20T10:47:02-03:00
 tags: ["best-practices", "golang", "go"]
@@ -26,7 +26,7 @@ falso y refactorizarlo para hacer un buen uso de las interfaces.
 
 Para simplificar un poco la publicación vamos a acotar el caso de uso y lo reduciremos a la capa de servicio y repositorio.
 
-Imaginemos que en la capa de repositorio nos encontramos con lo siguiente
+Imaginemos que en la capa de repositorio nos encontramos con lo siguiente:
 
 ```go
 package repository
@@ -53,7 +53,7 @@ func (repo *repository) Save(ctx context.Context, model *beer.Beer) (*beer.Beer,
 }
 ```
 
-Y en la capa de servicio lo siguiente
+Y en la capa de servicio lo siguiente:
 
 ```go
 package service
@@ -125,7 +125,7 @@ func (repo *Repository) Save(ctx context.Context, model *beer.Beer) (*beer.Beer,
 
 Repasemos el cambio.
 
-En primer lugar eliminamos la interfaz y ahora la función `NewRepository()` retorna la estructura `Repository`, y en segundo lugar
+En primer lugar, eliminamos la interfaz y ahora la función `NewRepository()` retorna la estructura `Repository`, y en segundo lugar
 agregamos a `Repository` el método save.
 
 Todo bien luispi, ¿pero qué ganamos con este cambio?
