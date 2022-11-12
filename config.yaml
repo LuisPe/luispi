@@ -17,9 +17,30 @@ minify:
   # minifyOutput: true
 
 languages:
-  en:
-    languageName: "English"
+  es:
+    languageName: "es"
     weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: About
+          url: about/
+          weight: 1
+        - name: Archive
+          url: posts/
+          weight: 2
+        - name: Tags
+          url: tags/
+          weight: 3
+        - name: Categories
+          url: categories/
+          weight: 4
+  en:
+    languageName: "en"
+    weight: 2
     taxonomies:
       category: categories
       tag: tags
