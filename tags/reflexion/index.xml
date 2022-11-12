@@ -11,30 +11,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Aniversarios</title>
+      <title>Anniversaries</title>
       <link>https://luispe.github.io/blog/posts/career/</link>
       <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/career/</guid>
-      <description>Un aniversario, dos equipos y un ascenso</description>
+      <description>One anniversary, two teams and one promotion</description>
     </item>
     
     <item>
-      <title>Deuda técnica</title>
+      <title>Technical debt</title>
       <link>https://luispe.github.io/blog/posts/technical-debt/</link>
       <pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/technical-debt/</guid>
-      <description>La famosa deuda técnica y el impacto que produce en los equipos.</description>
+      <description>The famous technical debt and the impact it has on the teams.</description>
     </item>
     
     <item>
-      <title>De los errores se aprende, si se comparten, se crece</title>
+      <title>You learn from your mistakes, and if you share them, you grow.</title>
       <link>https://luispe.github.io/blog/posts/mistakes-and-learnings/</link>
       <pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/mistakes-and-learnings/</guid>
-      <description>Compartir y adquirir conocimiento debería ser la guía.</description>
+      <description>Sharing and acquiring knowledge should be the guide.</description>
     </item>
     
   </channel>

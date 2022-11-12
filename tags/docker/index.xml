@@ -11,21 +11,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 13 Jun 2022 18:45:35 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cuando el contexto importa</title>
+      <title>When context matters</title>
       <link>https://luispe.github.io/blog/posts/when-the-context-matter/</link>
       <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/when-the-context-matter/</guid>
-      <description>Pequeños detalles pueden evitarnos grandes contratiempos</description>
+      <description>Small details can save us from major setbacks</description>
     </item>
     
     <item>
-      <title>El tamaño importa</title>
+      <title>Size matters</title>
       <link>https://luispe.github.io/blog/posts/lightweight-container-image/</link>
       <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/lightweight-container-image/</guid>
-      <description>Como crear imágenes livianas y ahorrar transferencia de networking y storage.</description>
+      <description>How to create lightweight images and save networking and storage transfer.</description>
     </item>
     
   </channel>

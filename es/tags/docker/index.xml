@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on luispe</title>
+    <link>https://luispe.github.io/blog/es/tags/docker/</link>
+    <description>Recent content in docker on luispe</description>
+    <image>
+      <url>https://luispe.github.io/blog/papermod-cover.png</url>
+      <link>https://luispe.github.io/blog/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jun 2022 18:45:35 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cuando el contexto importa</title>
+      <link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link>
+      <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid>
+      <description>Pequeños detalles pueden evitarnos grandes contratiempos</description>
+    </item>
+    
+    <item>
+      <title>El tamaño importa</title>
+      <link>https://luispe.github.io/blog/es/posts/lightweight-container-image/</link>
+      <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/lightweight-container-image/</guid>
+      <description>Como crear imágenes livianas y ahorrar transferencia de networking y storage.</description>
+    </item>
+    
+  </channel>
+</rss>

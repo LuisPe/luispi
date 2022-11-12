@@ -11,12 +11,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>De interfaces y &#34;copy paste&#34;</title>
+      <title>Interfaces and &#34;copy paste&#34;</title>
       <link>https://luispe.github.io/blog/posts/interfaces-correct-use/</link>
       <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/interfaces-correct-use/</guid>
-      <description>Prevenir el abuso o mal uso de las interfaces favorece a la mantenibilidad del código.</description>
+      <description>Preventing the abuse or misuse of interfaces favors code maintainability.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate>
       
       <guid>https://luispe.github.io/blog/posts/hexagonal-architecture/</guid>
-      <description>Como desacoplar nuestras capas del sistema correctamente</description>
+      <description>How to decouple our system layers correctly</description>
     </item>
     
   </channel>

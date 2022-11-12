@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>luispe</title>
+    <link>https://luispe.github.io/blog/es/</link>
+    <description>Recent content on luispe</description>
+    <image>
+      <url>https://luispe.github.io/blog/papermod-cover.png</url>
+      <link>https://luispe.github.io/blog/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aniversarios</title>
+      <link>https://luispe.github.io/blog/es/posts/career/</link>
+      <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/career/</guid>
+      <description>Un aniversario, dos equipos y un ascenso</description>
+    </item>
+    
+    <item>
+      <title>Deuda técnica</title>
+      <link>https://luispe.github.io/blog/es/posts/technical-debt/</link>
+      <pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/technical-debt/</guid>
+      <description>La famosa deuda técnica y el impacto que produce en los equipos.</description>
+    </item>
+    
+    <item>
+      <title>Interfaces y &#34;copy paste&#34;</title>
+      <link>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</guid>
+      <description>Prevenir el abuso o mal uso de las interfaces favorece a la mantenibilidad del código.</description>
+    </item>
+    
+    <item>
+      <title>Cuando el contexto importa</title>
+      <link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link>
+      <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid>
+      <description>Pequeños detalles pueden evitarnos grandes contratiempos</description>
+    </item>
+    
+    <item>
+      <title>El tamaño importa</title>
+      <link>https://luispe.github.io/blog/es/posts/lightweight-container-image/</link>
+      <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/lightweight-container-image/</guid>
+      <description>Como crear imágenes livianas y ahorrar transferencia de networking y storage.</description>
+    </item>
+    
+    <item>
+      <title>Hexagonal Architecture</title>
+      <link>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</link>
+      <pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</guid>
+      <description>Como desacoplar nuestras capas del sistema correctamente</description>
+    </item>
+    
+    <item>
+      <title>De los errores se aprende, si se comparten, se crece</title>
+      <link>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</link>
+      <pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</guid>
+      <description>Compartir y adquirir conocimiento debería ser la guía.</description>
+    </item>
+    
+  </channel>
+</rss>
