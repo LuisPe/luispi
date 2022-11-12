@@ -100,6 +100,4 @@ quedamos tranquilos de que estamos acortando el margen de contratiempos.
 
 Para no aburrirte y por el momento hagamos una pausa.
 
-¡Que pase bien!
-
-
+¡Que pase bien! 👋🏽
