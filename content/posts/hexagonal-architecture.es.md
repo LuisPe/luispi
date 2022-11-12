@@ -30,7 +30,7 @@ aplica para cualquier lenguaje.
 > 
 >Anotación en nuestro modelo de dominio e.g `json`
 
-Un error que solía cometer es tener las anotaciones `json` o `validate` o cualquier anotación en el modelo de dominio.
+Un error que solía cometer es tener las anotaciones `json` o `gorm` o cualquier anotación en el modelo de dominio.
 
 Imaginemos que tenemos nuestro modelo `/user/user.go` con el siguiente contenido
 
