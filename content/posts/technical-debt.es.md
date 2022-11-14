@@ -17,13 +17,13 @@ Después de consultar por varios presupuestos decidimos contratar los servicios 
 
 Al cabo de unos dias "x" nos comenta:
 
-\- El trabajo está terminado.
+\- _El trabajo está terminado._
 
 Nos paramos en el frente de la casa y notamos que alrededor de los marcos de la ventana no está pintado en algunos casos.
 
 Al notar esto le preguntamos a "x" porque no pinto alrededor de los marcos de la ventana, a lo que nos responde:
 
-\- Disculpe, es una deuda técnica que la podemos atacar a futuro.
+\- _Disculpá, deuda técnica que la podemos atacar a futuro._
 
 ¿Qué sentirías si te encontrás con una situación asi?
 
@@ -31,8 +31,8 @@ Al notar esto le preguntamos a "x" porque no pinto alrededor de los marcos de la
 
 ## Repensemos
 
-En tecnología es muy común encontrarnos con este escenario y lamentablemente lo naturalizamos y como comente en una
-[publicación anterior](https://luispe.github.io/blog/posts/mistakes-and-learnings/) donde hablo entre otras cosas sobre
+En tecnología es muy común encontrarnos con este escenario y lamentablemente lo naturalizamos y como comente en otra
+[publicación](https://luispe.github.io/blog/posts/mistakes-and-learnings/) donde hablo entre otras cosas sobre
 la importancia de documentar y hacer test, es algo común que siempre veo como "deuda técnica", repensando en el ejemplo
 de pintar la casa creo que nos expone como podemos tener "distinta vara" para medir la misma situación en diferentes 
 contextos.
@@ -47,7 +47,7 @@ impulsar que el conocimiento esté distribuido.
 
 ## Conclusiones
 
-La deuda técnica es muy agotadora para los equipos y donde hoy pensamos que estamos ganando tiempo te aseguro que pronto,
+La deuda técnica es **muy agotadora** para los equipos y donde hoy pensamos que estamos ganando tiempo te aseguro que pronto,
 muy pronto, se pierde agilidad y velocidad en el desarrollo.
 
 Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.
