@@ -13,8 +13,8 @@ August 29, 2022 the promotions in the company were made public, I am part of the
 I wanted to write some conclusions that I have drawn from these 365 days, two teams and a promotion.
 
 ## Pillars
-Those who know me whether in my work or personal life, hear me talk about three principles, 
-with which I try to I try to mobilize myself and look around me:
+Those who know me whether in my work or in my personal life, hear me talk about three principles
+with which I try to mobilize myself and i search around me:
 1. Trust
 2. Humility
 3. Respect
