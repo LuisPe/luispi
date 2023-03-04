@@ -29,7 +29,7 @@ en la empresa es que me escriba [Tonga](https://www.linkedin.com/in/gastonirigoy
 gesto y le comente que iba a seguir por el camino que me llevo a que la empresa tenga el
 reconocimiento que tuvo, y le nombre estos pilares que acabo de enumerar.
 
-Casi un año después pasaron dos cosas increíblemente impactantes, que me marcaron y casi
+Seis meses después pasaron dos cosas increíblemente impactantes, que me marcaron y casi
 a modo de agradecimiento quiero que quede escrito.
 
 ### Ya no soy un marciano
@@ -42,17 +42,23 @@ el sentimiento per se.
 Hace pocas semanas Tonga en una charla descontracturada habló entre otras muchas cosas
 de la humildad, quede flasheado, por la forma en la que habló, la potencia del discurso
 y la cantidad de cosas que internamente se me estaban jugando, es la primera vez en la
-vida que dejaba de sentirme como un marciano en la industria del software.
+vida que dejaba de sentirme como un marciano en mundo IT.
 
 Me emocioné profundamente, quiero agradecerle y no sé si lo sabrá, 
 pero en mi universo es extremadamente valioso encontrar personas 
 con esa manera de transitar la vida.
 
+me marcó,
+
+gracias,
+
+me lo llevo para siempre.
+
 ### Es fácil dibujar una paloma, lo difícil es que vuele y que cante
 
 Lamentablemente en IT es fácil encontrarse con personas apresuradas por llegar,
-sin importar el costo, con la creencia que por llegar y sentarse en "esa mesa" van a tener
-un poder mayor de tracción, y no, todo lo contrario, tal vez falte "el superpoder".
+sin importar el costo, con la creencia que por llegar y sentarse en "la mesa" van a tener
+un poder mayor de tracción, y no, tal vez falte "el superpoder".
 
 Hace un ratito nomás hablé que hace poco me pasaron dos cosas increíblemente impactantes,
 vamos con la segunda de ellas, el superpoder.
@@ -66,6 +72,8 @@ Todos los seres humanos al nacer tenemos dos habilidades innatas, resolver probl
 ¿qué pasaría si un bebe, en vez de llorar cuando tiene hambre o algún dolor, se riera?
 
 Todos nos cagaríamos de risa, y el bebe o bien pasaría hambre o nadie se preocuparía por tratar ese dolor.
+
+**Instintivamente, sabemos resolver problemas y expresarnos.**
 
 ¿Por qué cuento esto?, al pasar el tiempo y por muchos motivos diversos nos vamos
 poniendo capas de autocensura, y no importa el puesto o rol que tengamos, perdemos ese
