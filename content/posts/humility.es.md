@@ -2,7 +2,6 @@
 title: "Humildad"
 description: "Un superpoder, increíblemente mas poderoso que cualquier puesto"
 date: 2023-03-01T21:32:15-03:00
-draft: true
 tags: ["reflexion"]
 ---
 

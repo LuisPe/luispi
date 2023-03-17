@@ -2,7 +2,6 @@
 title: "Humility"
 description: "A superpower, incredibly more powerful than any other position."
 date: 2023-03-01T21:32:15-03:00
-draft: true
 tags: ["reflexion"]
 ---
 
