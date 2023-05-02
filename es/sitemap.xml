@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://luispe.github.io/blog/es/posts/humility/</loc>
-    <lastmod>2023-03-01T21:32:15-03:00</lastmod>
+    <loc>https://luispe.github.io/blog/es/posts/career/</loc>
+    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://luispe.github.io/blog/posts/humility/"
+                href="https://luispe.github.io/blog/posts/career/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://luispe.github.io/blog/es/posts/humility/"
+                href="https://luispe.github.io/blog/es/posts/career/"
                 />
   </url><url>
     <loc>https://luispe.github.io/blog/es/</loc>
-    <lastmod>2023-03-01T21:32:15-03:00</lastmod>
+    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://luispe.github.io/blog/es/posts/</loc>
-    <lastmod>2023-03-01T21:32:15-03:00</lastmod>
+    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://luispe.github.io/blog/es/tags/reflexion/</loc>
-    <lastmod>2023-03-01T21:32:15-03:00</lastmod>
+    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://luispe.github.io/blog/es/tags/</loc>
-    <lastmod>2023-03-01T21:32:15-03:00</lastmod>
+    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -65,19 +65,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://luispe.github.io/blog/es/tags/"
-                />
-  </url><url>
-    <loc>https://luispe.github.io/blog/es/posts/career/</loc>
-    <lastmod>2022-09-02T19:11:03-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://luispe.github.io/blog/posts/career/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://luispe.github.io/blog/es/posts/career/"
                 />
   </url><url>
     <loc>https://luispe.github.io/blog/es/posts/technical-debt/</loc>
