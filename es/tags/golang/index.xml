@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>golang on luispe</title>
+    <title>Golang on luispe</title>
     <link>https://luispe.github.io/blog/es/tags/golang/</link>
-    <description>Recent content in golang on luispe</description>
+    <description>Recent content in Golang on luispe</description>
     <image>
       <url>https://luispe.github.io/blog/papermod-cover.png</url>
       <link>https://luispe.github.io/blog/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
     <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interfaces y &#34;copy paste&#34;</title>

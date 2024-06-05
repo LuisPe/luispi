@@ -9,9 +9,10 @@
       <link>https://luispe.github.io/blog/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
     <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>reflexion</title>
+      <title>Reflexion</title>
       <link>https://luispe.github.io/blog/es/tags/reflexion/</link>
       <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
       
@@ -20,7 +21,7 @@
     </item>
     
     <item>
-      <title>best-practices</title>
+      <title>Best-Practices</title>
       <link>https://luispe.github.io/blog/es/tags/best-practices/</link>
       <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
       
@@ -29,7 +30,7 @@
     </item>
     
     <item>
-      <title>go</title>
+      <title>Go</title>
       <link>https://luispe.github.io/blog/es/tags/go/</link>
       <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
       
@@ -38,7 +39,7 @@
     </item>
     
     <item>
-      <title>golang</title>
+      <title>Golang</title>
       <link>https://luispe.github.io/blog/es/tags/golang/</link>
       <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
       
@@ -47,7 +48,7 @@
     </item>
     
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://luispe.github.io/blog/es/tags/docker/</link>
       <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
       

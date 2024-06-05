@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>docker on luispe</title>
+    <title>Docker on luispe</title>
     <link>https://luispe.github.io/blog/tags/docker/</link>
-    <description>Recent content in docker on luispe</description>
+    <description>Recent content in Docker on luispe</description>
     <image>
       <url>https://luispe.github.io/blog/papermod-cover.png</url>
       <link>https://luispe.github.io/blog/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 13 Jun 2022 18:45:35 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When context matters</title>
