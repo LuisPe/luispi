@@ -57,8 +57,7 @@ I will not tell the details they know what I mean, but I wanted to thank them pu
 #### With you, to the war with a toothpick
 I talked about my first stage in Pomelo, let's move on to the second, "Migration to the Infrastructure team".
 
-From January to this part and from minute zero [Juanjo](https://www.linkedin.com/in/juanjosebehrend/),
-[Fede](https://www.linkedin.com/in/federicodon/) and [Gus](https://www.linkedin.com/in/gustavo-adrian-gimenez-4894589b/) 
+From January to this part and from minute zero [Juanjo](https://www.linkedin.com/in/juanjosebehrend/) and [Gus](https://www.linkedin.com/in/gustavo-adrian-gimenez-4894589b/) 
 and knowing me, I would say nothing, gave me the space to create a space for debates and cross-examination.
 They listened to my proposals, made them their own, and together we carried them forward, 
 they made parts of theirs I took them as my own and so surrounded by a pile of people with a 

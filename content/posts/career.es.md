@@ -56,9 +56,8 @@ los pormenores ellos saben a qué me refiero, pero quería agradecerles pública
 #### Con ustedes, a la guerra con un escarbadientes
 Hablé de mi primera etapa en Pomelo, pasemos a la segunda, "Migración al equipo de Infraestructura".
 
-De enero a esta parte y desde el minuto cero [Juanjo](https://www.linkedin.com/in/juanjosebehrend/),
-[Fede](https://www.linkedin.com/in/federicodon/) y [Gus](https://www.linkedin.com/in/gustavo-adrian-gimenez-4894589b/)
-y conociéndome, diría que nada, me dieron el espacio para crear un espacio de debates y repreguntas. Escucharon
+De enero a esta parte y desde el minuto cero [Juanjo](https://www.linkedin.com/in/juanjosebehrend/) y [Gus](https://www.linkedin.com/in/gustavo-adrian-gimenez-4894589b/)
+y conociéndome, diría que nada, me dieron el espacio para crear un espacio de debate y repreguntas. Escucharon
 mis propuestas, las hicieron suyas, y entre todos las llevamos adelante, me hicieron partes de las suyas las tome como 
 propias y así rodeado de una pila de personas con una calidad humana de otro planeta hicimos y estamos haciendo cosas
 increíbles.
