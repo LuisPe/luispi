@@ -26,7 +26,7 @@ To give a few examples.
 
 Let us imagine that we have the following Dockerfile to create our container image e.g:
 
-```
+```dockerfile
 FROM golang:1.18
 WORKDIR /build
 
@@ -61,7 +61,7 @@ our Dockerfile, among other things.
 
 Well, let's make a small change in our Dockerfile and build our image again
 
-```
+```dockerfile
 FROM golang:1.18-alpine3.16
 WORKDIR /build
 COPY go.mod go.sum ./
@@ -102,7 +102,7 @@ and a second stage where we are going to make it available for use.
 
 Let's get to work, let's open and make the following modifications to our Dockerfile.
 
-```
+```dockerfile
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
