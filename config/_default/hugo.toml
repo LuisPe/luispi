@@ -1,6 +1,6 @@
-baseURL = "https://example.com"
+baseURL = "https://luispe.github.io/blog"
 languageCode = "en"
-title = "Monochrome"
+title = "luispe"
 theme = "hugo-theme-monochrome"
 defaultContentLanguage = "en"
 enableEmoji = true
