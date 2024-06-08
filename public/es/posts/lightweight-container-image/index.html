@@ -1,0 +1,472 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang='es'><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href='http://localhost:1313/favicon.ico' type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El tamaño importa - Monochrome</title>
+
+    
+    <meta name="description" content="Como crear imágenes livianas y ahorrar transferencia de networking y storage." />
+    
+
+    
+
+    
+    <meta name="author" content="luispe" />
+    
+
+    
+        <meta property="og:url" content="http://localhost:1313/es/posts/lightweight-container-image/">
+  <meta property="og:site_name" content="Monochrome">
+  <meta property="og:title" content="El tamaño importa">
+  <meta property="og:description" content="Como crear imágenes livianas y ahorrar transferencia de networking y storage.">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-11T17:49:18-03:00">
+    <meta property="article:modified_time" content="2022-06-11T17:49:18-03:00">
+    <meta property="article:tag" content="Best-Practices">
+    <meta property="article:tag" content="Docker">
+
+    
+
+    
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="El tamaño importa">
+  <meta name="twitter:description" content="Como crear imágenes livianas y ahorrar transferencia de networking y storage.">
+
+    <link rel="stylesheet" href="/style.css" integrity="">
+
+
+
+    <link rel="stylesheet" href="/lib/css/prism.css" integrity="">
+
+
+
+    
+    <script>
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'light';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+<script defer src="/js/header.js" integrity=""></script>
+
+
+
+    <script defer src="/js/zooming.js" integrity=""></script>
+
+
+
+
+
+
+
+    
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        <script defer src="/js/prism.js" integrity="" data-manual></script>
+    
+
+
+
+    
+    
+    
+    <script defer src="/js/search-es.js" integrity=""></script>
+
+
+
+
+
+
+    
+</head>
+<body><header>
+    <div id="header_left">
+        <div id="sidebar_btn">
+            <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+            <label id="sidebar_btn_label" for="sidebar_btn_input">
+                <svg id="menu_icon" width="26px" height="26px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</svg>
+            </label>
+            <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
+                <div id="sidebar_canvas_overlay"></div>
+            </label>
+            <div id="sidebar">
+                <ul><li>
+                            <a href="/about/">Acerca de</a></li><li>
+                            <a href="/posts/">Posts</a></li></ul>
+            </div>
+        </div>
+    
+        <div class="brand">
+            <div>
+                <a href="/es/">luispe</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <div id="theme_tool">
+            <svg id="dark_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+</svg>
+
+</svg>
+            <svg id="light_mode_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+
+</svg>
+        </div>
+
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+
+</svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+</svg>
+
+</svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
+        
+
+        
+            <div id="translation_tool" class="dropdown-wrapper pure-menu pure-menu-horizontal toolbox-btn" onclick="void(0)">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <div class="dropdown-btn pure-menu-link">
+                            <svg width="18px" height="18px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+
+</svg>
+                            <span class="dropdown-desc">Español</span>
+                        </div>
+                        <ul class="pure-menu-children">
+                            
+                            <li class="pure-menu-item">
+                                <a href="http://localhost:1313/" class="pure-menu-link">English</a>
+                            </li>
+                            
+                            <li class="pure-menu-item">
+                                <a href="http://localhost:1313/es/" class="pure-menu-link">Español</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        
+    </div>
+</header>
+<nav id="navbar" class="pure-menu">
+    <ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/about/" class="pure-menu-link">Acerca de</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/posts/" class="pure-menu-link">Posts</a>
+                    
+                </li></ul>
+</nav>
+<main>
+            <div id="content" class="content-margin">
+                
+    
+    <div class="collapsible-menu-wrapper"><div class="collapsible-menu-type"><span>Table of contents</span></div><div class="collapsible-menu">
+        
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preámbulo">Preámbulo</a></li>
+    <li><a href="#comencemos">Comencemos</a></li>
+    <li><a href="#propuestaaprendizaje">Propuesta/aprendizaje</a>
+      <ul>
+        <li><a href="#vamos-con-la-primera-propuesta">Vamos con la primera propuesta.</a></li>
+        <li><a href="#segunda-propuesta">Segunda propuesta</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </div></div>
+
+
+
+    <div class="content-margin">
+
+
+
+<article >
+    
+    
+        
+        
+    
+    <p>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
+de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
+para cualquier lenguaje, ¡vamos!</p>
+
+<h2 id="preámbulo" class="header-anchor-wrapper">Preámbulo
+  <a href="#pre%c3%a1mbulo" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
+no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:</p>
+<ul>
+<li>Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.</li>
+<li>Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
+va a ser la inicialización del container, y con esto ganamos en dos puntos.
+<ul>
+<li>Costos, y con costos nos referimos al uso del networking que utilicemos para obtener la imagen y luego inicializar
+el container.</li>
+<li>Velocidad en auto scaling, está claro que obtener una imagen de 20 MB versus una de 900 MB la primera, claro está, va a
+inicializarse con mayor velocidad.</li>
+</ul>
+</li>
+</ul>
+<p>Por dar algunos ejemplos.</p>
+
+<h2 id="comencemos" class="header-anchor-wrapper">Comencemos
+  <a href="#comencemos" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+<p>Imaginemos que tenemos el siguiente Dockerfile para crear nuestra imagen de container e.g:</p>
+<pre  class="mc-prism hide language-text" ><code>FROM golang:1.18
+WORKDIR /build
+
+COPY go.mod go.sum ./
+RUN go mod download &amp;&amp; go mod verify
+
+COPY . ./
+RUN go build -o ./myapp ./path/to/main
+
+ENTRYPOINT [&quot;/myapp&quot;]
+</code></pre>
+<p>Construyamos nuestra imagen <code>docker build -t myapp:0.0.1 .</code></p>
+<p>Si listamos las imágenes que tengamos en nuestro host vamos a poder observar que el peso es de aproximadamente <code>968 MB</code></p>
+<p>What? 968 MB solo para disponibilizar un binario que pesa unos pocos megas?</p>
+<blockquote>
+<p>NOTA</p>
+<p>En todas mis publicaciones vas a encontrarte con conceptos, la idea es que aprendamos y no copiemos y peguemos.
+Por dar un ejemplo <code>RUN go build -o ./myapp ./path/to/main</code> donde <code>./path/to/main</code> debería estar el main de tu app de
+Golang</p>
+</blockquote>
+
+<h2 id="propuestaaprendizaje" class="header-anchor-wrapper">Propuesta/aprendizaje
+  <a href="#propuestaaprendizaje" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h2>
+
+
+<h3 id="vamos-con-la-primera-propuesta" class="header-anchor-wrapper">Vamos con la primera propuesta.
+  <a href="#vamos-con-la-primera-propuesta" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p>Siempre es una buena práctica usar imágenes <code>-alpine</code>, por convención en el universo de container cuando disponibilizamos
+una imagen <code>-alpine</code> estamos indicando al cliente que es una imagen reducida en tamaño y la que deberíamos utilizar en
+nuestro Dockerfile, entre otras cosas.</p>
+<p>Bien, realicemos un pequeño cambio en nuestro Dockerfile y volvamos a construir nuestra imagen</p>
+<pre  class="mc-prism hide language-text" ><code>FROM golang:1.18-alpine3.16
+WORKDIR /build
+COPY go.mod go.sum ./
+RUN go mod download &amp;&amp; go mod verify
+
+COPY . ./
+RUN go build -o ./myapp ./path/to/main
+
+ENTRYPOINT [&quot;/myapp&quot;]
+</code></pre>
+<p>Si prestamos atención el cambio fue sutil, pero efectivo, pasamos de <code>FROM golang:1.18</code> a <code>FROM golang:1.18-alpine3.16</code></p>
+<p>Construyamos nuevamente nuestra imagen <code>docker build -t myapp:0.0.2 .</code></p>
+<p>Si volvemos a listar las imágenes nos vamos a encontrar con que ahora la imagen <code>myapp:0.0.2</code> pesa aproximadamente <code>331 MB</code></p>
+<p>Reducimos, si las cuentas no fallan, 637 MB.</p>
+<p>Es una excelente &ldquo;approach&rdquo; pero repensemos. ¿Hace falta tener una imagen con todo Golang dentro del container pesando
+cerca de 331 MB para disponibilizar un binario que pesa unos cuantos megabytes?.</p>
+<p>La respuesta es claramente, no.</p>
+
+<h3 id="segunda-propuesta" class="header-anchor-wrapper">Segunda propuesta
+  <a href="#segunda-propuesta" class="header-anchor-link">
+    <svg width="16px" height="16px" viewBox="0 0 24 24">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+    stroke-linejoin="round">
+    <line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line>
+</svg>
+
+</svg>
+  </a>
+</h3>
+
+<p>La tecnología de container tiene una característica excelente, que para nuestro caso, nos va a ayudar a construir una
+imagen de container muy liviana, por si no lo sabías, estoy hablando de Multistage, te comparto la
+<a href="https://docs.docker.com/develop/develop-images/multistage-build/">documentación oficial</a> para que profundices sobre esta
+característica.</p>
+<p>¿En qué consiste Multistage?, se trata de construir imágenes por etapas pudiendo así compartir datos entre cada una de
+ellas y vamos a obtener una imagen final de un tamaño muy pequeño.</p>
+<p>Lo primero que vamos a hacer es tener una primera etapa de build, donde vamos a construir el binario, y una segunda
+etapa donde vamos a dejarlo disponible para utilizarlo.</p>
+<p>Manos a la obra, abramos y realicemos las siguientes modificaciones a nuestro Dockerfile.</p>
+<pre  class="mc-prism hide language-text" ><code># First layer use to build a Golang binary
+FROM golang:1.18-alpine3.16 AS builder
+WORKDIR /build
+COPY go.mod go.sum ./
+RUN go mod download &amp;&amp; go mod verify
+
+COPY . ./
+RUN go build -o ./myapp ./path/to/main
+
+# Final layer expose app to minimal docker image
+FROM alpine:3.16.0
+
+COPY --from=builder /build/myapp /myapp
+
+ENTRYPOINT [&quot;/myapp&quot;]
+</code></pre>
+<p>Como podemos observar la primera modificación consiste en taguear la primera etapa como build.
+Luego en la segunda y etapa final con la siguiente línea <code>COPY --from=builder /build/myapp /myapp</code> copiamos el binario
+desde la etapa que tagueamos como <code>builder</code> y lo disponibilizamos en una imagen alpine.</p>
+<p>Si listamos ahora nuestras imágenes podemos observar que pesa aproximadamente 9 MB, si si, escribi correctamente
+9 megabytes &#x1f60e;.</p>
+<p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.</p>
+<p>Para no aburrirte y por el momento hagamos una pausa.</p>
+<p>¡Que pase bien!</p>
+
+</article>
+</div>
+
+
+                
+                    
+                
+            </div>
+        </main>
+</body>
+</html>

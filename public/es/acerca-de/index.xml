@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Monochrome</title>
+    <link>http://localhost:1313/es/acerca-de/</link>
+    <description>Recent content in About on Monochrome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 10 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/es/acerca-de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acerca de mí</title>
+      <link>http://localhost:1313/es/acerca-de/about/</link>
+      <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/es/acerca-de/about/</guid>
+      <description>Hola 👋🏼 En el blog vas a encontrarte con reflexiones y aprendizajes sobre mi vida en general.
+No pretendo ser ejemplo de nada ni nadie, las opiniones que dejo acá son mías, espero no ofender a nadie con ellas.
+Mi nombre es Luis Pedro &amp;ndash;luispe&amp;ndash; tengo 38 años nací y crecí en Gonnet, una localidad de La Plata, BsAs, Argentina. De mi infancia conservo a una tonelada de amigos con los cuales ya compartimos 35 años, ahora que lo escribo es una locura.</description>
+    </item>
+    
+  </channel>
+</rss>

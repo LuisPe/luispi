@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stop-Copy-Paste on Monochrome</title>
+    <link>http://localhost:1313/es/categories/stop-copy-paste/</link>
+    <description>Recent content in Stop-Copy-Paste on Monochrome</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="http://localhost:1313/es/categories/stop-copy-paste/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interfaces y &#34;copy paste&#34;</title>
+      <link>http://localhost:1313/es/posts/interfaces-correct-use/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>http://localhost:1313/es/posts/interfaces-correct-use/</guid>
+      <description>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien dice el título y descripción hoy vamos a hablar de las interfaces.
+Seguramente se encuentren con algunas referencias a otra publicación que hice sobre arquitectura hexagonal, creo que parte del mal uso de las interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el concepto subyacente.</description>
+    </item>
+    
+    <item>
+      <title>Cuando el contexto importa</title>
+      <link>http://localhost:1313/es/posts/when-the-context-matter/</link>
+      <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
+      
+      <guid>http://localhost:1313/es/posts/when-the-context-matter/</guid>
+      <description>La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo el acceso.
+Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir porque la estamos realizando.
+Preámbulo Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:
+# First layer use to build a Golang binary FROM golang:1.</description>
+    </item>
+    
+    <item>
+      <title>El tamaño importa</title>
+      <link>http://localhost:1313/es/posts/lightweight-container-image/</link>
+      <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
+      
+      <guid>http://localhost:1313/es/posts/lightweight-container-image/</guid>
+      <description>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican para cualquier lenguaje, ¡vamos!
+Preámbulo Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc) no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:</description>
+    </item>
+    
+    <item>
+      <title>Hexagonal Architecture</title>
+      <link>http://localhost:1313/es/posts/hexagonal-architecture/</link>
+      <pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>http://localhost:1313/es/posts/hexagonal-architecture/</guid>
+      <description>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
+Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.
+Preámbulo Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra, mas bien todo lo contrario, me parece un excelente patrón.</description>
+    </item>
+    
+  </channel>
+</rss>
