@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Best-Practices on Monochrome</title>
-    <link>http://localhost:1313/tags/best-practices/</link>
-    <description>Recent content in Best-Practices on Monochrome</description>
+    <title>Best-Practices on luispe</title>
+    <link>http://localhost:1313/blog/tags/best-practices/</link>
+    <description>Recent content in Best-Practices on luispe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interfaces and &#34;copy paste&#34;</title>
-      <link>http://localhost:1313/posts/interfaces-correct-use/</link>
+      <link>http://localhost:1313/blog/posts/interfaces-correct-use/</link>
       <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
       
-      <guid>http://localhost:1313/posts/interfaces-correct-use/</guid>
+      <guid>http://localhost:1313/blog/posts/interfaces-correct-use/</guid>
       <description>In the following post I want to share a common mistake I used to make in my Golang projects. And as the title and description says, today we are going to talk about interfaces.
 You will probably come across some references to another post I did on hexagonal architecture, I think part of the misuse of interfaces is the consequence of following &amp;ldquo;medium&amp;rdquo; publications to the letter and not taking the time to understand the underlying concept.</description>
     </item>
     
     <item>
       <title>Size matters</title>
-      <link>http://localhost:1313/posts/lightweight-container-image/</link>
+      <link>http://localhost:1313/blog/posts/lightweight-container-image/</link>
       <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
       
-      <guid>http://localhost:1313/posts/lightweight-container-image/</guid>
+      <guid>http://localhost:1313/blog/posts/lightweight-container-image/</guid>
       <description>In the following post I am going to share with you some tips and best practices to develop our container images, as an example we are going to create an image for an app in Golang, but the following tips apply to any language, let&amp;rsquo;s go!
 Preface To make our container images as small as possible in terms of weight (megabytes, gigabytes, etc.) is not a matter of taste, it helps us in many ways, here are some of them:</description>
     </item>
     
     <item>
       <title>Hexagonal Architecture</title>
-      <link>http://localhost:1313/posts/hexagonal-architecture/</link>
+      <link>http://localhost:1313/blog/posts/hexagonal-architecture/</link>
       <pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate>
       
-      <guid>http://localhost:1313/posts/hexagonal-architecture/</guid>
+      <guid>http://localhost:1313/blog/posts/hexagonal-architecture/</guid>
       <description>This is the first of a series where we will review different development patterns that I made mistakes and what is currently and what I understand so far, the best way to apply it.
 As the title of the publication says, today I want to talk about hexagonal architecture.
 Preface I have been noticing a lot of &amp;ldquo;hype&amp;rdquo; around the hexagonal architecture and I would like to be clear about it, I am not against it, on the contrary, I think it is an excellent pattern.</description>

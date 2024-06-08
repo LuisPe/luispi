@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reflexion on Monochrome</title>
-    <link>http://localhost:1313/es/tags/reflexion/</link>
-    <description>Recent content in Reflexion on Monochrome</description>
+    <title>Reflexion on luispe</title>
+    <link>http://localhost:1313/blog/es/tags/reflexion/</link>
+    <description>Recent content in Reflexion on luispe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aniversarios</title>
-      <link>http://localhost:1313/es/posts/career/</link>
+      <link>http://localhost:1313/blog/es/posts/career/</link>
       <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
       
-      <guid>http://localhost:1313/es/posts/career/</guid>
+      <guid>http://localhost:1313/blog/es/posts/career/</guid>
       <description>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.
 Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa (Pomelo), el 29 de agosto del 2022 hicieron públicas las promociones en la empresa, formo parte de las personas a las que ascendieron, quería escribir algunas conclusiones que me llevo de estos más 365 días, dos equipos y un ascenso.</description>
     </item>
     
     <item>
       <title>Deuda técnica</title>
-      <link>http://localhost:1313/es/posts/technical-debt/</link>
+      <link>http://localhost:1313/blog/es/posts/technical-debt/</link>
       <pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate>
       
-      <guid>http://localhost:1313/es/posts/technical-debt/</guid>
+      <guid>http://localhost:1313/blog/es/posts/technical-debt/</guid>
       <description>En la siguiente publicación vamos a repensar un concepto comúnmente encontrado y avalado en la industria de la tecnología, la deuda técnica.
 Distinta vara Imaginemos que necesitamos pintar el exterior de nuestra casa y decidimos contratar a un profesional para que realice el trabajo.
 Después de consultar por varios presupuestos decidimos contratar los servicios de &amp;ldquo;x&amp;rdquo; para que se encargue del trabajo.
@@ -31,10 +31,10 @@ Al cabo de unos dias &amp;ldquo;x&amp;rdquo; nos comenta:</description>
     
     <item>
       <title>De los errores se aprende, si se comparten, se crece</title>
-      <link>http://localhost:1313/es/posts/mistakes-and-learnings/</link>
+      <link>http://localhost:1313/blog/es/posts/mistakes-and-learnings/</link>
       <pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate>
       
-      <guid>http://localhost:1313/es/posts/mistakes-and-learnings/</guid>
+      <guid>http://localhost:1313/blog/es/posts/mistakes-and-learnings/</guid>
       <description>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos (opinión de quien redacta, mal llamado caso de éxito) y pocas, por no decir nulas, las ocasiones donde se comparten los errores (opinión de quien redacta, mal llamado fracaso).
 Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y entendí de la industria al compartirlos.</description>
     </item>
