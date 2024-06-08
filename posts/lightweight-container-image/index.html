@@ -8,7 +8,7 @@
 as an example we are going to create an image for an app in Golang, but the following tips apply to any language, let&rsquo;s go!</p><h2>Preface</h2><p>To make our container images as small as possible in terms of weight (megabytes, gigabytes, etc.)
 is not a matter of taste, it helps us in many ways, here are some of them:</p><ul><li>Reduce storage costs in the registry we use to manage our images.</li><li>When we have to obtain the image to start the container it is clear that the lighter it is the faster the
 initialization of the container will be, and with this we win in two points.<ul><li>Costs, and by costs we mean the use of the networking we use to obtain the image and then initialize the container.</li><li>Speed in auto scaling, it is clear that to obtain a 20 MB image versus a 900 MB image the first one, of course,
-is going to initialize with a higher speed.</li></ul></li></ul><p>To give a few examples.</p><h2>Let&rsquo;s start</h2><p>Let us imagine that we have the following Dockerfile to create our container image e.g:</p><pre class="mc-prism hide language-text"><code>FROM golang:1.18
+is going to initialize with a higher speed.</li></ul></li></ul><p>To give a few examples.</p><h2>Let&rsquo;s start</h2><p>Let us imagine that we have the following Dockerfile to create our container image e.g:</p><pre class="mc-prism hide language-text"><code class=language-dockerfile>FROM golang:1.18
 WORKDIR /build
 
 COPY go.mod go.sum ./
@@ -21,7 +21,7 @@ ENTRYPOINT [&quot;/myapp&quot;]
 </code></pre><p>Let&rsquo;s build our <code>docker build -t myapp:0.0.1 .</code> image.</p><p>If we list the images that we have in our host we will be able to observe that the weight is approximately <code>968 MB</code>.</p><p>What? 968 MB just to make available a binary that weighs a few megabytes?</p><blockquote><p>NOTE</p><p>In all my publications you will find concepts, the idea is that we learn and not copy and paste.</p><p>To give an example <code>RUN go build -o ./myapp ./path/to/main</code> where <code>./path/to/main</code> should be the main of
 your Golang app</p></blockquote><h2>Proposal/learning</h2><h3>Let&rsquo;s go with the first proposal.</h3><p>It is always a good practice to use <code>-alpine</code> images, by convention in the container universe when we make available
 an <code>-alpine</code> image we are indicating to the client that it is an image reduced in size and the one we should use in
-our Dockerfile, among other things.</p><p>Well, let&rsquo;s make a small change in our Dockerfile and build our image again</p><pre class="mc-prism hide language-text"><code>FROM golang:1.18-alpine3.16
+our Dockerfile, among other things.</p><p>Well, let&rsquo;s make a small change in our Dockerfile and build our image again</p><pre class="mc-prism hide language-text"><code class=language-dockerfile>FROM golang:1.18-alpine3.16
 WORKDIR /build
 COPY go.mod go.sum ./
 RUN go mod download &amp;&amp; go mod verify
@@ -37,7 +37,7 @@ container image, in case you didn&rsquo;t know, I&rsquo;m talking about Multista
 <a href=https://docs.docker.com/develop/develop-images/multistage-build/>official documentation</a>
 to deepen about this feature.</p><p>What does Multistage consist of? It is about building images in stages so that we can share data between each
 one of them, and we will obtain a final image of a very small size.</p><p>The first thing we are going to do is to have a first stage of build, where we are going to build the binary,
-and a second stage where we are going to make it available for use.</p><p>Let&rsquo;s get to work, let&rsquo;s open and make the following modifications to our Dockerfile.</p><pre class="mc-prism hide language-text"><code># First layer use to build a Golang binary
+and a second stage where we are going to make it available for use.</p><p>Let&rsquo;s get to work, let&rsquo;s open and make the following modifications to our Dockerfile.</p><pre class="mc-prism hide language-text"><code class=language-dockerfile># First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
 COPY go.mod go.sum ./
