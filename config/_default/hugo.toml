@@ -1,0 +1,15 @@
+baseURL = "https://luispe.github.io/blog"
+languageCode = "en"
+title = "luispe"
+theme = "hugo-theme-monochrome"
+defaultContentLanguage = "en"
+enableEmoji = true
+paginate = 5
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

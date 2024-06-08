@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on luispe</title>
+    <link>http://localhost:1313/blog/es/tags/go/</link>
+    <description>Recent content in Go on luispe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/es/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interfaces y &#34;copy paste&#34;</title>
+      <link>http://localhost:1313/blog/es/posts/interfaces-correct-use/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/posts/interfaces-correct-use/</guid>
+      <description>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien dice el título y descripción hoy vamos a hablar de las interfaces.
+Seguramente se encuentren con algunas referencias a otra publicación que hice sobre arquitectura hexagonal, creo que parte del mal uso de las interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el concepto subyacente.</description>
+    </item>
+    
+    <item>
+      <title>Hexagonal Architecture</title>
+      <link>http://localhost:1313/blog/es/posts/hexagonal-architecture/</link>
+      <pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/posts/hexagonal-architecture/</guid>
+      <description>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
+Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.
+Preámbulo Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra, mas bien todo lo contrario, me parece un excelente patrón.</description>
+    </item>
+    
+  </channel>
+</rss>

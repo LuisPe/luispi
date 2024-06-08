@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on luispe</title>
+    <link>http://localhost:1313/blog/tags/docker/</link>
+    <description>Recent content in Docker on luispe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 11 Jun 2022 17:49:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Size matters</title>
+      <link>http://localhost:1313/blog/posts/lightweight-container-image/</link>
+      <pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/lightweight-container-image/</guid>
+      <description>In the following post I am going to share with you some tips and best practices to develop our container images, as an example we are going to create an image for an app in Golang, but the following tips apply to any language, let&amp;rsquo;s go!
+Preface To make our container images as small as possible in terms of weight (megabytes, gigabytes, etc.) is not a matter of taste, it helps us in many ways, here are some of them:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reflexion on luispe</title>
+    <link>http://localhost:1313/blog/tags/reflexion/</link>
+    <description>Recent content in Reflexion on luispe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/reflexion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anniversaries</title>
+      <link>http://localhost:1313/blog/posts/career/</link>
+      <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/career/</guid>
+      <description>Anniversaries, be it a birthday, the end of the year or whatever, generally lead one to reflect.
+This case would not be the exception, what is the anniversary, less than a month ago i completed one year in my current company (Pomelo), August 29, 2022 the promotions in the company were made public, I am part of the people who were promoted, I wanted to write some conclusions that I have drawn from these 365 days, two teams and a promotion.</description>
+    </item>
+    
+    <item>
+      <title>Technical debt</title>
+      <link>http://localhost:1313/blog/posts/technical-debt/</link>
+      <pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/technical-debt/</guid>
+      <description>In the following post we will rethink a concept commonly encountered and endorsed in the technology industry, technical debt.
+Different yardstick Let&amp;rsquo;s imagine that we need to paint the exterior of our house and we decide to hire a professional to do the job.
+After consulting several quotes we decided to hire the services of &amp;ldquo;x&amp;rdquo; to take care of the job.
+After a few days &amp;ldquo;x&amp;rdquo; tells us:
+- The work is finished.</description>
+    </item>
+    
+    <item>
+      <title>You learn from your mistakes, and if you share them, you grow.</title>
+      <link>http://localhost:1313/blog/posts/mistakes-and-learnings/</link>
+      <pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/mistakes-and-learnings/</guid>
+      <description>In our society in general and in technology in particular, we have the strange habit of publishing success stories (opinion of the writer, wrongly called successful case) and few, if any, occasions where mistakes are shared (opinion of the writer, wrongly called failure).
+As you might be suspecting below I am going to share some mistakes, which I learned from them and even more how much I grew and understood about the industry by sharing them.</description>
+    </item>
+    
+  </channel>
+</rss>

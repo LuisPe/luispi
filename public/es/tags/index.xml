@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on luispe</title>
+    <link>http://localhost:1313/blog/es/tags/</link>
+    <description>Recent content in Tags on luispe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/blog/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Index</title>
+      <link>http://localhost:1313/blog/es/tags/index/</link>
+      <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reflexion</title>
+      <link>http://localhost:1313/blog/es/tags/reflexion/</link>
+      <pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/reflexion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Best-Practices</title>
+      <link>http://localhost:1313/blog/es/tags/best-practices/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/best-practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/blog/es/tags/go/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://localhost:1313/blog/es/tags/golang/</link>
+      <pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/blog/es/tags/docker/</link>
+      <pubDate>Mon, 13 Jun 2022 18:45:35 -0300</pubDate>
+      
+      <guid>http://localhost:1313/blog/es/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
