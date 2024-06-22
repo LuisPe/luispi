@@ -1,6 +1,6 @@
 ---
 title: "El infierno de los tickets"
-description: "Aplicar una metología de tickets puede destruir al equipo de infraestructura ¿y a tu empresa?"
+description: "Aplicar una metodología de tickets puede destruir al equipo de infraestructura ¿y a tu empresa?"
 date: 2024-06-19T19:10:20-03:00
 tags: ["reflexion"]
 toc: true
