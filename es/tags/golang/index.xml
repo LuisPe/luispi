@@ -1,4 +1,284 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on luispe</title><link>https://luispe.github.io/blog/es/tags/golang/</link><description>Recent content in Golang on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</guid><description>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien dice el título y descripción hoy vamos a hablar de las interfaces.
-Seguramente se encuentren con algunas referencias a otra publicación que hice sobre arquitectura hexagonal, creo que parte del mal uso de las interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el concepto subyacente.</description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</guid><description>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.
-Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.
-Preámbulo Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra, mas bien todo lo contrario, me parece un excelente patrón.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Golang</title><link>https://luispe.github.io/blog/es/tags/golang/</link><description>Recent content in Golang on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</guid><description>
+&lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
+dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
+&lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
+&lt;a href="https://luispe.github.io/blog/posts/hexagonal-architecture/" target="_blank" rel="noopener">arquitectura hexagonal&lt;/a>, creo que parte del mal uso de las
+interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el
+concepto subyacente.&lt;/p>
+&lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
+&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Si hay algo que tenemos que admitir en el ecosistema de Golang es el enrosque que a veces nos damos con algunas/varias
+cuestiones. Por dar un ejemplo en como nombrar las variables (que es un tema del que quiero hablar pronto) y en el
+caso de hoy con las interfaces.&lt;/p>
+&lt;p>Golang tiene sus particularidades, pero se basa en muchos patrones ya conocidos en la industria. En el ecosistema de Go
+a veces complejizamos algunos patrones y caemos en &amp;ldquo;anti patrones&amp;rdquo;, en la siguiente publicación vamos a revisar un proyecto
+falso y refactorizarlo para hacer un buen uso de las interfaces.&lt;/p>
+&lt;p>Para simplificar un poco la publicación vamos a acotar el caso de uso y lo reduciremos a la capa de servicio y repositorio.&lt;/p>
+&lt;p>Imaginemos que en la capa de repositorio nos encontramos con lo siguiente:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">repository&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// pkg imports
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Repository&lt;/span> &lt;span class="kd">interface&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">repository&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// repository client and configs go here
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">NewRepository&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="nx">Repository&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">repository&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">repo&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">repository&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// previous logic here
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">repo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">toModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">beerEntity&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Y en la capa de servicio lo siguiente:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">service&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// pkg imports
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Service&lt;/span> &lt;span class="kd">interface&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">Create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">service&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">repo&lt;/span> &lt;span class="nx">Repository&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">NewService&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">repo&lt;/span> &lt;span class="nx">Repository&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">Service&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">service&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">repo&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">svc&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">service&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">svc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>El anterior escenario es el que me encuentro comúnmente en los proyectos de Go y quiero comentarles que yo también supe
+cometer el mismo error.&lt;/p>
+&lt;p>Todo bien luispi, ¿pero cuál es el error?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Las interfaces Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
+esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
+&lt;/blockquote>
+&lt;h2>Propuesta/aprendizaje&lt;span class="hx-absolute -hx-mt-20" id="propuestaaprendizaje">&lt;/span>
+&lt;a href="#propuestaaprendizaje" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
+&lt;p>&lt;em>El paquete de implementación debe devolver tipos concretos (generalmente puntero o estructura): de esa manera, se pueden
+agregar nuevos métodos a las implementaciones sin requerir una refactorización extensa.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>Con esto en mente vayamos a los bifes&lt;/p>
+&lt;p>En primer lugar ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
+no la interfaz.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">repository&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// pkg imports
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Repository&lt;/span> &lt;span class="kd">struct&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// repository client and configs go here
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">NewRepository&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="nx">Repository&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">Repository&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">repo&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Repository&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">beer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// previous logic here
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">repo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">toModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">beerEntity&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Repasemos el cambio.&lt;/p>
+&lt;p>En primer lugar, eliminamos la interfaz y ahora la función &lt;code>NewRepository()&lt;/code> retorna la estructura &lt;code>Repository&lt;/code>, y en segundo lugar
+agregamos a &lt;code>Repository&lt;/code> el método save.&lt;/p>
+&lt;p>Todo bien luispi, ¿pero qué ganamos con este cambio?&lt;/p>
+&lt;p>Como no tenemos que cumplir con ningún contrato de interfaz no estamos atados a tener que implementar todos los métodos
+que tenga la misma.&lt;/p>
+&lt;p>Tenemos que pensar a este paquete como un productor (&lt;code>producer&lt;/code>) y siempre tengamos como nota mental que los &lt;code>producer&lt;/code>,
+de nuevo, retornan tipos concretos (generalmente un puntero o una estructura).&lt;/p>
+&lt;p>Ahora es el turno de editar la capa del consumidor (&lt;code>consumer&lt;/code>), en este caso el &lt;code>service&lt;/code>.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">service&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// pkg imports
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Repository&lt;/span> &lt;span class="kd">interface&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">beer&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">Service&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">repo&lt;/span> &lt;span class="nx">Repository&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">NewService&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">repo&lt;/span> &lt;span class="nx">Repository&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">Service&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">Service&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">repo&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">svc&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Service&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">beer&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">Beer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">createBeer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">svc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Save&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">beer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">createBeer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Repasemos el cambio.&lt;/p>
+&lt;p>Realizamos varios cambios, en primer lugar declaramos la interfaz &lt;code>Repository&lt;/code> y en la estructura &lt;code>Service&lt;/code> inyectamos
+la interfaz para que pueda consumirse en los métodos del servicio.&lt;/p>
+&lt;p>Al igual que con la capa de repositorio nuestro &lt;code>NewService()&lt;/code> ahora retorna una estructura y no una interfaz.&lt;/p>
+&lt;p>Por ultimo agregamos el método &lt;code>Create&lt;/code> a nuestro &lt;code>Service&lt;/code>.&lt;/p>
+&lt;h2>Conclusiones&lt;span class="hx-absolute -hx-mt-20" id="conclusiones">&lt;/span>
+&lt;a href="#conclusiones" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Con estos cambios sutiles pero poderosos nuestros &lt;code>producer&lt;/code> ahora tienen una enorme flexibilidad.&lt;/p>
+&lt;p>Por último quiero agradecer a mi amigo y mentor &lt;a href="https://www.linkedin.com/in/morenojp/" target="_blank" rel="noopener">morenojp&lt;/a> que me compartió este
+anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo de software.&lt;/p>
+&lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
+&lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
+&lt;p>¡Que pase bien!&lt;/p>
+&lt;hr>
+&lt;p>Fuentes:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/golang/go/wiki/CodeReviewComments#interfaces" target="_blank" rel="noopener">wiki oficial de Golang&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://8thlight.com/blog/go-interface-misuse/" target="_blank" rel="noopener">go interfaces misuse&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
+en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
+&lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>
+&lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
+&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Hace tiempo noto mucho &amp;ldquo;hype&amp;rdquo; en torno a la arquitectura hexagonal y me gustaría ser claro al respecto, no estoy en contra,
+mas bien todo lo contrario, me parece un excelente patrón.&lt;/p>
+&lt;p>Pero creo que caemos en el error de aplicar la recetas de publicaciones de &amp;ldquo;medium&amp;rdquo; y no solo terminamos con todas las
+capas de nuestro sistema acopladas sino que con nombres de packages al estilo &amp;ldquo;adapters&amp;rdquo; o &amp;ldquo;ports&amp;rdquo; y si hay algo hermoso
+en el lenguaje de Go(lang) es la intencionalidad en el nombre de un package.&lt;/p>
+&lt;blockquote>
+&lt;p>Un buen nombre en el package hace que casi ni sea necesario nada más para expresar la intencionalidad del mismo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Te comparto y recomiendo leer la siguiente &lt;a href="https://go.dev/blog/package-names" target="_blank" rel="noopener">publicación oficial&lt;/a>, opinión personal,
+aplica para cualquier lenguaje.&lt;/p>
+&lt;h2>Comencemos&lt;span class="hx-absolute -hx-mt-20" id="comencemos">&lt;/span>
+&lt;a href="#comencemos" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
+&lt;p>Anti patrón&lt;/p>
+&lt;p>Anotación en nuestro modelo de dominio e.g &lt;code>json&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>Un error que solía cometer es tener las anotaciones &lt;code>json&lt;/code> o &lt;code>gorm&lt;/code> o cualquier anotación en el modelo de dominio.&lt;/p>
+&lt;p>Imaginemos que tenemos nuestro modelo &lt;code>/user/user.go&lt;/code> con el siguiente contenido&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">User&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;first_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;last_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Antes de continuar leyendo te invito a que por unos segundos/minutos hagamos una reflexión de porque es un anti patrón.&lt;/p>
+&lt;h2>Propuesta/aprendizaje&lt;span class="hx-absolute -hx-mt-20" id="propuestaaprendizaje">&lt;/span>
+&lt;a href="#propuestaaprendizaje" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Nuestro modelo debería ser agnóstico a la capa de presentación y a la de datos, por lo tanto, no debería contener ninguna
+anotación. Deberíamos mapear los datos hacia nuestro modelo y viceversa, a continuación un ejemplo de como quedaría
+un controlador rest HTTP e.g.:&lt;/p>
+&lt;p>&lt;code>user/rest_controller.go&lt;/code>&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">UserDTO&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;first_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="s">`json:&amp;#34;last_name&amp;#34;`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ctrl&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">controller&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">toUserModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">userDTO&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">UserDTO&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">User&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">User&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">userDTO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">FirstName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">userDTO&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">LastName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ctrl&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">controller&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">toUserDTO&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">User&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">UserDTO&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">UserDTO&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">FirstName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">LastName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
+hacia el modelo de dominio cuando llamemos al servicio y viceversa.&lt;/p>
+&lt;p>Por último quitamos las anotaciones en nuestro modelo &lt;code>user/user.go&lt;/code>&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">User&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">FirstName&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">LastName&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Todo bien luispi, ¿pero qué ganancia obtuvimos?&lt;/p>
+&lt;p>Ahora nuestro &lt;code>/user/user.go&lt;/code> al no tener ninguna anotación no importa como presentemos o como obtengamos/persistamos
+los datos, nunca vamos a tocar el core/dominio de nuestra aplicación, ahora si podríamos afirmar que nuestro core/dominio
+es agnóstico a las capas de presentación o datos ganando flexibilidad, testabilidad, etc.&lt;/p>
+&lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
+&lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
+&lt;p>¡Que pase bien!&lt;/p></description></item></channel></rss>

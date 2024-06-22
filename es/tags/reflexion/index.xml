@@ -1,6 +1,237 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reflexion on luispe</title><link>https://luispe.github.io/blog/es/tags/reflexion/</link><description>Recent content in Reflexion on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 02 Sep 2022 19:11:03 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml"/><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/posts/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/career/</guid><description>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.
-Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa (Pomelo), el 29 de agosto del 2022 hicieron públicas las promociones en la empresa, formo parte de las personas a las que ascendieron, quería escribir algunas conclusiones que me llevo de estos más 365 días, dos equipos y un ascenso.</description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/posts/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/technical-debt/</guid><description>En la siguiente publicación vamos a repensar un concepto comúnmente encontrado y avalado en la industria de la tecnología, la deuda técnica.
-Distinta vara Imaginemos que necesitamos pintar el exterior de nuestra casa y decidimos contratar a un profesional para que realice el trabajo.
-Después de consultar por varios presupuestos decidimos contratar los servicios de &amp;ldquo;x&amp;rdquo; para que se encargue del trabajo.
-Al cabo de unos dias &amp;ldquo;x&amp;rdquo; nos comenta:</description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</guid><description>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos (opinión de quien redacta, mal llamado caso de éxito) y pocas, por no decir nulas, las ocasiones donde se comparten los errores (opinión de quien redacta, mal llamado fracaso).
-Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y entendí de la industria al compartirlos.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Reflexion</title><link>https://luispe.github.io/blog/es/tags/reflexion/</link><description>Recent content in Reflexion on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 19 Jun 2024 19:10:20 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml"/><item><title>El infierno de los tickets</title><link>https://luispe.github.io/blog/es/blog/ticket-hell/</link><pubDate>Wed, 19 Jun 2024 19:10:20 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/ticket-hell/</guid><description>
+&lt;h2>Problema&lt;span class="hx-absolute -hx-mt-20" id="problema">&lt;/span>
+&lt;a href="#problema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
+&lt;p>¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
+voy a explicar el por qué la menciono.&lt;/p>
+&lt;p>En los equipos de infraestructura en el cual llevo trabajando y liderando
+algunos años tuve la gran fortuna de cruzarme con &lt;a href="https://www.linkedin.com/in/juanjosebehrend/" target="_blank" rel="noopener">Juanjo&lt;/a>.
+Desde el minuto cero le escuche decir, promover y defender a capa y espada:&lt;/p>
+&lt;p>&lt;em>- Nunca caigamos en un equipo de infraestructura que trabaje mediante pedidos por tickets&lt;/em>&lt;/p>
+&lt;h2>Posicionamiento&lt;span class="hx-absolute -hx-mt-20" id="posicionamiento">&lt;/span>
+&lt;a href="#posicionamiento" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>¿Cuál es el racional detrás de esta posición firme?&lt;/p>
+&lt;ol>
+&lt;li>Se tiene que tener una cultura extremadamente fuerte de punta a punta
+para poder determinar que ticket es mas importante que otro.&lt;/li>
+&lt;li>El equipo de infraestructura inherentemente tiene que crecer si el equipo de tecnología
+y producto se expande a nuevas funcionalidades.&lt;/li>
+&lt;li>Es extremadamente difícil mantener al equipo de infraestructura motivado.&lt;/li>
+&lt;li>Es imposible innovar desde el equipo de infraestructura.&lt;/li>
+&lt;/ol>
+&lt;p>Existen varios motivos más, pero en este momento me parecen los mas destacables y avanzo
+en explicar cada uno de ellos.&lt;/p>
+&lt;h3>1. Cultura extremadamente fuerte&lt;span class="hx-absolute -hx-mt-20" id="1-cultura-extremadamente-fuerte">&lt;/span>
+&lt;a href="#1-cultura-extremadamente-fuerte" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Tanto a los equipos de infraestructura como a los de QA no se los suele involucrar en el armado
+de roadmap y sprint de tecnología y producto.
+En caso que pase, se lo hace al final de la milla &amp;ldquo;cuando ya todo esta cocinado&amp;rdquo;.&lt;/p>
+&lt;p>¿A donde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
+y tiene que priorizar por cuestiones de capacidad de ejecución, la pregunta obvia:&lt;/p>
+&lt;p>¿que ticket priorizo?&lt;/p>
+&lt;p>Buena suerte cuando estés ahí, porque para los clientes lo de ellos es lo más importante del
+mundo mundial y es lo más importante por sobre cualquier cosa.&lt;/p>
+&lt;h3>2. Crecimiento sin sentido&lt;span class="hx-absolute -hx-mt-20" id="2-crecimiento-sin-sentido">&lt;/span>
+&lt;a href="#2-crecimiento-sin-sentido" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Supongamos que el punto anterior esta resuelto, de este punto que voy
+a explicar a continuación no se zafa.&lt;/p>
+&lt;p>¿Por qué decimos que el equipo de infraestructura inherentemente tiene que crecer?&lt;/p>
+&lt;p>Si caemos en tickets que solo resuelve el equipo de infraestructura a más productos y
+funcionalidades que tenga la empresa más personas se necesitan del equipo de
+infraestructura para atacar la demanda de tickets.&lt;/p>
+&lt;p>Felicitaciones, creaste un embudo de ejecución.&lt;/p>
+&lt;p>¿Solución?, contratar más talento para el equipo de infraestructura.&lt;/p>
+&lt;h3>3. Motivación&lt;span class="hx-absolute -hx-mt-20" id="3-motivación">&lt;/span>
+&lt;a href="#3-motivaci%c3%b3n" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Supongamos que el punto 1 y el 2 están resueltos.&lt;/p>
+&lt;p>¿Los integrantes del equipo de infraestructura son humanos verdad?&lt;/p>
+&lt;p>Digo esto porque es difícil mantener la motivación si &amp;mdash;en un trabajo
+que es altamente impulsado por la creatividad&amp;mdash; acotamos a los integrantes del
+equipo a &amp;ldquo;cerrar tickets&amp;rdquo; sin ningún lugar para la discusión o la doble pregunta.&lt;/p>
+&lt;p>¿Que puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
+que, si son tóxicos, pueden acusar de bloqueantes o mala experiencia en la gestión
+de infraestructura al equipo de infra.&lt;/p>
+&lt;p>De esto último ¿que puede decirte?, Keep Calm y te dejo un gran abrazo.&lt;/p>
+&lt;h3>4. Innovación&lt;span class="hx-absolute -hx-mt-20" id="4-innovación">&lt;/span>
+&lt;a href="#4-innovaci%c3%b3n" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Por último si tenemos resueltos los anteriores 3 puntos es imposible innovar,
+lisa y llanamente.&lt;/p>
+&lt;p>¿Por qué?, un equipo que trabaja simplemente cerrando tickets, abocado solo a participar en
+un proyecto creando infraestructura, es imposible que pueda innovar.&lt;/p>
+&lt;h2>Volvamos al inicio&lt;span class="hx-absolute -hx-mt-20" id="volvamos-al-inicio">&lt;/span>
+&lt;a href="#volvamos-al-inicio" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
+&lt;p>A lo largo de post explique el racional y los puntos mas importantes en los que va a impactar
+una metodología de tickets para gestión de infraestructura.&lt;/p>
+&lt;p>Y quiero dejar en claro que no está mal trabajar por tickets en un equipo de infraestructura,
+&lt;strong>lo que si esta definitivamente mal es que la gestión de infraestructura se haga por tickets&lt;/strong>.&lt;/p>
+&lt;p>¿Y que tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
+muchos empresas con los equipos de infraestructura y &amp;ldquo;debemos parar la pelota&amp;rdquo; para reflexionar
+porque no están funcionando bien las cosas en muchos lugares.&lt;/p>
+&lt;p>¿Y cómo podemos evitarlo?&lt;/p>
+&lt;p>Debemos inyectar una mentalidad de producto a los equipos de infraestructura, ofrecer
+abstracciones con experiencias de primer nivel del caos de la plataforma subyacente para que
+los equipos de tecnología de producto sean autosuficientes en la gestión del software
+y la infraestructura asociada.&lt;/p>
+&lt;p>Espero que mi experiencia te haga repensar como formar cultura y procesos
+de trabajo para los equipos de infraestructura en la empresa si tenés dudas
+o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)&lt;/p>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
+&lt;p>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.&lt;/p>
+&lt;p>Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa
+(&lt;a href="https://www.linkedin.com/company/pomelo-latam/mycompany/" target="_blank" rel="noopener">Pomelo&lt;/a>), el 29 de agosto del 2022 hicieron públicas las
+promociones en la empresa, formo parte de las personas a las que ascendieron, quería escribir algunas conclusiones
+que me llevo de estos más 365 días, dos equipos y un ascenso.&lt;/p>
+&lt;h2>Pilares&lt;span class="hx-absolute -hx-mt-20" id="pilares">&lt;/span>
+&lt;a href="#pilares" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Los que me conocen, sea en lo laboral o la vida personal, me escuchan hablar sobre tres principios, con los que trato
+de movilizarme y busco a mi alrededor:&lt;/p>
+&lt;ol>
+&lt;li>Confianza&lt;/li>
+&lt;li>Humildad&lt;/li>
+&lt;li>Respeto&lt;/li>
+&lt;/ol>
+&lt;h3>Confianza&lt;span class="hx-absolute -hx-mt-20" id="confianza">&lt;/span>
+&lt;a href="#confianza" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Voy a intentar explicar que significa para mí este pilar.&lt;/p>
+&lt;p>En una de &lt;a href="https://luispe.github.io/blog/posts/mistakes-and-learnings/" target="_blank" rel="noopener">mis primeras publicaciones&lt;/a> donde hablo sobre
+errores y aprendizajes, hablo sobre que ascender no debería ser la única o principal meta hay cosas muchísimo,
+pero muchísimo más importantes y la confianza es una de ellas.&lt;/p>
+&lt;p>Ok luispi, ¿pero qué tiene que ver con la confianza?, alla vamos.&lt;/p>
+&lt;h4>Inicios&lt;span class="hx-absolute -hx-mt-20" id="inicios">&lt;/span>
+&lt;a href="#inicios" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>Mi primer acercamiento a Pomelo fué por medio de &lt;a href="https://www.linkedin.com/in/marumoran/" target="_blank" rel="noopener">Maru&lt;/a>, ya nos conocíamos,
+Maru fué quien hizo el proceso de hiring cuando entré en MercadoLibre, luego estuvimos cerca de reencontrarnos en
+Naranja X, pero bien sirvió el impasse para reencontrarnos profesionalmente en Pomelo, esto lo cuento justamente por
+el término de &lt;strong>confianza&lt;/strong>.&lt;/p>
+&lt;p>¿Creen que Maru hubiese confiado en mí no solo una, sino dos veces?, yo creo que no, es una persona
+absolutamente admirable en construir equipos de tecnología, y esa confianza que mutuamente nos tenemos hace que:&lt;/p>
+&lt;ul>
+&lt;li>Maru vuelva a confiar en mí una y otra vez y vuelva a convocarme.&lt;/li>
+&lt;li>De mi lado tomar esa confianza depositada y construir (o intentar hacerlo) el mejor contexto de trabajo posible.&lt;/li>
+&lt;/ul>
+&lt;h4>Reencuentro y desencuentro&lt;span class="hx-absolute -hx-mt-20" id="reencuentro-y-desencuentro">&lt;/span>
+&lt;a href="#reencuentro-y-desencuentro" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>En los más 365 días que llevo en Pomelo trabaje casi la mitad de tiempo en el equipo del Procesador, me reencontré
+con caras conocidas y conocí algunas nuevas, ya voy a nombrarlas, primero la anécdota.&lt;/p>
+&lt;p>En el Procesador estuve poco más de 5 meses, cumplimos el hito (locura) de tener en marcha el procesador y
+luego mediando enero de 2022 me mude al equipo de infra.
+Acá se jugaron dos pilares, confianza y respeto, ¿por qué digo esto?, los chicos supieron para donde quería dirigir
+mi carrera y me apoyaron al 100%.&lt;/p>
+&lt;p>No obstante 7 meses después me demostraron que son personas en las cuales voy a confiar infinitamente más allá
+de Pomelo, estas personas son: &lt;a href="https://www.linkedin.com/in/victoria-rodr%C3%ADguez-brizi-61639a55/" target="_blank" rel="noopener">Brizi&lt;/a>,
+&lt;a href="https://www.linkedin.com/in/damian-tundis/" target="_blank" rel="noopener">Dami&lt;/a> y &lt;a href="https://www.linkedin.com/in/nsarfati/" target="_blank" rel="noopener">Nico&lt;/a>, no voy a contar
+los pormenores ellos saben a qué me refiero, pero quería agradecerles públicamente ❤️.&lt;/p>
+&lt;h4>Con ustedes, a la guerra con un escarbadientes&lt;span class="hx-absolute -hx-mt-20" id="con-ustedes-a-la-guerra-con-un-escarbadientes">&lt;/span>
+&lt;a href="#con-ustedes-a-la-guerra-con-un-escarbadientes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h4>&lt;p>Hablé de mi primera etapa en Pomelo, pasemos a la segunda, &amp;ldquo;Migración al equipo de Infraestructura&amp;rdquo;.&lt;/p>
+&lt;p>De enero a esta parte y desde el minuto cero &lt;a href="https://www.linkedin.com/in/juanjosebehrend/" target="_blank" rel="noopener">Juanjo&lt;/a> y &lt;a href="https://www.linkedin.com/in/gustavo-adrian-gimenez-4894589b/" target="_blank" rel="noopener">Gus&lt;/a>
+y conociéndome, diría que nada, me dieron el espacio para crear un espacio de debate y repreguntas. Escucharon
+mis propuestas, las hicieron suyas, y entre todos las llevamos adelante, me hicieron partes de las suyas las tome como
+propias y así rodeado de una pila de personas con una calidad humana de otro planeta hicimos y estamos haciendo cosas
+increíbles.&lt;/p>
+&lt;p>¿Cuál es el punto de todo esto?, que ascender no sea la principal o única meta, generar confianza a tu alrededor es
+incontable de veces más importante y es, al menos en los valores que persigo y busco, infinitamente superior a
+cualquier puesto que ocupemos u obtengamos.&lt;/p>
+&lt;p>Por ahora no quiero aburrir ni extenderme, pronto voy a escribir sobre los otros dos pilares que siento indispensables
+para transitar la vida, humildad y respeto.&lt;/p></description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/blog/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/technical-debt/</guid><description>
+&lt;p>En la siguiente publicación vamos a repensar un concepto comúnmente encontrado y avalado en la industria de la
+tecnología, la deuda técnica.&lt;/p>
+&lt;h2>Distinta vara&lt;span class="hx-absolute -hx-mt-20" id="distinta-vara">&lt;/span>
+&lt;a href="#distinta-vara" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Imaginemos que necesitamos pintar el exterior de nuestra casa y decidimos contratar a un profesional para que realice el
+trabajo.&lt;/p>
+&lt;p>Después de consultar por varios presupuestos decidimos contratar los servicios de &amp;ldquo;x&amp;rdquo; para que se encargue del trabajo.&lt;/p>
+&lt;p>Al cabo de unos dias &amp;ldquo;x&amp;rdquo; nos comenta:&lt;/p>
+&lt;p>- &lt;em>El trabajo está terminado.&lt;/em>&lt;/p>
+&lt;p>Nos paramos en el frente de la casa y notamos que alrededor de los marcos de la ventana no está pintado en algunos casos.&lt;/p>
+&lt;p>Al notar esto le preguntamos a &amp;ldquo;x&amp;rdquo; porque no pinto alrededor de los marcos de la ventana, a lo que nos responde:&lt;/p>
+&lt;p>- &lt;em>Disculpá, deuda técnica que la podemos atacar a futuro.&lt;/em>&lt;/p>
+&lt;p>¿Qué sentirías si te encontrás con una situación asi?&lt;/p>
+&lt;p>¿Por qué en el contexto de la tecnología avalamos tener deuda técnica?&lt;/p>
+&lt;h2>Repensemos&lt;span class="hx-absolute -hx-mt-20" id="repensemos">&lt;/span>
+&lt;a href="#repensemos" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>En tecnología es muy común encontrarnos con este escenario y lamentablemente lo naturalizamos y como comente en otra
+&lt;a href="https://luispe.github.io/blog/posts/mistakes-and-learnings/" target="_blank" rel="noopener">publicación&lt;/a> donde hablo entre otras cosas sobre
+la importancia de documentar y hacer test, es algo común que siempre veo como &amp;ldquo;deuda técnica&amp;rdquo;, repensando en el ejemplo
+de pintar la casa creo que nos expone como podemos tener &amp;ldquo;distinta vara&amp;rdquo; para medir la misma situación en diferentes
+contextos.&lt;/p>
+&lt;p>¿Por qué es nociva la deuda técnica?&lt;/p>
+&lt;ul>
+&lt;li>En contexto de tests: es extremadamente difícil realizar cambios sin que explote todo.&lt;/li>
+&lt;li>En contexto de documentación: es extremadamente difícil agregar funcionalidad porque la falta de documentación hace que
+perdamos una cantidad enorme de tiempo tratando de entender como están construidas las cosas.&lt;/li>
+&lt;li>En contexto de equipo: tener deuda técnica hace que el conocimiento quede en las personas y deberíamos siempre, siempre,
+impulsar que el conocimiento esté distribuido.&lt;/li>
+&lt;/ul>
+&lt;h2>Conclusiones&lt;span class="hx-absolute -hx-mt-20" id="conclusiones">&lt;/span>
+&lt;a href="#conclusiones" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>La deuda técnica es &lt;strong>muy agotadora&lt;/strong> para los equipos y donde hoy pensamos que estamos ganando tiempo te aseguro que pronto,
+muy pronto, se pierde agilidad y velocidad en el desarrollo.&lt;/p>
+&lt;p>Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.&lt;/p>
+&lt;p>Para finalizar espero que repensemos juntos la &amp;ldquo;deuda técnica&amp;rdquo; y que nos incomode tenerla.&lt;/p>
+&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</guid><description>
+&lt;p>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
+(opinión de quien redacta, mal llamado &lt;strong>caso de éxito&lt;/strong>) y pocas, por no decir nulas, las ocasiones donde se comparten los
+errores (opinión de quien redacta, mal llamado &lt;strong>fracaso&lt;/strong>).&lt;/p>
+&lt;p>Como estarás sospechando a continuación voy a compartir algunos errores, que aprendí de ellos y más aún cuanto crecí y
+entendí de la industria al compartirlos.&lt;/p>
+&lt;h2>Enseñanza 1:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-1">&lt;/span>
+&lt;a href="#ense%c3%b1anza-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
+&lt;p>Escribir un paso a paso, compartirlo, validarlo y re-validarlo antes de ejecutar nada&lt;/p>
+&lt;/blockquote>
+&lt;p>Mi primer desarrollo productivo fue en 2012 (?) aproximadamente, se trató de una web para una empresa que necesitaba
+publicar su catálogo de productos, enumero tecnologías para tener un poco de contexto:&lt;/p>
+&lt;ul>
+&lt;li>digitalocean, recién salido, además de los droplets no se cuantos productos más tenía en cartera&lt;/li>
+&lt;li>angular js (angular 1)&lt;/li>
+&lt;li>creo que nodeJS para el backend&lt;/li>
+&lt;/ul>
+&lt;p>Este desarrollo lo hice con quien es una de las personas que más respeto y admiro, Víctor De Grandis –Vitor–.&lt;/p>
+&lt;p>Mi experiencia configurando servidores era nula, tuve la delirante idea de decirle a Vitor:&lt;/p>
+&lt;p>&lt;em>che amigo, ¿puedo configurar el servidor y después intentas romperlo?&lt;/em>&lt;/p>
+&lt;p>Acto seguido me pongo a realizar varias configuraciones entre ellas me puse a jugar con los puertos, hasta que muy
+orgulloso le digo:&lt;/p>
+&lt;p>&lt;em>Vitor, probá a ver qué onda&lt;/em>&lt;/p>
+&lt;p>Después de un rato me llega un mensaje,&lt;/p>
+&lt;p>&lt;em>amigo ¿puede ser que cerraste el puerto 22?&lt;/em>&lt;/p>
+&lt;p>Hermoso, salí de la casa, cerré la puerta y tiré la llave a una laguna.&lt;/p>
+&lt;p>Como la gente de digitalocean está preparada para personas como quien redacta, tiene una funcionalidad que si se accede
+desde la web (no tengo mucha idea como se resuelve por detrás) podes ejecutar una terminal en el navegador y acceder al droplet.&lt;/p>
+&lt;p>Configure de nuevo los puertos, y el resto medio que es historia.&lt;/p>
+&lt;h2>Enseñanza 2:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-2">&lt;/span>
+&lt;a href="#ense%c3%b1anza-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
+&lt;p>Documentar el conocimiento por más trivial que lo consideremo e invitemos a que el resto lo haga. Además de evitar
+varias reuniones de “transferencia de conocimiento” nos vamos a ahorrar varios arrobas, ¿te recuerda algo?&lt;/p>
+&lt;p>@fulanito puede darte una mano&lt;/p>
+&lt;/blockquote>
+&lt;p>En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas pero de las cuales aprendí mucho mucho
+de cada una de ellas, lamentablemente la aventura fue muy corta en tiempo.&lt;/p>
+&lt;p>Lo que sí me extrañó mucho a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a
+punto tal de parar motores (literal) y estar semanas sin entregar funcionalidades a producción porque tuvimos que sentarnos
+a entender cómo dejar esa línea de código local y exponerla a internet.&lt;/p>
+&lt;p>¿Qué errores detecte y que aprendí?&lt;/p>
+&lt;p>Documentar el conocimiento, por más trivial que lo consideremos, documentarlo.&lt;/p>
+&lt;p>O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más veces haciendo reuniones de
+“knowledge transfer” porque alguna persona estaba dejando el equipo?&lt;/p>
+&lt;p>¿o acaso eras vos quien lo estaba dejando?&lt;/p>
+&lt;h2>Enseñanza 3:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-3">&lt;/span>
+&lt;a href="#ense%c3%b1anza-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
+&lt;p>Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.&lt;/p>
+&lt;p>Enseñanza 3 bis:&lt;/p>
+&lt;p>Pensar y realizar pruebas antes de implementar cualquier cosa es una guía fundamental para entender el comportamiento de
+nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, &lt;strong>siempre&lt;/strong>,
+es una ganancia en el tiempo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas,
+&lt;a href="https://www.linkedin.com/in/morenojp/" target="_blank" rel="noopener">Juan Moreno&lt;/a>, ¿qué es mejor para mí?, soluciones simples a problemas complejos.&lt;/p>
+&lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar
+la enseñanza número 3 y 3 bis.&lt;/p>
+&lt;p>En los tiempos pre pandemia, solía –costumbre que aun conservo desde lo remoto– arrancar temprano, tener un par de horas
+“a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.&lt;/p>
+&lt;p>Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un
+poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque
+había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.&lt;/p>
+&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junte con él a solas, le hice una pregunta:&lt;/p>
+&lt;p>&lt;em>¿cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
+&lt;p>Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y
+no agarrar a los primero que se cruzó en el camino.&lt;/p>
+&lt;p>Por último le dije que comprendía pero no compartía su enojo ni como lo había manejado.&lt;/p>
+&lt;p>Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:&lt;/p>
+&lt;blockquote>
+&lt;p>Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a
+la altura de las circunstancias. Compartir y adquirir conocimiento debería ser la guía.&lt;/p>
+&lt;p>Pensar y realizar test antes de implementar cualquier cosa es la guía fundamental para entender el comportamiento
+de nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, &lt;strong>siempre&lt;/strong>,
+es una ganancia en el tiempo.&lt;/p>
+&lt;/blockquote>
+&lt;p>Para finalizar entiendo que voy a seguir cometiendo errores y compartiendo la experiencia que me dejaron,
+eso no me hace ni peor ni mejor que nadie.&lt;/p>
+&lt;p>Estoy convencido que es una sana manera de transitar la vida donde lo “normal” es mostrarnos “exitosos” o
+como me gusta hacer paralelismos con el fútbol, “jugar para la tribuna”, pero a fin de cuenta es solo una apariencia.&lt;/p>
+&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item></channel></rss>
