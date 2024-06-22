@@ -16,12 +16,10 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: luispe
   es:
     languageName: Español
     languageCode: es
     weight: 2
-    title: luispe
 
 # import hextra as module
 module:
@@ -75,9 +73,3 @@ params:
   footer:
     displayCopyright: false
     displayPoweredBy: true
-
-  blog:
-    list:
-      # date | lastmod | publishDate | title | weight
-      sortBy: date
-      sortOrder: desc
