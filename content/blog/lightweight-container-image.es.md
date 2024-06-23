@@ -12,7 +12,7 @@ para cualquier lenguaje, ¡vamos!
 
 ## Preámbulo
 
-Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
+Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc.)
 no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:
 - Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.
 - Cuando tengamos que obtener la imagen para iniciar el container queda claro que mientras más liviana sea más rápido
@@ -125,10 +125,10 @@ Luego en la segunda y etapa final con la siguiente línea `COPY --from=builder /
 desde la etapa que tagueamos como `builder` y lo disponibilizamos en una imagen alpine.
 
 Si listamos ahora nuestras imágenes podemos observar que pesa aproximadamente 9 MB, si si, escribi correctamente 
-9 megabytes :sunglasses:.
+9 megabytes 😎.
 
 Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.
 
 Para no aburrirte y por el momento hagamos una pausa.
 
-¡Que pase bien!
+¡Que pase bien! 👋🏽

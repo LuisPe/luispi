@@ -9,7 +9,7 @@ in the technology industry, technical debt.
 
 ## Different yardstick
 
-Let's imagine that we need to paint the exterior of our house and we decide to hire a professional to do the job.
+Let's imagine that we need to paint the exterior of our house, and we decide to hire a professional to do the job.
 
 After consulting several quotes we decided to hire the services of "x" to take care of the job.
 
@@ -29,7 +29,7 @@ Why in the context of technology do we endorse having technical debt?
 
 ## Rethink
 
-In technology it is very common to encounter this scenario and unfortunately we naturalize it and as 
+In technology, it is very common to encounter this scenario, and unfortunately we naturalize it and as 
 I commented in a [previous publication](https://luispe.github.io/blog/posts/mistakes-and-learnings/) 
 where I talk among other things about the importance of documenting and testing, it is something common that 
 I always see as "technical debt", rethinking the example of painting the house I think it exposes 

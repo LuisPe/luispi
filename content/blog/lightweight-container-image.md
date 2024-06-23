@@ -124,7 +124,7 @@ Then in the second and final stage with the following line `COPY --from=builder 
 the binary from the stage that we have selected as `builder` and we make it available in an alpine image.
 
 If we list now our images we can see that it weighs approximately 9 MB, yes yes, 
-I wrote correctly 9 megabytes :sunglasses:.
+I wrote correctly 9 megabytes 😎.
 
 We could do one last optimization or best practice, but I think it's worth leaving it for another post.
 

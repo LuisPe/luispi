@@ -15,7 +15,7 @@ Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir p
 ## Preámbulo
 Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:
 
-```
+```dockerfile
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
@@ -49,14 +49,14 @@ poder realizar compilación cruzada.
 sistema operativo (SO) el binario para otra arquitectura o SO.
 
 Entonces para ser un poco más específicos podemos desde un host con SO = linux y arquitectura = amd64, compilar un binario 
-para SO = windows, arquitectura = 386 :fire:.
+para SO = windows, arquitectura = 386 😲.
 
 Imaginemos ahora que donde corremos los contenedores para nuestras aplicaciones el cómputo es linux como SO y con 
 arquitectura amd64.
 
 Con esto en mente realicemos una pequeña, pero importante mejora en nuestro Dockerfile.
 
-```
+```dockerfile
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build

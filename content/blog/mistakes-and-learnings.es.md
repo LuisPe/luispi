@@ -65,7 +65,7 @@ Documentar el conocimiento, por más trivial que lo consideremos, documentarlo.
 O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más veces haciendo reuniones de 
 “knowledge transfer” porque alguna persona estaba dejando el equipo?
 
-¿o acaso eras vos quien lo estaba dejando?
+¿O acaso eras vos quien lo estaba dejando?
 
 ## Enseñanza 3:
 
@@ -83,21 +83,21 @@ Por último y en otro lugar que trabajé, conocí a una de las personas que mejo
 Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar 
 la enseñanza número 3 y 3 bis.
 
-En los tiempos pre pandemia, solía –costumbre que aun conservo desde lo remoto– arrancar temprano, tener un par de horas 
+En los tiempos prepandemia, solía –costumbre que aún conservo desde lo remoto– arrancar temprano, tener un par de horas 
 “a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.
 
 Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un 
 poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque 
 había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.
 
-Famoso _Take a breath_ y al cabo de unos minutos me junte con él a solas, le hice una pregunta:
+Famoso _Take a breath_ y al cabo de unos minutos me junté con él a solas, le hice una pregunta:
 
 _¿cuántas personas están involucradas en esta funcionalidad?_
 
 Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y 
-no agarrar a los primero que se cruzó en el camino.
+no agarrar a los primeros que se cruzó en el camino.
 
-Por último le dije que comprendía pero no compartía su enojo ni como lo había manejado.
+Por último le dije que comprendía, pero no compartía su enojo ni como lo había manejado.
 
 Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:
 

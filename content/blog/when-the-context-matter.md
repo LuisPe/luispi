@@ -9,7 +9,7 @@ toc: true
 
 The following publication could be said to be a continuation of another one where we talk 
 about how having lightweight images helps us in many aspects, 
-if you still could not read it here I leave you the access
+if you still could not read it here I leave you
 [the access](https://luispe.github.io/blog/posts/lightweight-container-image/).
 
 Today we are going to make a small, but important improvement, and we are going to find out why we are doing it.
@@ -55,7 +55,7 @@ from a host with a certain architecture and operating system (OS)
 the binary for another architecture or OS.
 
 So to be a little more specific we can from a host with OS = linux and 
-architecture = amd64, compile a binary  for OS = windows, architecture = 386 :fire:.
+architecture = amd64, compile a binary  for OS = windows, architecture = 386 😲.
 
 Let's imagine now that where we run the containers for our applications 
 the computation is linux as OS and with  amd64 architecture.

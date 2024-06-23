@@ -89,8 +89,8 @@ cometer el mismo error.
 
 Todo bien luispi, ¿pero cuál es el error?
 
->_Las interfaces Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa 
-esos valores._ :scream_cat: :boom:
+>_Las interfaces en Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa 
+esos valores._ 🫠
 
 ## Propuesta/aprendizaje
 
@@ -99,7 +99,7 @@ agregar nuevos métodos a las implementaciones sin requerir una refactorización
 
 Con esto en mente vayamos a los bifes
 
-En primer lugar ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
+En primer lugar, ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
 no la interfaz.
 
 ```go
@@ -187,7 +187,7 @@ Para no aburrirte y por el momento hagamos una pausa.
 
 Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.
 
-¡Que pase bien!
+¡Hasta pronto! 👋🏽
 
 ---
 Fuentes:

@@ -89,7 +89,7 @@ I also made the same mistake.
 All good luispi, but what's the mistake?
 
 >_Go interfaces generally belong to the package that uses values of the interface type, 
-> not to the package that implements those values._ :scream_cat: :boom:
+> not to the package that implements those values._ 🫠
 
 ## Proposal/learning
 

@@ -71,7 +71,7 @@ func (ctrl *controller) toUserDTO(user *User) *UserDTO {
 }
 ```
 
-Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el `data transfer object`
+Como podemos ver en el ejemplo anterior los métodos privados en el controlador rest mapean desde el `data transfer object`
 hacia el modelo de dominio cuando llamemos al servicio y viceversa.
 
 Por último quitamos las anotaciones en nuestro modelo `user/user.go`

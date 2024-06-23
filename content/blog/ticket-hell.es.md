@@ -94,7 +94,7 @@ A lo largo de post expliqué el racional y los puntos mas importantes en los que
 una metodología de tickets para gestión de infraestructura.
 
 Y quiero dejar en claro que no está mal trabajar por tickets en un equipo de infraestructura,
-**lo que si esta definitivamente mal es que la gestión de infraestructura se haga por tickets**.
+**lo que si está definitivamente mal es que la gestión de infraestructura se haga por tickets**.
 
 ¿Y qué tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
 muchas empresas con los equipos de infraestructura y "debemos parar la pelota" para reflexionar
@@ -111,4 +111,4 @@ Espero que mi experiencia te haga repensar como formar cultura y procesos
 de trabajo para los equipos de infraestructura en la empresa si tenés dudas
 o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)
 
-¡Que pase bien! 👋🏽
+¡Hasta pronto! 👋🏽

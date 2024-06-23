@@ -25,9 +25,9 @@ This development was done with one of the people I respect and admire the most, 
 
 My experience configuring servers was null, I had the delirious idea of telling Vitor:
 
-_my friend, can I set up the server and then you try to break it?
+_my friend, can I set up the server, and then you try to break it?
 
-Then I started to make several configurations, among them I started to play with the ports, until I proudly told him:
+Then I started to make several configurations, among them, I started to play with the ports, until I proudly told him:
 
 _Vitor, try to see what happens_.
 
