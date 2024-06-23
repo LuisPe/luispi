@@ -210,7 +210,7 @@ indispensable to walk through life, humility and respect.&lt;/p></description></
 &lt;p>In the following post we will rethink a concept commonly encountered and endorsed
 in the technology industry, technical debt.&lt;/p>
 &lt;h2>Different yardstick&lt;span class="hx-absolute -hx-mt-20" id="different-yardstick">&lt;/span>
-&lt;a href="#different-yardstick" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Let&amp;rsquo;s imagine that we need to paint the exterior of our house and we decide to hire a professional to do the job.&lt;/p>
+&lt;a href="#different-yardstick" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Let&amp;rsquo;s imagine that we need to paint the exterior of our house, and we decide to hire a professional to do the job.&lt;/p>
 &lt;p>After consulting several quotes we decided to hire the services of &amp;ldquo;x&amp;rdquo; to take care of the job.&lt;/p>
 &lt;p>After a few days &amp;ldquo;x&amp;rdquo; tells us:&lt;/p>
 &lt;p>- The work is finished.&lt;/p>
@@ -220,7 +220,7 @@ in the technology industry, technical debt.&lt;/p>
 &lt;p>How would you feel if you encountered such a situation?&lt;/p>
 &lt;p>Why in the context of technology do we endorse having technical debt?&lt;/p>
 &lt;h2>Rethink&lt;span class="hx-absolute -hx-mt-20" id="rethink">&lt;/span>
-&lt;a href="#rethink" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In technology it is very common to encounter this scenario and unfortunately we naturalize it and as
+&lt;a href="#rethink" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In technology, it is very common to encounter this scenario, and unfortunately we naturalize it and as
 I commented in a &lt;a href="https://luispe.github.io/blog/posts/mistakes-and-learnings/" target="_blank" rel="noopener">previous publication&lt;/a>
 where I talk among other things about the importance of documenting and testing, it is something common that
 I always see as &amp;ldquo;technical debt&amp;rdquo;, rethinking the example of painting the house I think it exposes
@@ -328,7 +328,7 @@ I also made the same mistake.&lt;/p>
 &lt;p>All good luispi, but what&amp;rsquo;s the mistake?&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>Go interfaces generally belong to the package that uses values of the interface type,
-not to the package that implements those values.&lt;/em> :scream_cat: :boom:&lt;/p>
+not to the package that implements those values.&lt;/em> 🫠&lt;/p>
 &lt;/blockquote>
 &lt;h2>Proposal/learning&lt;span class="hx-absolute -hx-mt-20" id="proposallearning">&lt;/span>
 &lt;a href="#proposallearning" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
@@ -431,7 +431,7 @@ this anti pattern and made me rethink and improve, once again, in this software 
 &lt;/ul></description></item><item><title>When context matters</title><link>https://luispe.github.io/blog/blog/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/blog/when-the-context-matter/</guid><description>
 &lt;p>The following publication could be said to be a continuation of another one where we talk
 about how having lightweight images helps us in many aspects,
-if you still could not read it here I leave you the access
+if you still could not read it here I leave you
 &lt;a href="https://luispe.github.io/blog/posts/lightweight-container-image/" target="_blank" rel="noopener">the access&lt;/a>.&lt;/p>
 &lt;p>Today we are going to make a small, but important improvement, and we are going to find out why we are doing it.&lt;/p>
 &lt;h2>Preface&lt;span class="hx-absolute -hx-mt-20" id="preface">&lt;/span>
@@ -474,7 +474,7 @@ and that is the great virtue of being able to cross-compile.&lt;/p>
 from a host with a certain architecture and operating system (OS)
 the binary for another architecture or OS.&lt;/p>
 &lt;p>So to be a little more specific we can from a host with OS = linux and
-architecture = amd64, compile a binary for OS = windows, architecture = 386 :fire:.&lt;/p>
+architecture = amd64, compile a binary for OS = windows, architecture = 386 😲.&lt;/p>
 &lt;p>Let&amp;rsquo;s imagine now that where we run the containers for our applications
 the computation is linux as OS and with amd64 architecture.&lt;/p>
 &lt;p>With this in mind let&amp;rsquo;s make a small but important improvement to our Dockerfile.&lt;/p>
@@ -654,7 +654,7 @@ title="Copy code"
 Then in the second and final stage with the following line &lt;code>COPY --from=builder /build/myapp /myapp&lt;/code> we copy
 the binary from the stage that we have selected as &lt;code>builder&lt;/code> and we make it available in an alpine image.&lt;/p>
 &lt;p>If we list now our images we can see that it weighs approximately 9 MB, yes yes,
-I wrote correctly 9 megabytes :sunglasses:.&lt;/p>
+I wrote correctly 9 megabytes 😎.&lt;/p>
 &lt;p>We could do one last optimization or best practice, but I think it&amp;rsquo;s worth leaving it for another post.&lt;/p>
 &lt;p>So as not to bore you and for the moment let&amp;rsquo;s take a break.&lt;/p>
 &lt;p>Have a good time! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/blog/hexagonal-architecture/</guid><description>
@@ -769,8 +769,8 @@ its product catalog, I list technologies to have some context:&lt;/p>
 &lt;/ul>
 &lt;p>This development was done with one of the people I respect and admire the most, Victor De Grandis -Vitor-.&lt;/p>
 &lt;p>My experience configuring servers was null, I had the delirious idea of telling Vitor:&lt;/p>
-&lt;p>_my friend, can I set up the server and then you try to break it?&lt;/p>
-&lt;p>Then I started to make several configurations, among them I started to play with the ports, until I proudly told him:&lt;/p>
+&lt;p>_my friend, can I set up the server, and then you try to break it?&lt;/p>
+&lt;p>Then I started to make several configurations, among them, I started to play with the ports, until I proudly told him:&lt;/p>
 &lt;p>&lt;em>Vitor, try to see what happens&lt;/em>.&lt;/p>
 &lt;p>After a while I receive a message,&lt;/p>
 &lt;p>&lt;em>my friend, could it be that you closed port 22?&lt;/em>&lt;/p>

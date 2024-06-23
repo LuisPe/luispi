@@ -87,8 +87,8 @@ title="Copy code"
 cometer el mismo error.&lt;/p>
 &lt;p>Todo bien luispi, ¿pero cuál es el error?&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;em>Las interfaces Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
-esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
+&lt;p>&lt;em>Las interfaces en Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
+esos valores.&lt;/em> 🫠&lt;/p>
 &lt;/blockquote>
 &lt;h2>Propuesta/aprendizaje&lt;span class="hx-absolute -hx-mt-20" id="propuestaaprendizaje">&lt;/span>
 &lt;a href="#propuestaaprendizaje" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
@@ -96,7 +96,7 @@ esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
 agregar nuevos métodos a las implementaciones sin requerir una refactorización extensa.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>Con esto en mente vayamos a los bifes&lt;/p>
-&lt;p>En primer lugar ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
+&lt;p>En primer lugar, ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
 no la interfaz.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">repository&lt;/span>
@@ -182,7 +182,7 @@ la interfaz para que pueda consumirse en los métodos del servicio.&lt;/p>
 anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo de software.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
 &lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p>
 &lt;hr>
 &lt;p>Fuentes:&lt;/p>
 &lt;ul>
@@ -196,17 +196,21 @@ nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
 &lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code># First layer use to build a Golang binary
-FROM golang:1.18-alpine3.16 AS builder
-WORKDIR /build
-COPY go.mod go.sum ./
-RUN go mod download &amp;amp;&amp;amp; go mod verify
-COPY . ./
-RUN GOOS=linux go build -o ./myapp ./path/to/main
-# Final layer expose app to minimal docker image
-FROM alpine:3.16.0
-COPY --from=builder /build/myapp /myapp
-ENTRYPOINT [&amp;#34;/myapp&amp;#34;]&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># First layer use to build a Golang binary&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16 AS builder&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>linux go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Final layer expose app to minimal docker image&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> alpine:3.16.0&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --from&lt;span class="o">=&lt;/span>builder /build/myapp /myapp&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -227,26 +231,31 @@ poder realizar compilación cruzada.&lt;/p>
 &lt;p>¿Qué es compilación cruzada?, es la característica de poder compilar desde un host con una determinada arquitectura y
 sistema operativo (SO) el binario para otra arquitectura o SO.&lt;/p>
 &lt;p>Entonces para ser un poco más específicos podemos desde un host con SO = linux y arquitectura = amd64, compilar un binario
-para SO = windows, arquitectura = 386 :fire:.&lt;/p>
+para SO = windows, arquitectura = 386 😲.&lt;/p>
 &lt;p>Imaginemos ahora que donde corremos los contenedores para nuestras aplicaciones el cómputo es linux como SO y con
 arquitectura amd64.&lt;/p>
 &lt;p>Con esto en mente realicemos una pequeña, pero importante mejora en nuestro Dockerfile.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code># First layer use to build a Golang binary
-FROM golang:1.18-alpine3.16 AS builder
-WORKDIR /build
-COPY go.mod go.sum ./
-RUN go mod download &amp;amp;&amp;amp; go mod verify
-ENV GO111MODULE=on \
-CGO_ENABLED=0 \
-GOOS=linux \
-GOARCH=amd64
-COPY . ./
-RUN go build -o ./myapp ./path/to/main
-# Final layer expose app to minimal docker image
-FROM alpine:3.16.0
-COPY --from=builder /build/myapp /myapp
-ENTRYPOINT [&amp;#34;/myapp&amp;#34;]&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># First layer use to build a Golang binary&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16 AS builder&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">GO111MODULE&lt;/span>&lt;span class="o">=&lt;/span>on &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>linux &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Final layer expose app to minimal docker image&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> alpine:3.16.0&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --from&lt;span class="o">=&lt;/span>builder /build/myapp /myapp&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -285,7 +294,7 @@ quedamos tranquilos de que estamos acortando el margen de contratiempos.&lt;/p>
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
-&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
+&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc.)
 no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:&lt;/p>
 &lt;ul>
 &lt;li>Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.&lt;/li>
@@ -402,10 +411,10 @@ title="Copy code"
 Luego en la segunda y etapa final con la siguiente línea &lt;code>COPY --from=builder /build/myapp /myapp&lt;/code> copiamos el binario
 desde la etapa que tagueamos como &lt;code>builder&lt;/code> y lo disponibilizamos en una imagen alpine.&lt;/p>
 &lt;p>Si listamos ahora nuestras imágenes podemos observar que pesa aproximadamente 9 MB, si si, escribi correctamente
-9 megabytes :sunglasses:.&lt;/p>
+9 megabytes 😎.&lt;/p>
 &lt;p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
 &lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
 &lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>
@@ -475,7 +484,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
+&lt;p>Como podemos ver en el ejemplo anterior los métodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
 hacia el modelo de dominio cuando llamemos al servicio y viceversa.&lt;/p>
 &lt;p>Por último quitamos las anotaciones en nuestro modelo &lt;code>user/user.go&lt;/code>&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">

@@ -124,7 +124,7 @@ indispensable to walk through life, humility and respect.&lt;/p></description></
 &lt;p>In the following post we will rethink a concept commonly encountered and endorsed
 in the technology industry, technical debt.&lt;/p>
 &lt;h2>Different yardstick&lt;span class="hx-absolute -hx-mt-20" id="different-yardstick">&lt;/span>
-&lt;a href="#different-yardstick" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Let&amp;rsquo;s imagine that we need to paint the exterior of our house and we decide to hire a professional to do the job.&lt;/p>
+&lt;a href="#different-yardstick" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Let&amp;rsquo;s imagine that we need to paint the exterior of our house, and we decide to hire a professional to do the job.&lt;/p>
 &lt;p>After consulting several quotes we decided to hire the services of &amp;ldquo;x&amp;rdquo; to take care of the job.&lt;/p>
 &lt;p>After a few days &amp;ldquo;x&amp;rdquo; tells us:&lt;/p>
 &lt;p>- The work is finished.&lt;/p>
@@ -134,7 +134,7 @@ in the technology industry, technical debt.&lt;/p>
 &lt;p>How would you feel if you encountered such a situation?&lt;/p>
 &lt;p>Why in the context of technology do we endorse having technical debt?&lt;/p>
 &lt;h2>Rethink&lt;span class="hx-absolute -hx-mt-20" id="rethink">&lt;/span>
-&lt;a href="#rethink" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In technology it is very common to encounter this scenario and unfortunately we naturalize it and as
+&lt;a href="#rethink" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In technology, it is very common to encounter this scenario, and unfortunately we naturalize it and as
 I commented in a &lt;a href="https://luispe.github.io/blog/posts/mistakes-and-learnings/" target="_blank" rel="noopener">previous publication&lt;/a>
 where I talk among other things about the importance of documenting and testing, it is something common that
 I always see as &amp;ldquo;technical debt&amp;rdquo;, rethinking the example of painting the house I think it exposes
@@ -171,8 +171,8 @@ its product catalog, I list technologies to have some context:&lt;/p>
 &lt;/ul>
 &lt;p>This development was done with one of the people I respect and admire the most, Victor De Grandis -Vitor-.&lt;/p>
 &lt;p>My experience configuring servers was null, I had the delirious idea of telling Vitor:&lt;/p>
-&lt;p>_my friend, can I set up the server and then you try to break it?&lt;/p>
-&lt;p>Then I started to make several configurations, among them I started to play with the ports, until I proudly told him:&lt;/p>
+&lt;p>_my friend, can I set up the server, and then you try to break it?&lt;/p>
+&lt;p>Then I started to make several configurations, among them, I started to play with the ports, until I proudly told him:&lt;/p>
 &lt;p>&lt;em>Vitor, try to see what happens&lt;/em>.&lt;/p>
 &lt;p>After a while I receive a message,&lt;/p>
 &lt;p>&lt;em>my friend, could it be that you closed port 22?&lt;/em>&lt;/p>

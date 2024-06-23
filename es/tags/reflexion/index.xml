@@ -2,10 +2,10 @@
 &lt;h2>Problema&lt;span class="hx-absolute -hx-mt-20" id="problema">&lt;/span>
 &lt;a href="#problema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
 &lt;p>¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
-voy a explicar el por qué la menciono.&lt;/p>
+voy a explicar por qué la menciono.&lt;/p>
 &lt;p>En los equipos de infraestructura en el cual llevo trabajando y liderando
 algunos años tuve la gran fortuna de cruzarme con &lt;a href="https://www.linkedin.com/in/juanjosebehrend/" target="_blank" rel="noopener">Juanjo&lt;/a>.
-Desde el minuto cero le escuche decir, promover y defender a capa y espada:&lt;/p>
+Desde el minuto cero le escuché decir, promover y defender a capa y espada:&lt;/p>
 &lt;p>&lt;em>- Nunca caigamos en un equipo de infraestructura que trabaje mediante pedidos por tickets&lt;/em>&lt;/p>
 &lt;h2>Posicionamiento&lt;span class="hx-absolute -hx-mt-20" id="posicionamiento">&lt;/span>
 &lt;a href="#posicionamiento" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>¿Cuál es el racional detrás de esta posición firme?&lt;/p>
@@ -22,8 +22,8 @@ en explicar cada uno de ellos.&lt;/p>
 &lt;h3>1. Cultura extremadamente fuerte&lt;span class="hx-absolute -hx-mt-20" id="1-cultura-extremadamente-fuerte">&lt;/span>
 &lt;a href="#1-cultura-extremadamente-fuerte" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Tanto a los equipos de infraestructura como a los de QA no se los suele involucrar en el armado
 de roadmap y sprint de tecnología y producto.
-En caso que pase, se lo hace al final de la milla &amp;ldquo;cuando ya todo esta cocinado&amp;rdquo;.&lt;/p>
-&lt;p>¿A donde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
+En caso de que pase, se lo hace al final de la milla &amp;ldquo;cuando ya todo está cocinado&amp;rdquo;.&lt;/p>
+&lt;p>¿A dónde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
 y tiene que priorizar por cuestiones de capacidad de ejecución, la pregunta obvia:&lt;/p>
 &lt;p>¿que ticket priorizo?&lt;/p>
 &lt;p>Buena suerte cuando estés ahí, porque para los clientes lo de ellos es lo más importante del
@@ -43,10 +43,10 @@ infraestructura para atacar la demanda de tickets.&lt;/p>
 &lt;p>Digo esto porque es difícil mantener la motivación si &amp;mdash;en un trabajo
 que es altamente impulsado por la creatividad&amp;mdash; acotamos a los integrantes del
 equipo a &amp;ldquo;cerrar tickets&amp;rdquo; sin ningún lugar para la discusión o la doble pregunta.&lt;/p>
-&lt;p>¿Que puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
+&lt;p>¿Qué puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
 que, si son tóxicos, pueden acusar de bloqueantes o mala experiencia en la gestión
 de infraestructura al equipo de infra.&lt;/p>
-&lt;p>De esto último ¿que puede decirte?, Keep Calm y te dejo un gran abrazo.&lt;/p>
+&lt;p>De esto último ¿qué puede decirte?, Keep Calm y te dejo un gran abrazo.&lt;/p>
 &lt;h3>4. Innovación&lt;span class="hx-absolute -hx-mt-20" id="4-innovación">&lt;/span>
 &lt;a href="#4-innovaci%c3%b3n" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Por último si tenemos resueltos los anteriores 3 puntos es imposible innovar,
 lisa y llanamente.&lt;/p>
@@ -54,13 +54,13 @@ lisa y llanamente.&lt;/p>
 un proyecto creando infraestructura, es imposible que pueda innovar.&lt;/p>
 &lt;h2>Volvamos al inicio&lt;span class="hx-absolute -hx-mt-20" id="volvamos-al-inicio">&lt;/span>
 &lt;a href="#volvamos-al-inicio" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
-&lt;p>A lo largo de post explique el racional y los puntos mas importantes en los que va a impactar
+&lt;p>A lo largo de post expliqué el racional y los puntos mas importantes en los que va a impactar
 una metodología de tickets para gestión de infraestructura.&lt;/p>
 &lt;p>Y quiero dejar en claro que no está mal trabajar por tickets en un equipo de infraestructura,
-&lt;strong>lo que si esta definitivamente mal es que la gestión de infraestructura se haga por tickets&lt;/strong>.&lt;/p>
-&lt;p>¿Y que tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
-muchos empresas con los equipos de infraestructura y &amp;ldquo;debemos parar la pelota&amp;rdquo; para reflexionar
-porque no están funcionando bien las cosas en muchos lugares.&lt;/p>
+&lt;strong>lo que si está definitivamente mal es que la gestión de infraestructura se haga por tickets&lt;/strong>.&lt;/p>
+&lt;p>¿Y qué tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
+muchas empresas con los equipos de infraestructura y &amp;ldquo;debemos parar la pelota&amp;rdquo; para reflexionar
+por qué no están funcionando bien las cosas en muchos lugares.&lt;/p>
 &lt;p>¿Y cómo podemos evitarlo?&lt;/p>
 &lt;p>Debemos inyectar una mentalidad de producto a los equipos de infraestructura, ofrecer
 abstracciones con experiencias de primer nivel del caos de la plataforma subyacente para que
@@ -69,7 +69,7 @@ y la infraestructura asociada.&lt;/p>
 &lt;p>Espero que mi experiencia te haga repensar como formar cultura y procesos
 de trabajo para los equipos de infraestructura en la empresa si tenés dudas
 o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
 &lt;p>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.&lt;/p>
 &lt;p>Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa
 (&lt;a href="https://www.linkedin.com/company/pomelo-latam/mycompany/" target="_blank" rel="noopener">Pomelo&lt;/a>), el 29 de agosto del 2022 hicieron públicas las
@@ -199,7 +199,7 @@ a entender cómo dejar esa línea de código local y exponerla a internet.&lt;/p
 &lt;p>Documentar el conocimiento, por más trivial que lo consideremos, documentarlo.&lt;/p>
 &lt;p>O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más veces haciendo reuniones de
 “knowledge transfer” porque alguna persona estaba dejando el equipo?&lt;/p>
-&lt;p>¿o acaso eras vos quien lo estaba dejando?&lt;/p>
+&lt;p>¿O acaso eras vos quien lo estaba dejando?&lt;/p>
 &lt;h2>Enseñanza 3:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-3">&lt;/span>
 &lt;a href="#ense%c3%b1anza-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
 &lt;p>Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.&lt;/p>
@@ -212,16 +212,16 @@ es una ganancia en el tiempo.&lt;/p>
 &lt;a href="https://www.linkedin.com/in/morenojp/" target="_blank" rel="noopener">Juan Moreno&lt;/a>, ¿qué es mejor para mí?, soluciones simples a problemas complejos.&lt;/p>
 &lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar
 la enseñanza número 3 y 3 bis.&lt;/p>
-&lt;p>En los tiempos pre pandemia, solía –costumbre que aun conservo desde lo remoto– arrancar temprano, tener un par de horas
+&lt;p>En los tiempos prepandemia, solía –costumbre que aún conservo desde lo remoto– arrancar temprano, tener un par de horas
 “a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.&lt;/p>
 &lt;p>Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un
 poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque
 había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.&lt;/p>
-&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junte con él a solas, le hice una pregunta:&lt;/p>
+&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junté con él a solas, le hice una pregunta:&lt;/p>
 &lt;p>&lt;em>¿cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
 &lt;p>Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y
-no agarrar a los primero que se cruzó en el camino.&lt;/p>
-&lt;p>Por último le dije que comprendía pero no compartía su enojo ni como lo había manejado.&lt;/p>
+no agarrar a los primeros que se cruzó en el camino.&lt;/p>
+&lt;p>Por último le dije que comprendía, pero no compartía su enojo ni como lo había manejado.&lt;/p>
 &lt;p>Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:&lt;/p>
 &lt;blockquote>
 &lt;p>Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a

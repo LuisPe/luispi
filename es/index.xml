@@ -99,10 +99,10 @@ tips de un libro de liderazgo.&lt;/p>
 &lt;h2>Problema&lt;span class="hx-absolute -hx-mt-20" id="problema">&lt;/span>
 &lt;a href="#problema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
 &lt;p>¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
-voy a explicar el por qué la menciono.&lt;/p>
+voy a explicar por qué la menciono.&lt;/p>
 &lt;p>En los equipos de infraestructura en el cual llevo trabajando y liderando
 algunos años tuve la gran fortuna de cruzarme con &lt;a href="https://www.linkedin.com/in/juanjosebehrend/" target="_blank" rel="noopener">Juanjo&lt;/a>.
-Desde el minuto cero le escuche decir, promover y defender a capa y espada:&lt;/p>
+Desde el minuto cero le escuché decir, promover y defender a capa y espada:&lt;/p>
 &lt;p>&lt;em>- Nunca caigamos en un equipo de infraestructura que trabaje mediante pedidos por tickets&lt;/em>&lt;/p>
 &lt;h2>Posicionamiento&lt;span class="hx-absolute -hx-mt-20" id="posicionamiento">&lt;/span>
 &lt;a href="#posicionamiento" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>¿Cuál es el racional detrás de esta posición firme?&lt;/p>
@@ -119,8 +119,8 @@ en explicar cada uno de ellos.&lt;/p>
 &lt;h3>1. Cultura extremadamente fuerte&lt;span class="hx-absolute -hx-mt-20" id="1-cultura-extremadamente-fuerte">&lt;/span>
 &lt;a href="#1-cultura-extremadamente-fuerte" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Tanto a los equipos de infraestructura como a los de QA no se los suele involucrar en el armado
 de roadmap y sprint de tecnología y producto.
-En caso que pase, se lo hace al final de la milla &amp;ldquo;cuando ya todo esta cocinado&amp;rdquo;.&lt;/p>
-&lt;p>¿A donde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
+En caso de que pase, se lo hace al final de la milla &amp;ldquo;cuando ya todo está cocinado&amp;rdquo;.&lt;/p>
+&lt;p>¿A dónde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
 y tiene que priorizar por cuestiones de capacidad de ejecución, la pregunta obvia:&lt;/p>
 &lt;p>¿que ticket priorizo?&lt;/p>
 &lt;p>Buena suerte cuando estés ahí, porque para los clientes lo de ellos es lo más importante del
@@ -140,10 +140,10 @@ infraestructura para atacar la demanda de tickets.&lt;/p>
 &lt;p>Digo esto porque es difícil mantener la motivación si &amp;mdash;en un trabajo
 que es altamente impulsado por la creatividad&amp;mdash; acotamos a los integrantes del
 equipo a &amp;ldquo;cerrar tickets&amp;rdquo; sin ningún lugar para la discusión o la doble pregunta.&lt;/p>
-&lt;p>¿Que puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
+&lt;p>¿Qué puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
 que, si son tóxicos, pueden acusar de bloqueantes o mala experiencia en la gestión
 de infraestructura al equipo de infra.&lt;/p>
-&lt;p>De esto último ¿que puede decirte?, Keep Calm y te dejo un gran abrazo.&lt;/p>
+&lt;p>De esto último ¿qué puede decirte?, Keep Calm y te dejo un gran abrazo.&lt;/p>
 &lt;h3>4. Innovación&lt;span class="hx-absolute -hx-mt-20" id="4-innovación">&lt;/span>
 &lt;a href="#4-innovaci%c3%b3n" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Por último si tenemos resueltos los anteriores 3 puntos es imposible innovar,
 lisa y llanamente.&lt;/p>
@@ -151,13 +151,13 @@ lisa y llanamente.&lt;/p>
 un proyecto creando infraestructura, es imposible que pueda innovar.&lt;/p>
 &lt;h2>Volvamos al inicio&lt;span class="hx-absolute -hx-mt-20" id="volvamos-al-inicio">&lt;/span>
 &lt;a href="#volvamos-al-inicio" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
-&lt;p>A lo largo de post explique el racional y los puntos mas importantes en los que va a impactar
+&lt;p>A lo largo de post expliqué el racional y los puntos mas importantes en los que va a impactar
 una metodología de tickets para gestión de infraestructura.&lt;/p>
 &lt;p>Y quiero dejar en claro que no está mal trabajar por tickets en un equipo de infraestructura,
-&lt;strong>lo que si esta definitivamente mal es que la gestión de infraestructura se haga por tickets&lt;/strong>.&lt;/p>
-&lt;p>¿Y que tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
-muchos empresas con los equipos de infraestructura y &amp;ldquo;debemos parar la pelota&amp;rdquo; para reflexionar
-porque no están funcionando bien las cosas en muchos lugares.&lt;/p>
+&lt;strong>lo que si está definitivamente mal es que la gestión de infraestructura se haga por tickets&lt;/strong>.&lt;/p>
+&lt;p>¿Y qué tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
+muchas empresas con los equipos de infraestructura y &amp;ldquo;debemos parar la pelota&amp;rdquo; para reflexionar
+por qué no están funcionando bien las cosas en muchos lugares.&lt;/p>
 &lt;p>¿Y cómo podemos evitarlo?&lt;/p>
 &lt;p>Debemos inyectar una mentalidad de producto a los equipos de infraestructura, ofrecer
 abstracciones con experiencias de primer nivel del caos de la plataforma subyacente para que
@@ -166,7 +166,7 @@ y la infraestructura asociada.&lt;/p>
 &lt;p>Espero que mi experiencia te haga repensar como formar cultura y procesos
 de trabajo para los equipos de infraestructura en la empresa si tenés dudas
 o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
 &lt;p>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.&lt;/p>
 &lt;p>Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa
 (&lt;a href="https://www.linkedin.com/company/pomelo-latam/mycompany/" target="_blank" rel="noopener">Pomelo&lt;/a>), el 29 de agosto del 2022 hicieron públicas las
@@ -341,8 +341,8 @@ title="Copy code"
 cometer el mismo error.&lt;/p>
 &lt;p>Todo bien luispi, ¿pero cuál es el error?&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;em>Las interfaces Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
-esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
+&lt;p>&lt;em>Las interfaces en Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
+esos valores.&lt;/em> 🫠&lt;/p>
 &lt;/blockquote>
 &lt;h2>Propuesta/aprendizaje&lt;span class="hx-absolute -hx-mt-20" id="propuestaaprendizaje">&lt;/span>
 &lt;a href="#propuestaaprendizaje" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
@@ -350,7 +350,7 @@ esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
 agregar nuevos métodos a las implementaciones sin requerir una refactorización extensa.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>Con esto en mente vayamos a los bifes&lt;/p>
-&lt;p>En primer lugar ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
+&lt;p>En primer lugar, ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
 no la interfaz.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">repository&lt;/span>
@@ -436,7 +436,7 @@ la interfaz para que pueda consumirse en los métodos del servicio.&lt;/p>
 anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo de software.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
 &lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p>
 &lt;hr>
 &lt;p>Fuentes:&lt;/p>
 &lt;ul>
@@ -450,17 +450,21 @@ nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
 &lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code># First layer use to build a Golang binary
-FROM golang:1.18-alpine3.16 AS builder
-WORKDIR /build
-COPY go.mod go.sum ./
-RUN go mod download &amp;amp;&amp;amp; go mod verify
-COPY . ./
-RUN GOOS=linux go build -o ./myapp ./path/to/main
-# Final layer expose app to minimal docker image
-FROM alpine:3.16.0
-COPY --from=builder /build/myapp /myapp
-ENTRYPOINT [&amp;#34;/myapp&amp;#34;]&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># First layer use to build a Golang binary&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16 AS builder&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>linux go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Final layer expose app to minimal docker image&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> alpine:3.16.0&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --from&lt;span class="o">=&lt;/span>builder /build/myapp /myapp&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -481,26 +485,31 @@ poder realizar compilación cruzada.&lt;/p>
 &lt;p>¿Qué es compilación cruzada?, es la característica de poder compilar desde un host con una determinada arquitectura y
 sistema operativo (SO) el binario para otra arquitectura o SO.&lt;/p>
 &lt;p>Entonces para ser un poco más específicos podemos desde un host con SO = linux y arquitectura = amd64, compilar un binario
-para SO = windows, arquitectura = 386 :fire:.&lt;/p>
+para SO = windows, arquitectura = 386 😲.&lt;/p>
 &lt;p>Imaginemos ahora que donde corremos los contenedores para nuestras aplicaciones el cómputo es linux como SO y con
 arquitectura amd64.&lt;/p>
 &lt;p>Con esto en mente realicemos una pequeña, pero importante mejora en nuestro Dockerfile.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code># First layer use to build a Golang binary
-FROM golang:1.18-alpine3.16 AS builder
-WORKDIR /build
-COPY go.mod go.sum ./
-RUN go mod download &amp;amp;&amp;amp; go mod verify
-ENV GO111MODULE=on \
-CGO_ENABLED=0 \
-GOOS=linux \
-GOARCH=amd64
-COPY . ./
-RUN go build -o ./myapp ./path/to/main
-# Final layer expose app to minimal docker image
-FROM alpine:3.16.0
-COPY --from=builder /build/myapp /myapp
-ENTRYPOINT [&amp;#34;/myapp&amp;#34;]&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dockerfile" data-lang="dockerfile">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># First layer use to build a Golang binary&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> golang:1.18-alpine3.16 AS builder&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">WORKDIR&lt;/span>&lt;span class="s"> /build&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> go.mod go.sum ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go mod download &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> go mod verify&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENV&lt;/span> &lt;span class="nv">GO111MODULE&lt;/span>&lt;span class="o">=&lt;/span>on &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">CGO_ENABLED&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">GOOS&lt;/span>&lt;span class="o">=&lt;/span>linux &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">GOARCH&lt;/span>&lt;span class="o">=&lt;/span>amd64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">COPY&lt;/span> . ./&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> go build -o ./myapp ./path/to/main&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># Final layer expose app to minimal docker image&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="s"> alpine:3.16.0&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">COPY&lt;/span> --from&lt;span class="o">=&lt;/span>builder /build/myapp /myapp&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ENTRYPOINT&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;/myapp&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -539,7 +548,7 @@ quedamos tranquilos de que estamos acortando el margen de contratiempos.&lt;/p>
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
-&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc)
+&lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Perseguir que nuestras imágenes de container sean lo más reducida posible en cuanto a su peso (megabytes, gigabytes, etc.)
 no es una cuestión de gustos, nos ayuda en muchos aspectos, a continuación les comparto algunos:&lt;/p>
 &lt;ul>
 &lt;li>Reduce gastos de storage en el registry que utilizamos para gestionar nuestras imágenes.&lt;/li>
@@ -656,10 +665,10 @@ title="Copy code"
 Luego en la segunda y etapa final con la siguiente línea &lt;code>COPY --from=builder /build/myapp /myapp&lt;/code> copiamos el binario
 desde la etapa que tagueamos como &lt;code>builder&lt;/code> y lo disponibilizamos en una imagen alpine.&lt;/p>
 &lt;p>Si listamos ahora nuestras imágenes podemos observar que pesa aproximadamente 9 MB, si si, escribi correctamente
-9 megabytes :sunglasses:.&lt;/p>
+9 megabytes 😎.&lt;/p>
 &lt;p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
 &lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
 &lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>
@@ -729,7 +738,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
+&lt;p>Como podemos ver en el ejemplo anterior los métodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
 hacia el modelo de dominio cuando llamemos al servicio y viceversa.&lt;/p>
 &lt;p>Por último quitamos las anotaciones en nuestro modelo &lt;code>user/user.go&lt;/code>&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -796,7 +805,7 @@ a entender cómo dejar esa línea de código local y exponerla a internet.&lt;/p
 &lt;p>Documentar el conocimiento, por más trivial que lo consideremos, documentarlo.&lt;/p>
 &lt;p>O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más veces haciendo reuniones de
 “knowledge transfer” porque alguna persona estaba dejando el equipo?&lt;/p>
-&lt;p>¿o acaso eras vos quien lo estaba dejando?&lt;/p>
+&lt;p>¿O acaso eras vos quien lo estaba dejando?&lt;/p>
 &lt;h2>Enseñanza 3:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-3">&lt;/span>
 &lt;a href="#ense%c3%b1anza-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
 &lt;p>Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.&lt;/p>
@@ -809,16 +818,16 @@ es una ganancia en el tiempo.&lt;/p>
 &lt;a href="https://www.linkedin.com/in/morenojp/" target="_blank" rel="noopener">Juan Moreno&lt;/a>, ¿qué es mejor para mí?, soluciones simples a problemas complejos.&lt;/p>
 &lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar
 la enseñanza número 3 y 3 bis.&lt;/p>
-&lt;p>En los tiempos pre pandemia, solía –costumbre que aun conservo desde lo remoto– arrancar temprano, tener un par de horas
+&lt;p>En los tiempos prepandemia, solía –costumbre que aún conservo desde lo remoto– arrancar temprano, tener un par de horas
 “a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.&lt;/p>
 &lt;p>Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un
 poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque
 había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.&lt;/p>
-&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junte con él a solas, le hice una pregunta:&lt;/p>
+&lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junté con él a solas, le hice una pregunta:&lt;/p>
 &lt;p>&lt;em>¿cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
 &lt;p>Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y
-no agarrar a los primero que se cruzó en el camino.&lt;/p>
-&lt;p>Por último le dije que comprendía pero no compartía su enojo ni como lo había manejado.&lt;/p>
+no agarrar a los primeros que se cruzó en el camino.&lt;/p>
+&lt;p>Por último le dije que comprendía, pero no compartía su enojo ni como lo había manejado.&lt;/p>
 &lt;p>Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:&lt;/p>
 &lt;blockquote>
 &lt;p>Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a

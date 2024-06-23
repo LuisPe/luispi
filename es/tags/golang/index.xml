@@ -87,8 +87,8 @@ title="Copy code"
 cometer el mismo error.&lt;/p>
 &lt;p>Todo bien luispi, ¿pero cuál es el error?&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;em>Las interfaces Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
-esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
+&lt;p>&lt;em>Las interfaces en Go generalmente pertenecen al paquete que usa valores del tipo de interfaz, no al paquete que implementa
+esos valores.&lt;/em> 🫠&lt;/p>
 &lt;/blockquote>
 &lt;h2>Propuesta/aprendizaje&lt;span class="hx-absolute -hx-mt-20" id="propuestaaprendizaje">&lt;/span>
 &lt;a href="#propuestaaprendizaje" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
@@ -96,7 +96,7 @@ esos valores.&lt;/em> :scream_cat: :boom:&lt;/p>
 agregar nuevos métodos a las implementaciones sin requerir una refactorización extensa.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>Con esto en mente vayamos a los bifes&lt;/p>
-&lt;p>En primer lugar ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
+&lt;p>En primer lugar, ataquemos la capa de repositorio, como bien dice la nota anterior vamos a retornar una estructura y
 no la interfaz.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">repository&lt;/span>
@@ -182,7 +182,7 @@ la interfaz para que pueda consumirse en los métodos del servicio.&lt;/p>
 anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo de software.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
 &lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p>
 &lt;hr>
 &lt;p>Fuentes:&lt;/p>
 &lt;ul>
@@ -258,7 +258,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Como podemos ver en el ejemplo anterior los metodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
+&lt;p>Como podemos ver en el ejemplo anterior los métodos privados en el controlador rest mapean desde el &lt;code>data transfer object&lt;/code>
 hacia el modelo de dominio cuando llamemos al servicio y viceversa.&lt;/p>
 &lt;p>Por último quitamos las anotaciones en nuestro modelo &lt;code>user/user.go&lt;/code>&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">

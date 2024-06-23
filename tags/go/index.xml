@@ -88,7 +88,7 @@ I also made the same mistake.&lt;/p>
 &lt;p>All good luispi, but what&amp;rsquo;s the mistake?&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>Go interfaces generally belong to the package that uses values of the interface type,
-not to the package that implements those values.&lt;/em> :scream_cat: :boom:&lt;/p>
+not to the package that implements those values.&lt;/em> 🫠&lt;/p>
 &lt;/blockquote>
 &lt;h2>Proposal/learning&lt;span class="hx-absolute -hx-mt-20" id="proposallearning">&lt;/span>
 &lt;a href="#proposallearning" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
