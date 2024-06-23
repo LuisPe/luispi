@@ -10,11 +10,11 @@ toc: true
 _Si solo tenés un martillo todos los problemas se parecen a un clavo_
 
 ¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
-voy a explicar el por qué la menciono.
+voy a explicar por qué la menciono.
 
 En los equipos de infraestructura en el cual llevo trabajando y liderando
 algunos años tuve la gran fortuna de cruzarme con [Juanjo](https://www.linkedin.com/in/juanjosebehrend/).
-Desde el minuto cero le escuche decir, promover y defender a capa y espada:
+Desde el minuto cero le escuché decir, promover y defender a capa y espada:
 
 _- Nunca caigamos en un equipo de infraestructura que trabaje mediante pedidos por tickets_
 
@@ -36,9 +36,9 @@ en explicar cada uno de ellos.
 
 Tanto a los equipos de infraestructura como a los de QA no se los suele involucrar en el armado
 de roadmap y sprint de tecnología y producto. 
-En caso que pase, se lo hace al final de la milla "cuando ya todo esta cocinado".
+En caso de que pase, se lo hace al final de la milla "cuando ya todo está cocinado".
 
-¿A donde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
+¿A dónde apunto con esto?, que si al responsable de infraestructura le llegan dos tickets
 y tiene que priorizar por cuestiones de capacidad de ejecución, la pregunta obvia:
 
 ¿que ticket priorizo?
@@ -71,11 +71,11 @@ Digo esto porque es difícil mantener la motivación si ---en un trabajo
 que es altamente impulsado por la creatividad--- acotamos a los integrantes del
 equipo a "cerrar tickets" sin ningún lugar para la discusión o la doble pregunta.
 
-¿Que puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
+¿Qué puede pasar?, rotación alta en el equipo de infra y un malestar en los equipos de tecnología
 que, si son tóxicos, pueden acusar de bloqueantes o mala experiencia en la gestión
 de infraestructura al equipo de infra.
 
-De esto último ¿que puede decirte?, Keep Calm y te dejo un gran abrazo.
+De esto último ¿qué puede decirte?, Keep Calm y te dejo un gran abrazo.
 
 ### 4. Innovación
 
@@ -90,15 +90,15 @@ un proyecto creando infraestructura, es imposible que pueda innovar.
 
 _Si solo tenés un martillo todos los problemas se parecen a un clavo_
 
-A lo largo de post explique el racional y los puntos mas importantes en los que va a impactar
+A lo largo de post expliqué el racional y los puntos mas importantes en los que va a impactar
 una metodología de tickets para gestión de infraestructura.
 
 Y quiero dejar en claro que no está mal trabajar por tickets en un equipo de infraestructura,
 **lo que si esta definitivamente mal es que la gestión de infraestructura se haga por tickets**.
 
-¿Y que tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
-muchos empresas con los equipos de infraestructura y "debemos parar la pelota" para reflexionar
-porque no están funcionando bien las cosas en muchos lugares.
+¿Y qué tiene que ver la frase del martillo?, que se implementó mal una metodología ágil en
+muchas empresas con los equipos de infraestructura y "debemos parar la pelota" para reflexionar
+por qué no están funcionando bien las cosas en muchos lugares.
 
 ¿Y cómo podemos evitarlo?
 
