@@ -4,6 +4,7 @@ description: "How to create lightweight images and save networking and storage t
 date: 2022-06-11T17:49:18-03:00
 tags: ["best-practices", "docker"]
 categories: ["stop-copy-paste"]
+toc: true
 ---
 In the following post I am going to share with you some tips and best practices to develop our container images, 
 as an example we are going to create an image for an app in Golang, but the following tips apply to any language, let's go!

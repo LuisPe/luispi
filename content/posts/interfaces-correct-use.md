@@ -4,6 +4,7 @@ description: "Preventing the abuse or misuse of interfaces favors code maintaina
 date: 2022-06-20T10:47:02-03:00
 tags: ["best-practices", "golang", "go"]
 categories: ["stop-copy-paste"]
+toc: true
 ---
 In the following post I want to share a common mistake I used to make in my Golang projects. 
 And as the title and description says, today we are going to talk about interfaces.

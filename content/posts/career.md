@@ -3,6 +3,7 @@ title: "Anniversaries"
 description: "One anniversary, two teams and one promotion"
 date: 2022-09-02T19:11:03-03:00
 tags: ["reflexion"]
+toc: true
 ---
 Anniversaries, be it a birthday, the end of the year or whatever, generally lead one to reflect.
 

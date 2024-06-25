@@ -3,6 +3,7 @@ title: "Technical debt"
 description: "The famous technical debt and the impact it has on the teams."
 date: 2022-07-02T16:36:17-03:00
 tags: ["reflexion"]
+toc: true
 ---
 In the following post we will rethink a concept commonly encountered and endorsed 
 in the technology industry, technical debt.

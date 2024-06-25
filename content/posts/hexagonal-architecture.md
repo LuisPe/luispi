@@ -4,6 +4,7 @@ description: "How to decouple our system layers correctly"
 date: 2022-06-09T21:53:34-03:00
 tags: ["best-practices", "golang", "go"]
 categories: ["stop-copy-paste"]
+toc: true
 ---
 This is the first of a series where we will review different development patterns that I made 
 mistakes and what is currently and what I understand so far, the best way to apply it.

@@ -3,6 +3,7 @@ title: "You learn from your mistakes, and if you share them, you grow."
 description: "Sharing and acquiring knowledge should be the guide."
 date: 2022-06-05T21:53:34-03:00
 tags: ["reflexion"]
+toc: true
 ---
 In our society in general and in technology in particular, we have the strange habit of publishing success 
 stories (opinion of the writer, wrongly called **successful case**) and few, if any, occasions where 

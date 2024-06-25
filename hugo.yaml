@@ -4,7 +4,7 @@ title: luispe
 
 enableRobotsTXT: true
 enableGitInfo: true
-# enableEmoji: false
+enableEmoji: true
 hasCJKLanguage: true
 
 # services:
@@ -39,11 +39,9 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - identifier: blog
-    - name: Blog
-      pageRef: /blog
+    - name: Posts
+      pageRef: /posts
       weight: 1
-    - identifier: about
     - name: About
       pageRef: /about
       weight: 2
