@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Stop-Copy-Paste</title><link>https://luispe.github.io/blog/es/categories/stop-copy-paste/</link><description>Recent content in Stop-Copy-Paste on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/categories/stop-copy-paste/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Stop-Copy-Paste</title><link>https://luispe.github.io/blog/es/categories/stop-copy-paste/</link><description>Recent content in Stop-Copy-Paste on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/categories/stop-copy-paste/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</guid><description>
 &lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
 &lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
@@ -188,7 +188,7 @@ anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo 
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/golang/go/wiki/CodeReviewComments#interfaces" target="_blank" rel="noopener">wiki oficial de Golang&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://8thlight.com/blog/go-interface-misuse/" target="_blank" rel="noopener">go interfaces misuse&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/blog/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/when-the-context-matter/</guid><description>
+&lt;/ul></description></item><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid><description>
 &lt;p>La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas
 nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
 &lt;a href="https://luispe.github.io/blog/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
@@ -289,7 +289,7 @@ cabeza o &amp;ldquo;troubleshooting&amp;rdquo;, y de más esta decir que ya no n
 de integración continua), porque realizando la compilación, de nuevo, para el entorno en que va a ser ejecutado, nos
 quedamos tranquilos de que estamos acortando el margen de contratiempos.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/es/blog/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/lightweight-container-image/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/es/posts/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/lightweight-container-image/</guid><description>
 &lt;p>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!&lt;/p>
@@ -414,7 +414,7 @@ desde la etapa que tagueamos como &lt;code>builder&lt;/code> y lo disponibilizam
 9 megabytes 😎.&lt;/p>
 &lt;p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</guid><description>
 &lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
 &lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>

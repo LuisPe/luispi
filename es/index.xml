@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Inicio</title><link>https://luispe.github.io/blog/es/</link><description>Recent content in Inicio on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><atom:link href="https://luispe.github.io/blog/es/index.xml" rel="self" type="application/rss+xml"/><item><title>Todos deberíamos gestionar equipos</title><link>https://luispe.github.io/blog/es/blog/we-should-allmanageteams/</link><pubDate>Sat, 22 Jun 2024 11:10:25 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/we-should-allmanageteams/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Inicio</title><link>https://luispe.github.io/blog/es/</link><description>Recent content in Inicio on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><atom:link href="https://luispe.github.io/blog/es/index.xml" rel="self" type="application/rss+xml"/><item><title>Todos deberíamos gestionar equipos</title><link>https://luispe.github.io/blog/es/posts/we-should-allmanageteams/</link><pubDate>Sat, 22 Jun 2024 11:10:25 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/we-should-allmanageteams/</guid><description>
 &lt;p>Para tener un contexto por si llegaste de casualidad a esta publicación,
 voy a hablar desde la industria de tecnología, industria profundamente técnica,
 y cómo liderar equipos, al menos por un lapso de tiempo,
@@ -95,7 +95,7 @@ no vas a impulsar el cambio y mejora en la vida y carrera de la persona.&lt;/p>
 &lt;a href="#se-vos-mismo-no-gestiones-desde-lo-libros" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Por último y también puede ser una obviedad, pero se vos mismo, se siente a kilómetros
 de distancia cuando alguien te está hablando desde un discurso preparado o desde
 tips de un libro de liderazgo.&lt;/p>
-&lt;p>Todos estamos y continuamos aprendiendo, vos también.&lt;/p></description></item><item><title>El infierno de los tickets</title><link>https://luispe.github.io/blog/es/blog/ticket-hell/</link><pubDate>Wed, 19 Jun 2024 19:10:20 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/ticket-hell/</guid><description>
+&lt;p>Todos estamos y continuamos aprendiendo, vos también.&lt;/p></description></item><item><title>El infierno de los tickets</title><link>https://luispe.github.io/blog/es/posts/ticket-hell/</link><pubDate>Wed, 19 Jun 2024 19:10:20 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/ticket-hell/</guid><description>
 &lt;h2>Problema&lt;span class="hx-absolute -hx-mt-20" id="problema">&lt;/span>
 &lt;a href="#problema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
 &lt;p>¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
@@ -166,7 +166,7 @@ y la infraestructura asociada.&lt;/p>
 &lt;p>Espero que mi experiencia te haga repensar como formar cultura y procesos
 de trabajo para los equipos de infraestructura en la empresa si tenés dudas
 o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)&lt;/p>
-&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/posts/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/career/</guid><description>
 &lt;p>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.&lt;/p>
 &lt;p>Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa
 (&lt;a href="https://www.linkedin.com/company/pomelo-latam/mycompany/" target="_blank" rel="noopener">Pomelo&lt;/a>), el 29 de agosto del 2022 hicieron públicas las
@@ -219,7 +219,7 @@ increíbles.&lt;/p>
 incontable de veces más importante y es, al menos en los valores que persigo y busco, infinitamente superior a
 cualquier puesto que ocupemos u obtengamos.&lt;/p>
 &lt;p>Por ahora no quiero aburrir ni extenderme, pronto voy a escribir sobre los otros dos pilares que siento indispensables
-para transitar la vida, humildad y respeto.&lt;/p></description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/blog/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/technical-debt/</guid><description>
+para transitar la vida, humildad y respeto.&lt;/p></description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/posts/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/technical-debt/</guid><description>
 &lt;p>En la siguiente publicación vamos a repensar un concepto comúnmente encontrado y avalado en la industria de la
 tecnología, la deuda técnica.&lt;/p>
 &lt;h2>Distinta vara&lt;span class="hx-absolute -hx-mt-20" id="distinta-vara">&lt;/span>
@@ -252,7 +252,7 @@ impulsar que el conocimiento esté distribuido.&lt;/li>
 muy pronto, se pierde agilidad y velocidad en el desarrollo.&lt;/p>
 &lt;p>Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.&lt;/p>
 &lt;p>Para finalizar espero que repensemos juntos la &amp;ldquo;deuda técnica&amp;rdquo; y que nos incomode tenerla.&lt;/p>
-&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</guid><description>
+&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</guid><description>
 &lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
 &lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
@@ -442,7 +442,7 @@ anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo 
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/golang/go/wiki/CodeReviewComments#interfaces" target="_blank" rel="noopener">wiki oficial de Golang&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://8thlight.com/blog/go-interface-misuse/" target="_blank" rel="noopener">go interfaces misuse&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/blog/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/when-the-context-matter/</guid><description>
+&lt;/ul></description></item><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid><description>
 &lt;p>La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas
 nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
 &lt;a href="https://luispe.github.io/blog/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
@@ -543,7 +543,7 @@ cabeza o &amp;ldquo;troubleshooting&amp;rdquo;, y de más esta decir que ya no n
 de integración continua), porque realizando la compilación, de nuevo, para el entorno en que va a ser ejecutado, nos
 quedamos tranquilos de que estamos acortando el margen de contratiempos.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/es/blog/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/lightweight-container-image/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>El tamaño importa</title><link>https://luispe.github.io/blog/es/posts/lightweight-container-image/</link><pubDate>Sat, 11 Jun 2022 17:49:18 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/lightweight-container-image/</guid><description>
 &lt;p>En la siguiente publicación voy a compartirles algunos consejos y buenas prácticas para desarrollar nuestras imágenes
 de container, como ejemplo vamos a crear una imagen para una app en Golang, pero los siguientes consejos aplican
 para cualquier lenguaje, ¡vamos!&lt;/p>
@@ -668,7 +668,7 @@ desde la etapa que tagueamos como &lt;code>builder&lt;/code> y lo disponibilizam
 9 megabytes 😎.&lt;/p>
 &lt;p>Podríamos realizar una última optimización o buena práctica, pero creo que vale la pena dejarlo para otra publicación.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
-&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;p>¡Que pase bien! 👋🏽&lt;/p></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</guid><description>
 &lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
 &lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>
@@ -761,7 +761,7 @@ los datos, nunca vamos a tocar el core/dominio de nuestra aplicación, ahora si 
 es agnóstico a las capas de presentación o datos ganando flexibilidad, testabilidad, etc.&lt;/p>
 &lt;p>Para no aburrirte y por el momento hagamos una pausa.&lt;/p>
 &lt;p>Próximamente vamos a seguir con pequeñas publicaciones donde vamos a intentar repensar otros anti patrones.&lt;/p>
-&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</guid><description>
+&lt;p>¡Que pase bien!&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</guid><description>
 &lt;p>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
 (opinión de quien redacta, mal llamado &lt;strong>caso de éxito&lt;/strong>) y pocas, por no decir nulas, las ocasiones donde se comparten los
 errores (opinión de quien redacta, mal llamado &lt;strong>fracaso&lt;/strong>).&lt;/p>

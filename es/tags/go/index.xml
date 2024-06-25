@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Go</title><link>https://luispe.github.io/blog/es/tags/go/</link><description>Recent content in Go on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/interfaces-correct-use/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Go</title><link>https://luispe.github.io/blog/es/tags/go/</link><description>Recent content in Go on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jun 2022 10:47:02 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Interfaces y "copy paste"</title><link>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</link><pubDate>Mon, 20 Jun 2022 10:47:02 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/interfaces-correct-use/</guid><description>
 &lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
 &lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
@@ -188,7 +188,7 @@ anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo 
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/golang/go/wiki/CodeReviewComments#interfaces" target="_blank" rel="noopener">wiki oficial de Golang&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://8thlight.com/blog/go-interface-misuse/" target="_blank" rel="noopener">go interfaces misuse&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/hexagonal-architecture/</guid><description>
+&lt;/ul></description></item><item><title>Hexagonal Architecture</title><link>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</link><pubDate>Thu, 09 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/hexagonal-architecture/</guid><description>
 &lt;p>Esta es la primera de una serie donde vamos a revisar diferentes patrones de desarrollo que errores cometí y cuál es
 en la actualidad y lo que entiendo hasta el momento, la mejor forma de aplicarlo.&lt;/p>
 &lt;p>Como bien dice el título de la publicación hoy quiero hablar sobre arquitectura hexagonal.&lt;/p>

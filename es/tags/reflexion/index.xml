@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Reflexion</title><link>https://luispe.github.io/blog/es/tags/reflexion/</link><description>Recent content in Reflexion on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 19 Jun 2024 19:10:20 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml"/><item><title>El infierno de los tickets</title><link>https://luispe.github.io/blog/es/blog/ticket-hell/</link><pubDate>Wed, 19 Jun 2024 19:10:20 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/ticket-hell/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Reflexion</title><link>https://luispe.github.io/blog/es/tags/reflexion/</link><description>Recent content in Reflexion on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 19 Jun 2024 19:10:20 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/reflexion/index.xml" rel="self" type="application/rss+xml"/><item><title>El infierno de los tickets</title><link>https://luispe.github.io/blog/es/posts/ticket-hell/</link><pubDate>Wed, 19 Jun 2024 19:10:20 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/ticket-hell/</guid><description>
 &lt;h2>Problema&lt;span class="hx-absolute -hx-mt-20" id="problema">&lt;/span>
 &lt;a href="#problema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;em>Si solo tenés un martillo todos los problemas se parecen a un clavo&lt;/em>&lt;/p>
 &lt;p>¿Por qué comienzo con esta conocida frase?, primero quiero dar un poco de historia y luego
@@ -69,7 +69,7 @@ y la infraestructura asociada.&lt;/p>
 &lt;p>Espero que mi experiencia te haga repensar como formar cultura y procesos
 de trabajo para los equipos de infraestructura en la empresa si tenés dudas
 o necesitas discutir algo de lo que escribí estoy encantado de conocerte :)&lt;/p>
-&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/blog/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/career/</guid><description>
+&lt;p>¡Hasta pronto! 👋🏽&lt;/p></description></item><item><title>Aniversarios</title><link>https://luispe.github.io/blog/es/posts/career/</link><pubDate>Fri, 02 Sep 2022 19:11:03 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/career/</guid><description>
 &lt;p>Los aniversarios, puede ser un cumpleaños, fin año o cualquiera sea, en general lo llevan a uno llevan a reflexionar.&lt;/p>
 &lt;p>Este caso no sería la excepción, ¿cuál es el aniversario?, hace menos de un mes cumplí un año en mi actual empresa
 (&lt;a href="https://www.linkedin.com/company/pomelo-latam/mycompany/" target="_blank" rel="noopener">Pomelo&lt;/a>), el 29 de agosto del 2022 hicieron públicas las
@@ -122,7 +122,7 @@ increíbles.&lt;/p>
 incontable de veces más importante y es, al menos en los valores que persigo y busco, infinitamente superior a
 cualquier puesto que ocupemos u obtengamos.&lt;/p>
 &lt;p>Por ahora no quiero aburrir ni extenderme, pronto voy a escribir sobre los otros dos pilares que siento indispensables
-para transitar la vida, humildad y respeto.&lt;/p></description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/blog/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/technical-debt/</guid><description>
+para transitar la vida, humildad y respeto.&lt;/p></description></item><item><title>Deuda técnica</title><link>https://luispe.github.io/blog/es/posts/technical-debt/</link><pubDate>Sat, 02 Jul 2022 16:36:17 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/technical-debt/</guid><description>
 &lt;p>En la siguiente publicación vamos a repensar un concepto comúnmente encontrado y avalado en la industria de la
 tecnología, la deuda técnica.&lt;/p>
 &lt;h2>Distinta vara&lt;span class="hx-absolute -hx-mt-20" id="distinta-vara">&lt;/span>
@@ -155,7 +155,7 @@ impulsar que el conocimiento esté distribuido.&lt;/li>
 muy pronto, se pierde agilidad y velocidad en el desarrollo.&lt;/p>
 &lt;p>Se puede evitar en la mayoría de los casos y no la aceptemos como algo natural.&lt;/p>
 &lt;p>Para finalizar espero que repensemos juntos la &amp;ldquo;deuda técnica&amp;rdquo; y que nos incomode tenerla.&lt;/p>
-&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/blog/mistakes-and-learnings/</guid><description>
+&lt;p>¡Gracias por leerme! 👋🏽&lt;/p></description></item><item><title>De los errores se aprende, si se comparten, se crece</title><link>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</link><pubDate>Sun, 05 Jun 2022 21:53:34 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/mistakes-and-learnings/</guid><description>
 &lt;p>En nuestra sociedad en general y en tecnología en particular tenemos la extraña costumbre de publicar los aciertos
 (opinión de quien redacta, mal llamado &lt;strong>caso de éxito&lt;/strong>) y pocas, por no decir nulas, las ocasiones donde se comparten los
 errores (opinión de quien redacta, mal llamado &lt;strong>fracaso&lt;/strong>).&lt;/p>
