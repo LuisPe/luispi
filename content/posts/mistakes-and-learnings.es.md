@@ -14,7 +14,7 @@ entendí de la industria al compartirlos.
 
 ## Enseñanza 1:
 
->Escribir un paso a paso, compartirlo, validarlo y re-validarlo antes de ejecutar nada
+> Escribir un paso a paso, compartirlo, validarlo y re-validarlo antes de ejecutar nada
 
 Mi primer desarrollo productivo fue en 2012 (?) aproximadamente, se trató de una web para una empresa que necesitaba
 publicar su catálogo de productos, enumero tecnologías para tener un poco de contexto:
@@ -46,15 +46,15 @@ Configure de nuevo los puertos, y el resto medio que es historia.
 
 ## Enseñanza 2:
 
-> Documentar el conocimiento por más trivial que lo consideremo e invitemos a que el resto lo haga. Además de evitar 
+> Documentar el conocimiento por más trivial que lo consideremos e invitemos a que el resto lo haga. Además de evitar 
 > varias reuniones de “transferencia de conocimiento” nos vamos a ahorrar varios arrobas, ¿te recuerda algo?
 > 
->@fulanito puede darte una mano
+> @fulanito puede darte una mano
 
-En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas pero de las cuales aprendí mucho mucho 
+En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas, pero de las cuales aprendí mucho mucho 
 de cada una de ellas, lamentablemente la aventura fue muy corta en tiempo.
 
-Lo que sí me extrañó mucho a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a 
+Lo que sí me extrañó a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a 
 punto tal de parar motores (literal) y estar semanas sin entregar funcionalidades a producción porque tuvimos que sentarnos 
 a entender cómo dejar esa línea de código local y exponerla a internet.
 
@@ -69,30 +69,30 @@ O acaso, y te invito a pensar durante unos segundos. ¿te encontraste una o más
 
 ## Enseñanza 3:
 
->Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.
+> Ascender no debería ser la única o principal meta, compartir y adquirir conocimiento debería ser la guía.
 >
->Enseñanza 3 bis:
+> Enseñanza 3 bis:
 > 
->Pensar y realizar pruebas antes de implementar cualquier cosa es una guía fundamental para entender el comportamiento de 
+> Pensar y realizar pruebas antes de implementar cualquier cosa es una guía fundamental para entender el comportamiento de 
 > nuestros sistemas o del conocimiento del dominio que tenemos hasta el momento. Siempre y repitamos, **siempre**, 
 > es una ganancia en el tiempo.
 
 Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas, 
 [Juan Moreno](https://www.linkedin.com/in/morenojp/), ¿qué es mejor para mí?, soluciones simples a problemas complejos.
 
-Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar 
-la enseñanza número 3 y 3 bis.
+Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, referente y mentor, 
+voy a intentar explicar la enseñanza número 3 y 3 bis.
 
 En los tiempos prepandemia, solía –costumbre que aún conservo desde lo remoto– arrancar temprano, tener un par de horas 
 “a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.
 
 Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un 
-poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque 
+poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, y así descargar su enojo porque 
 había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.
 
 Famoso _Take a breath_ y al cabo de unos minutos me junté con él a solas, le hice una pregunta:
 
-_¿cuántas personas están involucradas en esta funcionalidad?_
+_¿Cuántas personas están involucradas en esta funcionalidad?_
 
 Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y 
 no agarrar a los primeros que se cruzó en el camino.
@@ -101,7 +101,7 @@ Por último le dije que comprendía, pero no compartía su enojo ni como lo hab�
 
 Quiero aclarar que mi intención no es juzgar, sino compartir que aprendí de ese error, de nuevo:
 
->Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a 
+> Ascender no debería ser la única o principal meta, se corre el riesgo de estar bajo una enorme presión por no estar a 
 > la altura de las circunstancias. Compartir y adquirir conocimiento debería ser la guía.
 > 
 > Pensar y realizar test antes de implementar cualquier cosa es la guía fundamental para entender el comportamiento 
