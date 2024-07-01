@@ -792,13 +792,13 @@ desde la web (no tengo mucha idea como se resuelve por detrás) podes ejecutar u
 &lt;p>Configure de nuevo los puertos, y el resto medio que es historia.&lt;/p>
 &lt;h2>Enseñanza 2:&lt;span class="hx-absolute -hx-mt-20" id="enseñanza-2">&lt;/span>
 &lt;a href="#ense%c3%b1anza-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;blockquote>
-&lt;p>Documentar el conocimiento por más trivial que lo consideremo e invitemos a que el resto lo haga. Además de evitar
+&lt;p>Documentar el conocimiento por más trivial que lo consideremos e invitemos a que el resto lo haga. Además de evitar
 varias reuniones de “transferencia de conocimiento” nos vamos a ahorrar varios arrobas, ¿te recuerda algo?&lt;/p>
 &lt;p>@fulanito puede darte una mano&lt;/p>
 &lt;/blockquote>
-&lt;p>En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas pero de las cuales aprendí mucho mucho
+&lt;p>En otro equipo que tuve la fortuna de trabajar, pequeño en cantidad de personas, pero de las cuales aprendí mucho mucho
 de cada una de ellas, lamentablemente la aventura fue muy corta en tiempo.&lt;/p>
-&lt;p>Lo que sí me extrañó mucho a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a
+&lt;p>Lo que sí me extrañó a medida que uno a uno se iba yendo gente del equipo es que perdíamos mucho conocimiento a
 punto tal de parar motores (literal) y estar semanas sin entregar funcionalidades a producción porque tuvimos que sentarnos
 a entender cómo dejar esa línea de código local y exponerla a internet.&lt;/p>
 &lt;p>¿Qué errores detecte y que aprendí?&lt;/p>
@@ -816,15 +816,15 @@ es una ganancia en el tiempo.&lt;/p>
 &lt;/blockquote>
 &lt;p>Por último y en otro lugar que trabajé, conocí a una de las personas que mejor resuelve problemas,
 &lt;a href="https://www.linkedin.com/in/morenojp/" target="_blank" rel="noopener">Juan Moreno&lt;/a>, ¿qué es mejor para mí?, soluciones simples a problemas complejos.&lt;/p>
-&lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, voy a intentar explicar
-la enseñanza número 3 y 3 bis.&lt;/p>
+&lt;p>Después de este pequeño paréntesis y dedicatoria a quien hoy es una de mis fuentes de consulta, referente y mentor,
+voy a intentar explicar la enseñanza número 3 y 3 bis.&lt;/p>
 &lt;p>En los tiempos prepandemia, solía –costumbre que aún conservo desde lo remoto– arrancar temprano, tener un par de horas
 “a solas” me permite focalizar y priorizar en la medida de lo posible las cosas que quiero y me comprometí a realizar.&lt;/p>
 &lt;p>Una de esas mañanas y en consecuencia a una funcionalidad que estábamos desarrollando en el equipo el líder llegó un
-poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, pudiendo así descargar su enojo porque
+poco enojado (por ser amable) y agarró a los primeros que encontró del equipo, y así descargar su enojo porque
 había “quedado mal” ante sus superiores porque de todas las casuísticas había un caso que rompía.&lt;/p>
 &lt;p>Famoso &lt;em>Take a breath&lt;/em> y al cabo de unos minutos me junté con él a solas, le hice una pregunta:&lt;/p>
-&lt;p>&lt;em>¿cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
+&lt;p>&lt;em>¿Cuántas personas están involucradas en esta funcionalidad?&lt;/em>&lt;/p>
 &lt;p>Entendió con la pregunta que debía haber esperado y comentarle a todo el equipo responsable lo que había pasado y
 no agarrar a los primeros que se cruzó en el camino.&lt;/p>
 &lt;p>Por último le dije que comprendía, pero no compartía su enojo ni como lo había manejado.&lt;/p>
