@@ -523,9 +523,16 @@ mas bien todo lo contrario, me parece un excelente patrón.&lt;/p>
 &lt;p>Pero creo que caemos en el error de aplicar la recetas de publicaciones de &amp;ldquo;medium&amp;rdquo; y no solo terminamos con todas las
 capas de nuestro sistema acopladas sino que con nombres de packages al estilo &amp;ldquo;adapters&amp;rdquo; o &amp;ldquo;ports&amp;rdquo; y si hay algo hermoso
 en el lenguaje de Go(lang) es la intencionalidad en el nombre de un package.&lt;/p>
-&lt;blockquote>
-&lt;p>Un buen nombre en el package hace que casi ni sea necesario nada más para expresar la intencionalidad del mismo.&lt;/p>
-&lt;/blockquote>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+🗒️
+&lt;/div>&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">
+Un buen nombre en el package hace que no sea necesario nada más para expresar la intencionalidad del mismo.
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;p>Te comparto y recomiendo leer la siguiente &lt;a href="https://go.dev/blog/package-names" target="_blank" rel="noopener">publicación oficial&lt;/a>, opinión personal,
 aplica para cualquier lenguaje.&lt;/p>
 &lt;h2>Comencemos&lt;span class="hx-absolute -hx-mt-20" id="comencemos">&lt;/span>

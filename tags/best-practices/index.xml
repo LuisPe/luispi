@@ -526,9 +526,16 @@ I am not against it, on the contrary, I think it is an excellent pattern.&lt;/p>
 &lt;p>But I think we fall into the mistake of applying the publishing recipes of &amp;ldquo;medium&amp;rdquo; and not only end up
 with all the layers of our system coupled but with package names like &amp;ldquo;adapters&amp;rdquo; or &amp;ldquo;ports&amp;rdquo; and if there is
 something beautiful in the language of Go(lang) is the intentionality in the name of a package.&lt;/p>
-&lt;blockquote>
-&lt;p>A good name on the package means that almost nothing else is needed to express the intentionality of the package.&lt;/p>
-&lt;/blockquote>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+🗒️
+&lt;/div>&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">
+A good package name means that nothing else is needed to express the intentionality of the package.
+&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;p>I share and recommend you to read the following &lt;a href="https://go.dev/blog/package-names" target="_blank" rel="noopener">official publication&lt;/a>,
 personal opinion, applies to any language.&lt;/p>
 &lt;h2>Let&amp;rsquo;s start&lt;span class="hx-absolute -hx-mt-20" id="lets-start">&lt;/span>
