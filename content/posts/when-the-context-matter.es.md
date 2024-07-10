@@ -15,7 +15,7 @@ Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir p
 ## Preámbulo
 Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:
 
-```dockerfile
+```dockerfile {linenos=table,filename="Dockerfile"}
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
@@ -56,7 +56,7 @@ arquitectura amd64.
 
 Con esto en mente realicemos una pequeña, pero importante mejora en nuestro Dockerfile.
 
-```dockerfile
+```dockerfile {linenos=table,hl_lines=[7,8,9,10]filename="Dockerfile"}
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build

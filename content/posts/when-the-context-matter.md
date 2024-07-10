@@ -18,7 +18,7 @@ Today we are going to make a small, but important improvement, and we are going 
 
 As the last proposal in the post I shared earlier we stayed at this point:
 
-```dockerfile
+```dockerfile {linenos=table,filename="Dockerfile"}
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
@@ -62,7 +62,7 @@ the computation is linux as OS and with  amd64 architecture.
 
 With this in mind let's make a small but important improvement to our Dockerfile.
 
-```dockerfile
+```dockerfile {linenos=table,hl_lines=[7,8,9,10]filename="Dockerfile"}
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build

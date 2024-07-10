@@ -26,7 +26,7 @@ To give a few examples.
 
 Let us imagine that we have the following Dockerfile to create our container image e.g:
 
-```dockerfile
+```dockerfile {linenos=table,filename="Dockerfile"}
 FROM golang:1.18
 WORKDIR /build
 
@@ -38,6 +38,7 @@ RUN go build -o ./myapp ./path/to/main
 
 ENTRYPOINT ["/myapp"]
 ```
+
 Let's build our `docker build -t myapp:0.0.1 .` image.
 
 If we list the images that we have in our host we will be able to observe that the weight is approximately `968 MB`.
@@ -61,7 +62,7 @@ our Dockerfile, among other things.
 
 Well, let's make a small change in our Dockerfile and build our image again
 
-```dockerfile
+```dockerfile {linenos=table,hl_lines=[1],filename="Dockerfile"}
 FROM golang:1.18-alpine3.16
 WORKDIR /build
 COPY go.mod go.sum ./
@@ -102,7 +103,7 @@ and a second stage where we are going to make it available for use.
 
 Let's get to work, let's open and make the following modifications to our Dockerfile.
 
-```dockerfile
+```dockerfile {linenos=table,hl_lines=[2,11,13],filename="Dockerfile"}
 # First layer use to build a Golang binary
 FROM golang:1.18-alpine3.16 AS builder
 WORKDIR /build
