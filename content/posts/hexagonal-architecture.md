@@ -19,7 +19,9 @@ But I think we fall into the mistake of applying the publishing recipes of "medi
 with all the layers of our system coupled but with package names like "adapters" or "ports" and if there is 
 something beautiful in the language of Go(lang) is the intentionality in the name of a package.
 
->A good name on the package means that almost nothing else is needed to express the intentionality of the package.
+{{< callout type="info" emoji="🗒️" >}}
+A good package name means that nothing else is needed to express the intentionality of the package.
+{{< /callout >}}
 
 I share and recommend you to read the following [official publication](https://go.dev/blog/package-names), 
 personal opinion, applies to any language.
