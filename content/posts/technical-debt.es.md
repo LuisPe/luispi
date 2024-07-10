@@ -32,7 +32,7 @@ Al notar esto le preguntamos a "x" porque no pinto alrededor de los marcos de la
 ## Repensemos
 
 En tecnología es muy común encontrarnos con este escenario y lamentablemente lo naturalizamos y como comente en otra
-[publicación](https://luispe.github.io/blog/posts/mistakes-and-learnings/) donde hablo entre otras cosas sobre
+[publicación](https://luispe.github.io/blog/es/posts/mistakes-and-learnings/) donde hablo entre otras cosas sobre
 la importancia de documentar y hacer test, es algo común que siempre veo como "deuda técnica", repensando en el ejemplo
 de pintar la casa creo que nos expone como podemos tener "distinta vara" para medir la misma situación en diferentes 
 contextos.

@@ -22,7 +22,7 @@ de movilizarme y busco a mi alrededor:
 ### Confianza
 Voy a intentar explicar que significa para mí este pilar.
 
-En una de [mis primeras publicaciones](https://luispe.github.io/blog/posts/mistakes-and-learnings/) donde hablo sobre 
+En una de [mis primeras publicaciones](https://luispe.github.io/blog/es/posts//mistakes-and-learnings/) donde hablo sobre 
 errores y aprendizajes, hablo sobre que ascender no debería ser la única o principal meta hay cosas muchísimo, 
 pero muchísimo más importantes y la confianza es una de ellas.
 

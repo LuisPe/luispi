@@ -19,16 +19,16 @@ Pero creo que caemos en el error de aplicar la recetas de publicaciones de "medi
 capas de nuestro sistema acopladas sino que con nombres de packages al estilo "adapters" o "ports" y si hay algo hermoso 
 en el lenguaje de Go(lang) es la intencionalidad en el nombre de un package.
 
->Un buen nombre en el package hace que casi ni sea necesario nada más para expresar la intencionalidad del mismo.
+> Un buen nombre en el package hace que casi ni sea necesario nada más para expresar la intencionalidad del mismo.
 
 Te comparto y recomiendo leer la siguiente [publicación oficial](https://go.dev/blog/package-names), opinión personal,
 aplica para cualquier lenguaje.
 
 ## Comencemos
 
->Anti patrón
+> Anti patrón
 > 
->Anotación en nuestro modelo de dominio e.g `json`
+> Anotación en nuestro modelo de dominio e.g `json`
 
 Un error que solía cometer es tener las anotaciones `json` o `gorm` o cualquier anotación en el modelo de dominio.
 

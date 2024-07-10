@@ -10,7 +10,7 @@ En la siguiente publicación quiero compartir un error común que solía cometer
 dice el título y descripción hoy vamos a hablar de las interfaces.
 
 Seguramente se encuentren con algunas referencias a otra publicación que hice sobre 
-[arquitectura hexagonal](https://luispe.github.io/blog/posts/hexagonal-architecture/), creo que parte del mal uso de las
+[arquitectura hexagonal](https://luispe.github.io/blog/es/posts/hexagonal-architecture/), creo que parte del mal uso de las
 interfaces es la consecuencia de seguir a rajatabla publicaciones de "medium" y no tomarse el tiempo para entender el 
 concepto subyacente. 
 

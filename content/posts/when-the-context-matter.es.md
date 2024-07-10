@@ -8,7 +8,7 @@ toc: true
 ---
 La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas 
 nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo 
-[el acceso](https://luispe.github.io/blog/posts/lightweight-container-image/).
+[el acceso](https://luispe.github.io/blog/es/posts/lightweight-container-image/).
 
 Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir porque la estamos realizando.
 
