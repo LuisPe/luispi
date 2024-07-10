@@ -2,7 +2,7 @@
 &lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
 &lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
-&lt;a href="https://luispe.github.io/blog/posts/hexagonal-architecture/" target="_blank" rel="noopener">arquitectura hexagonal&lt;/a>, creo que parte del mal uso de las
+&lt;a href="https://luispe.github.io/blog/es/posts/hexagonal-architecture/" target="_blank" rel="noopener">arquitectura hexagonal&lt;/a>, creo que parte del mal uso de las
 interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el
 concepto subyacente.&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>

@@ -2,7 +2,7 @@
 &lt;p>En la siguiente publicación quiero compartir un error común que solía cometer en mis proyectos en Golang. Y como bien
 dice el título y descripción hoy vamos a hablar de las interfaces.&lt;/p>
 &lt;p>Seguramente se encuentren con algunas referencias a otra publicación que hice sobre
-&lt;a href="https://luispe.github.io/blog/posts/hexagonal-architecture/" target="_blank" rel="noopener">arquitectura hexagonal&lt;/a>, creo que parte del mal uso de las
+&lt;a href="https://luispe.github.io/blog/es/posts/hexagonal-architecture/" target="_blank" rel="noopener">arquitectura hexagonal&lt;/a>, creo que parte del mal uso de las
 interfaces es la consecuencia de seguir a rajatabla publicaciones de &amp;ldquo;medium&amp;rdquo; y no tomarse el tiempo para entender el
 concepto subyacente.&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
@@ -191,7 +191,7 @@ anti patrón y me hizo repensar y mejorar, una vez más, en esto del desarrollo 
 &lt;/ul></description></item><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid><description>
 &lt;p>La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas
 nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
-&lt;a href="https://luispe.github.io/blog/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
+&lt;a href="https://luispe.github.io/blog/es/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
 &lt;p>Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir porque la estamos realizando.&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
 &lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:&lt;/p>

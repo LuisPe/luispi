@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luispe – Docker</title><link>https://luispe.github.io/blog/es/tags/docker/</link><description>Recent content in Docker on luispe</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Tue, 14 Jun 2022 18:45:35 -0300</lastBuildDate><atom:link href="https://luispe.github.io/blog/es/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Cuando el contexto importa</title><link>https://luispe.github.io/blog/es/posts/when-the-context-matter/</link><pubDate>Tue, 14 Jun 2022 18:45:35 -0300</pubDate><guid>https://luispe.github.io/blog/es/posts/when-the-context-matter/</guid><description>
 &lt;p>La siguiente publicación se podría decir que es una continuación de otra donde hablamos de como tener imágenes livianas
 nos ayuda en muchos aspectos, si aún no pudiste leerla acá te dejo
-&lt;a href="https://luispe.github.io/blog/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
+&lt;a href="https://luispe.github.io/blog/es/posts/lightweight-container-image/" target="_blank" rel="noopener">el acceso&lt;/a>.&lt;/p>
 &lt;p>Hoy vamos a realizar una pequeña, pero importante mejora, y vamos a descubrir porque la estamos realizando.&lt;/p>
 &lt;h2>Preámbulo&lt;span class="hx-absolute -hx-mt-20" id="preámbulo">&lt;/span>
 &lt;a href="#pre%c3%a1mbulo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Como última propuesta en la publicación que compartí anteriormente nos quedamos en este punto:&lt;/p>
