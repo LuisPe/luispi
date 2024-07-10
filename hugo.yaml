@@ -2,6 +2,23 @@
 baseURL: https://luispe.github.io/blog
 title: luispe
 
+# import hextra as module
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+enableInlineShortcodes: true
+
 enableRobotsTXT: true
 enableGitInfo: true
 enableEmoji: true
@@ -20,22 +37,6 @@ languages:
     languageName: Español
     languageCode: es
     weight: 2
-
-# import hextra as module
-module:
-  imports:
-    - path: github.com/imfing/hextra
-
-markup:
-  # allow raw html
-  goldmark:
-    renderer:
-      unsafe: true
-  # enable hextra syntax highlight
-  highlight:
-    noClasses: false
-
-enableInlineShortcodes: true
 
 menu:
   main:
